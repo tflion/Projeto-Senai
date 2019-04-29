@@ -16,5 +16,10 @@ namespace ProjetoSenai
         {
             InitializeComponent();
         }
+
+        private void lblEscola_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
