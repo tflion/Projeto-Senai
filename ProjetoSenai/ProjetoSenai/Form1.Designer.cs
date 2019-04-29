@@ -28,107 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblSenha = new System.Windows.Forms.Label();
-            this.btnEntrar = new System.Windows.Forms.Button();
-            this.lblEsqueceuSenha = new System.Windows.Forms.Label();
-            this.lblEscola = new System.Windows.Forms.Label();
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.panelRight = new System.Windows.Forms.Panel();
+            this.lblSenai = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // panelLeft
             // 
-            this.textBox1.Location = new System.Drawing.Point(34, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 20);
-            this.textBox1.TabIndex = 0;
+            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(20)))), ((int)(((byte)(10)))));
+            this.panelLeft.Controls.Add(this.label1);
+            this.panelLeft.Controls.Add(this.lblSenai);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(290, 538);
+            this.panelLeft.TabIndex = 7;
             // 
-            // textBox2
+            // panelRight
             // 
-            this.textBox2.Location = new System.Drawing.Point(34, 172);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 20);
-            this.textBox2.TabIndex = 1;
+            this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRight.Location = new System.Drawing.Point(290, 0);
+            this.panelRight.Name = "panelRight";
+            this.panelRight.Size = new System.Drawing.Size(299, 538);
+            this.panelRight.TabIndex = 8;
             // 
-            // lblEmail
+            // lblSenai
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(30, 85);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(64, 20);
-            this.lblEmail.TabIndex = 2;
-            this.lblEmail.Text = "E-MAIL:";
+            this.lblSenai.AutoSize = true;
+            this.lblSenai.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenai.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSenai.Location = new System.Drawing.Point(93, 55);
+            this.lblSenai.Name = "lblSenai";
+            this.lblSenai.Size = new System.Drawing.Size(105, 38);
+            this.lblSenai.TabIndex = 0;
+            this.lblSenai.Text = "SENAI";
             // 
-            // lblSenha
+            // label1
             // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(30, 149);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(60, 20);
-            this.lblSenha.TabIndex = 3;
-            this.lblSenha.Text = "SENHA:";
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(34, 198);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(75, 23);
-            this.btnEntrar.TabIndex = 4;
-            this.btnEntrar.Text = "ENTRAR";
-            this.btnEntrar.UseVisualStyleBackColor = true;
-            // 
-            // lblEsqueceuSenha
-            // 
-            this.lblEsqueceuSenha.AutoSize = true;
-            this.lblEsqueceuSenha.Location = new System.Drawing.Point(31, 224);
-            this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
-            this.lblEsqueceuSenha.Size = new System.Drawing.Size(105, 13);
-            this.lblEsqueceuSenha.TabIndex = 5;
-            this.lblEsqueceuSenha.Text = "Esqueceu a senha ?";
-            // 
-            // lblEscola
-            // 
-            this.lblEscola.AutoSize = true;
-            this.lblEscola.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEscola.Location = new System.Drawing.Point(57, 28);
-            this.lblEscola.Name = "lblEscola";
-            this.lblEscola.Size = new System.Drawing.Size(156, 24);
-            this.lblEscola.TabIndex = 6;
-            this.lblEscola.Text = "SENAI CENTRO";
-            this.lblEscola.Click += new System.EventHandler(this.lblEscola_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(49, 134);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 22);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.lblEscola);
-            this.Controls.Add(this.lblEsqueceuSenha);
-            this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(this.lblSenha);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(589, 538);
+            this.Controls.Add(this.panelRight);
+            this.Controls.Add(this.panelLeft);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.panelLeft.ResumeLayout(false);
+            this.panelLeft.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.Button btnEntrar;
-        private System.Windows.Forms.Label lblEsqueceuSenha;
-        private System.Windows.Forms.Label lblEscola;
+        private System.Windows.Forms.Panel panelLeft;
+        private System.Windows.Forms.Label lblSenai;
+        private System.Windows.Forms.Panel panelRight;
+        private System.Windows.Forms.Label label1;
     }
 }
 
