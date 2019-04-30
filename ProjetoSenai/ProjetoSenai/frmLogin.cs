@@ -41,5 +41,25 @@ namespace ProjetoSenai
         {
 
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEsqueceuSenha_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
