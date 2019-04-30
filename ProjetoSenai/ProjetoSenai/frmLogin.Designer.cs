@@ -71,6 +71,7 @@
             this.txtSenha.Size = new System.Drawing.Size(316, 23);
             this.txtSenha.TabIndex = 4;
             this.txtSenha.UseSystemPasswordChar = false;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // materialDivider1
             // 
@@ -87,12 +88,12 @@
             // 
             this.lblEsqueceuSenha.AutoSize = true;
             this.lblEsqueceuSenha.Depth = 0;
-            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblEsqueceuSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblEsqueceuSenha.Location = new System.Drawing.Point(71, 492);
             this.lblEsqueceuSenha.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
-            this.lblEsqueceuSenha.Size = new System.Drawing.Size(156, 20);
+            this.lblEsqueceuSenha.Size = new System.Drawing.Size(142, 19);
             this.lblEsqueceuSenha.TabIndex = 7;
             this.lblEsqueceuSenha.Text = "Esqueceu a senha ?";
             this.lblEsqueceuSenha.Click += new System.EventHandler(this.lblEsqueceuSenha_Click);
@@ -101,12 +102,12 @@
             // 
             this.lblRegistro.AutoSize = true;
             this.lblRegistro.Depth = 0;
-            this.lblRegistro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistro.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblRegistro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblRegistro.Location = new System.Drawing.Point(285, 492);
             this.lblRegistro.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblRegistro.Name = "lblRegistro";
-            this.lblRegistro.Size = new System.Drawing.Size(72, 20);
+            this.lblRegistro.Size = new System.Drawing.Size(69, 19);
             this.lblRegistro.TabIndex = 8;
             this.lblRegistro.Text = "Registrar";
             // 
@@ -122,15 +123,16 @@
             this.btnLogin.TabIndex = 10;
             this.btnLogin.Text = "ENTRAR";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(113, 64);
+            this.panel1.Location = new System.Drawing.Point(113, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(241, 148);
+            this.panel1.Size = new System.Drawing.Size(241, 163);
             this.panel1.TabIndex = 11;
             // 
             // lblLogin
@@ -157,6 +159,7 @@
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtEmail);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(465, 527);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SENAI - Serviço de aprendizagem industrial";

@@ -61,5 +61,16 @@ namespace ProjetoSenai
         {
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            frmFuncionario form = new frmFuncionario();
+            form.Show();
+        }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+            txtSenha.UseSystemPasswordChar = true;
+        }
     }
 }
