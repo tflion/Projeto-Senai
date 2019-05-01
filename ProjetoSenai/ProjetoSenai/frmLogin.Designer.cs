@@ -88,12 +88,12 @@
             // 
             this.lblEsqueceuSenha.AutoSize = true;
             this.lblEsqueceuSenha.Depth = 0;
-            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEsqueceuSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblEsqueceuSenha.Location = new System.Drawing.Point(71, 492);
             this.lblEsqueceuSenha.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
-            this.lblEsqueceuSenha.Size = new System.Drawing.Size(142, 19);
+            this.lblEsqueceuSenha.Size = new System.Drawing.Size(156, 20);
             this.lblEsqueceuSenha.TabIndex = 7;
             this.lblEsqueceuSenha.Text = "Esqueceu a senha ?";
             this.lblEsqueceuSenha.Click += new System.EventHandler(this.lblEsqueceuSenha_Click);
@@ -102,12 +102,12 @@
             // 
             this.lblRegistro.AutoSize = true;
             this.lblRegistro.Depth = 0;
-            this.lblRegistro.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblRegistro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblRegistro.Location = new System.Drawing.Point(285, 492);
             this.lblRegistro.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblRegistro.Name = "lblRegistro";
-            this.lblRegistro.Size = new System.Drawing.Size(69, 19);
+            this.lblRegistro.Size = new System.Drawing.Size(72, 20);
             this.lblRegistro.TabIndex = 8;
             this.lblRegistro.Text = "Registrar";
             // 
@@ -133,6 +133,26 @@
             this.panel1.Location = new System.Drawing.Point(113, 49);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 163);
+            this.panel1.TabIndex = 11;
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Location = new System.Drawing.Point(175, 202);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(117, 44);
+            this.lblLogin.TabIndex = 13;
+            this.lblLogin.Text = "Login";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(113, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(241, 148);
             this.panel1.TabIndex = 11;
             // 
             // lblLogin
