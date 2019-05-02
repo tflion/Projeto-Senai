@@ -38,7 +38,7 @@ namespace ProjetoSenai
         private void BtnAbrir_Click(object sender, EventArgs e)
         {
             //Achar o excel e abrir ele no dataGridView
-            using (OpenFileDialog of = new OpenFileDialog() { Filter = "Excel Workbook|*.xls|Excel Workbook|*.xlsx", ValidateNames = true })
+            using (OpenFileDialog of = new OpenFileDialog() { Filter = "Excel Workbook 97-2003|*.xls", ValidateNames = true })
             {
                 if (of.ShowDialog() == DialogResult.OK)
                 {

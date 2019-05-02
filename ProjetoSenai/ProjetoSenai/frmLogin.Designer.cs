@@ -54,7 +54,6 @@
             this.txtEmail.Size = new System.Drawing.Size(316, 23);
             this.txtEmail.TabIndex = 3;
             this.txtEmail.UseSystemPasswordChar = false;
-            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             // 
             // txtSenha
             // 
@@ -87,6 +86,7 @@
             // lblEsqueceuSenha
             // 
             this.lblEsqueceuSenha.AutoSize = true;
+            this.lblEsqueceuSenha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblEsqueceuSenha.Depth = 0;
             this.lblEsqueceuSenha.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblEsqueceuSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -101,6 +101,7 @@
             // lblRegistro
             // 
             this.lblRegistro.AutoSize = true;
+            this.lblRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegistro.Depth = 0;
             this.lblRegistro.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblRegistro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -113,6 +114,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Depth = 0;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(147, 408);
@@ -124,26 +126,6 @@
             this.btnLogin.Text = "ENTRAR";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(113, 49);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(241, 163);
-            this.panel1.TabIndex = 11;
-            // 
-            // lblLogin
-            // 
-            this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(175, 202);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(117, 44);
-            this.lblLogin.TabIndex = 13;
-            this.lblLogin.Text = "Login";
             // 
             // panel1
             // 
@@ -183,7 +165,6 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SENAI - Serviço de aprendizagem industrial";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

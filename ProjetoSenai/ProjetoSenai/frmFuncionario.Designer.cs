@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionario));
             this.pnlDireito = new System.Windows.Forms.Panel();
             this.btnImportarDados = new MaterialSkin.Controls.MaterialRaisedButton();
             this.userPrincipal = new ProjetoSenai.userPrincipal();
@@ -80,6 +81,7 @@
             this.Controls.Add(this.userPrincipal);
             this.Controls.Add(this.userImportarDados);
             this.Controls.Add(this.pnlDireito);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(745, 554);
             this.Name = "frmFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

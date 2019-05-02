@@ -32,40 +32,20 @@ namespace ProjetoSenai
             );
         }
 
-        private void lblEscola_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblEmail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblEsqueceuSenha_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmEsqueceuSenha form = new frmEsqueceuSenha();
+            form.ShowDialog();
+            this.Close();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmFuncionario form = new frmFuncionario();
-            form.Show();
+            form.ShowDialog();
+            this.Close();
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
