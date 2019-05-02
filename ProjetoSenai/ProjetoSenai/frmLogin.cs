@@ -52,5 +52,13 @@ namespace ProjetoSenai
         {
             txtSenha.UseSystemPasswordChar = true;
         }
+
+        private void lblRegistro_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmRegistrarUsuario form = new frmRegistrarUsuario();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

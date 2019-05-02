@@ -111,6 +111,7 @@
             this.lblRegistro.Size = new System.Drawing.Size(69, 19);
             this.lblRegistro.TabIndex = 8;
             this.lblRegistro.Text = "Registrar";
+            this.lblRegistro.Click += new System.EventHandler(this.lblRegistro_Click);
             // 
             // btnLogin
             // 

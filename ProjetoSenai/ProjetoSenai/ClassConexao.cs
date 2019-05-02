@@ -28,7 +28,7 @@ namespace ProjetoZeeDog
         //3º Passo: Definindo os parâmetros para 
         //criar string de conexão 
         private string server = @"(localdb)\MSSQLLocalDB";// nome do servidor sqlServer
-        private string database = "bdZeeDog"; //nome do database
+        private string database = "dbProjetoSenai"; //nome do database
 
         //Método: CONECTAR
         public void Conectar()
