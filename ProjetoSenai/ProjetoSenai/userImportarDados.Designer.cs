@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboFolha = new System.Windows.Forms.ComboBox();
             this.lblFolha = new System.Windows.Forms.Label();
             this.dgvExcel = new System.Windows.Forms.DataGridView();
             this.btnAbrir = new System.Windows.Forms.Button();
@@ -42,6 +43,15 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
+            // cboFolha
+            // 
+            this.cboFolha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFolha.FormattingEnabled = true;
+            this.cboFolha.Location = new System.Drawing.Point(265, 53);
+            this.cboFolha.Name = "cboFolha";
+            this.cboFolha.Size = new System.Drawing.Size(121, 21);
+            this.cboFolha.TabIndex = 0;
+            this.cboFolha.SelectedIndexChanged += new System.EventHandler(this.CboFolha_SelectedIndexChanged);
             // 
             // lblFolha
             // 
@@ -68,6 +78,7 @@
             this.btnAbrir.TabIndex = 3;
             this.btnAbrir.Text = "Abrir";
             this.btnAbrir.UseVisualStyleBackColor = true;
+            this.btnAbrir.Click += new System.EventHandler(this.BtnAbrir_Click);
             // 
             // userImportarDados
             // 
@@ -77,6 +88,7 @@
             this.Controls.Add(this.dgvExcel);
             this.Controls.Add(this.lblFolha);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboFolha);
             this.Name = "userImportarDados";
             this.Size = new System.Drawing.Size(549, 490);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).EndInit();
@@ -88,6 +100,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboFolha;
         private System.Windows.Forms.Label lblFolha;
         private System.Windows.Forms.DataGridView dgvExcel;
         private System.Windows.Forms.Button btnAbrir;
