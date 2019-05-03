@@ -36,6 +36,7 @@ namespace ProjetoSenai
 
         private void BtnVoltarLogin_Click(object sender, EventArgs e)
         {
+            //Ir para um novo form e fechar o recente
             this.Hide();
             frmLogin form = new frmLogin();
             form.ShowDialog();
@@ -47,17 +48,28 @@ namespace ProjetoSenai
             txtNome.Text = "";
             txtEmail.Text = "";
             txtSenha.Text = "";
+            txtConfirmaSenha.Text = "";
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
-            if(txtSenha.Text != txtConfirmaSenha.Text)
+            //Se for diferente então irá apagar e mandar msgBox
+            if (txtSenha.Text != txtConfirmaSenha.Text)
             {
                 MessageBox.Show("Senhas não conferem, digite a senha novamente.");
                 txtSenha.Text = "";
                 txtConfirmaSenha.Text = "";
+                txtSenha.Focus();
+
+            //Verificar email
+            }else if(usuario.validarEmail(txtEmail.Text) == false)
+            {
+                MessageBox.Show("Email inválido, tente novamente.");
+                txtEmail.Text = "";
+                txtEmail.Focus();
             }else
             {
+                //Se for igual irá inserir no banco
                 usuario.Email = txtEmail.Text;
                 usuario.Senha = txtSenha.Text;
                 usuario.Nome = txtNome.Text;
@@ -65,8 +77,24 @@ namespace ProjetoSenai
                 if (usuario.InserirUsuario() == true)
                 {
                     MessageBox.Show("Usuário cadastrado com sucesso.");
+                    txtNome.Text = "";
+                    txtEmail.Text = "";
+                    txtSenha.Text = "";
+                    txtConfirmaSenha.Text = "";
                 }
             }
+        }
+
+        private void TxtSenha_TextChanged(object sender, EventArgs e)
+        {
+            //Tampar senha
+            txtSenha.UseSystemPasswordChar = true;
+        }
+
+        private void TxtConfirmaSenha_TextChanged(object sender, EventArgs e)
+        {
+            //Tampar senha
+            txtConfirmaSenha.UseSystemPasswordChar = true;
         }
     }
 }

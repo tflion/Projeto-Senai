@@ -16,6 +16,7 @@ namespace ProjetoSenai
 {
     public partial class frmLogin : MaterialForm
     {
+        ClassUsuario usuario = new ClassUsuario();
         public frmLogin()
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace ProjetoSenai
 
         private void lblEsqueceuSenha_Click(object sender, EventArgs e)
         {
+            //Ir para um novo form e fechar o recente
             this.Hide();
             frmEsqueceuSenha form = new frmEsqueceuSenha();
             form.ShowDialog();
@@ -42,19 +44,32 @@ namespace ProjetoSenai
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmFuncionario form = new frmFuncionario();
-            form.ShowDialog();
-            this.Close();
+            //Se for maior que 0 então achou o login
+            if(usuario.VerificarLogin(txtEmail.Text, txtSenha.Text) >0)
+            {
+                this.Hide();
+                frmFuncionario form = new frmFuncionario();
+                form.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("E-mail ou senha incorretos");
+                txtEmail.Text = "";
+                txtSenha.Text = "";
+            }
+            
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
+            //Tampar senha
             txtSenha.UseSystemPasswordChar = true;
         }
 
         private void lblRegistro_Click(object sender, EventArgs e)
         {
+            //Ir para um novo form e fechar o recente
             this.Hide();
             frmRegistrarUsuario form = new frmRegistrarUsuario();
             form.ShowDialog();

@@ -107,6 +107,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(316, 20);
             this.txtSenha.TabIndex = 5;
+            this.txtSenha.TextChanged += new System.EventHandler(this.TxtSenha_TextChanged);
             // 
             // txtEmail
             // 
@@ -187,6 +188,7 @@
             this.txtConfirmaSenha.Name = "txtConfirmaSenha";
             this.txtConfirmaSenha.Size = new System.Drawing.Size(316, 20);
             this.txtConfirmaSenha.TabIndex = 22;
+            this.txtConfirmaSenha.TextChanged += new System.EventHandler(this.TxtConfirmaSenha_TextChanged);
             // 
             // lblSenha1
             // 
