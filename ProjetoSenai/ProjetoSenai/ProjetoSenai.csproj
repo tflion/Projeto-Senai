@@ -66,6 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassAcessoBD.cs" />
+    <Compile Include="ClassAluno.cs" />
+    <Compile Include="ClassEmpresa.cs" />
     <Compile Include="ClassUsuario.cs" />
     <Compile Include="frmEsqueceuSenha.cs">
       <SubType>Form</SubType>
