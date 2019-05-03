@@ -36,6 +36,7 @@
             this.btnEnviar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.lblResult = new MaterialSkin.Controls.MaterialLabel();
+            this.btnVoltarLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEsqueceuSenha
@@ -125,11 +126,26 @@
             this.lblResult.Size = new System.Drawing.Size(0, 19);
             this.lblResult.TabIndex = 20;
             // 
+            // btnVoltarLogin
+            // 
+            this.btnVoltarLogin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnVoltarLogin.FlatAppearance.BorderSize = 0;
+            this.btnVoltarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltarLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltarLogin.Image")));
+            this.btnVoltarLogin.Location = new System.Drawing.Point(5, 68);
+            this.btnVoltarLogin.Name = "btnVoltarLogin";
+            this.btnVoltarLogin.Size = new System.Drawing.Size(63, 32);
+            this.btnVoltarLogin.TabIndex = 21;
+            this.btnVoltarLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVoltarLogin.UseVisualStyleBackColor = false;
+            this.btnVoltarLogin.Click += new System.EventHandler(this.BtnVoltarLogin_Click);
+            // 
             // frmEsqueceuSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(465, 527);
+            this.Controls.Add(this.btnVoltarLogin);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.materialDivider1);
@@ -155,5 +171,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnEnviar;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialLabel lblResult;
+        private System.Windows.Forms.Button btnVoltarLogin;
     }
 }

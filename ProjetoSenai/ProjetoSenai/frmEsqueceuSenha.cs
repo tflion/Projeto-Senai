@@ -67,6 +67,14 @@ namespace ProjetoSenai
                 
             }
         }
+
+        private void BtnVoltarLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin form = new frmLogin();
+            form.ShowDialog();
+            this.Close();
+        }
     }
     
 }
