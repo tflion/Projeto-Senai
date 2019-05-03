@@ -39,5 +39,26 @@ namespace ProjetoSenai
             form.ShowDialog();
             this.Close();
         }
+
+        private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            txtNome.Text = "";
+            txtEmail.Text = "";
+            txtSenha.Text = "";
+        }
+
+        private void BtnCadastrar_Click(object sender, EventArgs e)
+        {
+            if(txtSenha != txtConfirmaSenha)
+            {
+                MessageBox.Show("Senhas não conferem, digite a senha novamente.");
+                txtSenha.Text = "";
+                txtConfirmaSenha.Text = "";
+            }
+            else
+            {
+
+            }
+        }
     }
 }

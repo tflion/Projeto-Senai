@@ -65,7 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassConexao.cs" />
+    <Compile Include="ClassAcessoBD.cs" />
+    <Compile Include="ClassUsuario.cs" />
     <Compile Include="frmEsqueceuSenha.cs">
       <SubType>Form</SubType>
     </Compile>

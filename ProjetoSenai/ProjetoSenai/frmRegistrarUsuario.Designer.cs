@@ -33,14 +33,16 @@
             this.lblEmail = new MaterialSkin.Controls.MaterialLabel();
             this.lblSenha = new MaterialSkin.Controls.MaterialLabel();
             this.pnlDireito = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnCadastrarUsuario = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCadastrar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnLimpar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.btnVoltarLogin = new System.Windows.Forms.Button();
+            this.txtConfirmaSenha = new System.Windows.Forms.TextBox();
+            this.lblSenha1 = new MaterialSkin.Controls.MaterialLabel();
             this.pnlDireito.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             this.lblNome.Depth = 0;
             this.lblNome.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNome.Location = new System.Drawing.Point(256, 154);
+            this.lblNome.Location = new System.Drawing.Point(282, 154);
             this.lblNome.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
@@ -63,7 +65,7 @@
             this.lblEmail.Depth = 0;
             this.lblEmail.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEmail.Location = new System.Drawing.Point(255, 212);
+            this.lblEmail.Location = new System.Drawing.Point(282, 212);
             this.lblEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(55, 19);
@@ -76,7 +78,7 @@
             this.lblSenha.Depth = 0;
             this.lblSenha.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblSenha.Location = new System.Drawing.Point(256, 270);
+            this.lblSenha.Location = new System.Drawing.Point(283, 270);
             this.lblSenha.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(54, 19);
@@ -92,26 +94,26 @@
             this.pnlDireito.Size = new System.Drawing.Size(206, 490);
             this.pnlDireito.TabIndex = 3;
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(363, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtNome.Location = new System.Drawing.Point(363, 155);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(316, 20);
+            this.txtNome.TabIndex = 4;
             // 
-            // textBox2
+            // txtSenha
             // 
-            this.textBox2.Location = new System.Drawing.Point(363, 271);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(316, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtSenha.Location = new System.Drawing.Point(363, 271);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(316, 20);
+            this.txtSenha.TabIndex = 5;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(363, 213);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(316, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtEmail.Location = new System.Drawing.Point(363, 213);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(316, 20);
+            this.txtEmail.TabIndex = 6;
             // 
             // btnCadastrarUsuario
             // 
@@ -138,6 +140,7 @@
             this.btnCadastrar.TabIndex = 7;
             this.btnCadastrar.Text = "Enviar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
             // btnLimpar
             // 
@@ -151,6 +154,7 @@
             this.btnLimpar.TabIndex = 8;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // materialDivider1
             // 
@@ -177,18 +181,40 @@
             this.btnVoltarLogin.UseVisualStyleBackColor = false;
             this.btnVoltarLogin.Click += new System.EventHandler(this.BtnVoltarLogin_Click);
             // 
+            // txtConfirmaSenha
+            // 
+            this.txtConfirmaSenha.Location = new System.Drawing.Point(363, 311);
+            this.txtConfirmaSenha.Name = "txtConfirmaSenha";
+            this.txtConfirmaSenha.Size = new System.Drawing.Size(316, 20);
+            this.txtConfirmaSenha.TabIndex = 22;
+            // 
+            // lblSenha1
+            // 
+            this.lblSenha1.AutoSize = true;
+            this.lblSenha1.Depth = 0;
+            this.lblSenha1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblSenha1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSenha1.Location = new System.Drawing.Point(206, 310);
+            this.lblSenha1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblSenha1.Name = "lblSenha1";
+            this.lblSenha1.Size = new System.Drawing.Size(131, 19);
+            this.lblSenha1.TabIndex = 21;
+            this.lblSenha1.Text = "Confirme a senha:";
+            // 
             // frmRegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 554);
+            this.Controls.Add(this.txtConfirmaSenha);
+            this.Controls.Add(this.lblSenha1);
             this.Controls.Add(this.btnVoltarLogin);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.pnlDireito);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblEmail);
@@ -208,13 +234,15 @@
         private MaterialSkin.Controls.MaterialLabel lblEmail;
         private MaterialSkin.Controls.MaterialLabel lblSenha;
         private System.Windows.Forms.Panel pnlDireito;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TextBox txtEmail;
         private MaterialSkin.Controls.MaterialRaisedButton btnCadastrarUsuario;
         private MaterialSkin.Controls.MaterialRaisedButton btnCadastrar;
         private MaterialSkin.Controls.MaterialRaisedButton btnLimpar;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.Button btnVoltarLogin;
+        private System.Windows.Forms.TextBox txtConfirmaSenha;
+        private MaterialSkin.Controls.MaterialLabel lblSenha1;
     }
 }
