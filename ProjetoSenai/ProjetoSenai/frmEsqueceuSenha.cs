@@ -17,7 +17,7 @@ namespace ProjetoSenai
 {
     public partial class frmEsqueceuSenha : MaterialForm
     {
-
+        ClassUsuario usuario = new ClassUsuario();
         public frmEsqueceuSenha()
         {
             InitializeComponent();
@@ -36,36 +36,46 @@ namespace ProjetoSenai
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            //Mandar email
-            string emailCliente = txtEmail.Text;
+            lblResult.Text = "";
 
-            MailMessage mail = new MailMessage();
-
-            //Quem vai mandar
-            mail.From = new MailAddress("no.suporte.reply@gmail.com");
-            //Quem vai receber
-            mail.To.Add(emailCliente);
-            //Assunto
-            mail.Subject = "Recuperação de senha";
-            //Mensagem
-            mail.Body = "Sua senha do programa: ";
-
-            //Criar smtp para enviar o email
-            using(var smtp = new SmtpClient("smtp.gmail.com"))
+            if (usuario.VerificarLogin(txtEmail.Text) > 0)
             {
-                smtp.EnableSsl = true; // GMail requer SSL
-                smtp.Port = 587;       // porta para SSL
-                smtp.DeliveryMethod = SmtpDeliveryMethod.Network; // modo de envio
-                smtp.UseDefaultCredentials = false; // utilizar credencias especificas
+                //Mandar email
+                string emailCliente = txtEmail.Text;
 
-                //Usuário e senha do email que irá mandar
-                smtp.Credentials = new NetworkCredential("no.suporte.reply@gmail.com", "suporte123");
-                //Envia o email
-                smtp.Send(mail);
-                lblResult.Text = "E-mail enviado com sucesso.";
-                txtEmail.Text = "";
-                
+                MailMessage mail = new MailMessage();
+
+                //Quem vai mandar
+                mail.From = new MailAddress("no.suporte.reply@gmail.com");
+                //Quem vai receber
+                mail.To.Add(emailCliente);
+                //Assunto
+                mail.Subject = "Recuperação de senha";
+                //Mensagem
+                mail.Body = "Sua senha do programa: ";
+
+                //Criar smtp para enviar o email
+                using (var smtp = new SmtpClient("smtp.gmail.com"))
+                {
+                    smtp.EnableSsl = true; // GMail requer SSL
+                    smtp.Port = 587;       // porta para SSL
+                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network; // modo de envio
+                    smtp.UseDefaultCredentials = false; // utilizar credencias especificas
+
+                    //Usuário e senha do email que irá mandar
+                    smtp.Credentials = new NetworkCredential("no.suporte.reply@gmail.com", "suporte123");
+                    //Envia o email
+                    smtp.Send(mail);
+                    lblResult.Text = "E-mail enviado com sucesso.";
+                    txtEmail.Text = "";
+
+                }
             }
+            else
+            {
+                lblResult.Text = "E-mail não cadastrado no sistema";
+            }
+            
         }
 
         private void BtnVoltarLogin_Click(object sender, EventArgs e)

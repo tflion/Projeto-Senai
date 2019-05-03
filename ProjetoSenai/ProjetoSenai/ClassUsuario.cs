@@ -38,6 +38,15 @@ namespace ProjetoSenai
             int linha = (dt.Rows.Count > 0) ? 1 : 0;
             return linha;
         }
+        public int VerificarLogin(string email)
+        {
+            bd.Conectar();
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Usuario WHERE email = '{0}'", email));
+            bd.Desconectar();
+            int linha = (dt.Rows.Count > 0) ? 1 : 0;
+            return linha;
+        }
+
 
         //Função para validar Email
         public bool validarEmail(string Email)
