@@ -33,10 +33,10 @@
             this.lblEmail = new MaterialSkin.Controls.MaterialLabel();
             this.lblSenha = new MaterialSkin.Controls.MaterialLabel();
             this.pnlDireito = new System.Windows.Forms.Panel();
+            this.btnCadastrarUsuario = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.btnCadastrarUsuario = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCadastrar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnLimpar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
@@ -94,28 +94,6 @@
             this.pnlDireito.Size = new System.Drawing.Size(206, 490);
             this.pnlDireito.TabIndex = 3;
             // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(363, 155);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(316, 20);
-            this.txtNome.TabIndex = 4;
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Location = new System.Drawing.Point(363, 271);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(316, 20);
-            this.txtSenha.TabIndex = 5;
-            this.txtSenha.TextChanged += new System.EventHandler(this.TxtSenha_TextChanged);
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(363, 213);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(316, 20);
-            this.txtEmail.TabIndex = 6;
-            // 
             // btnCadastrarUsuario
             // 
             this.btnCadastrarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -129,6 +107,28 @@
             this.btnCadastrarUsuario.Text = "Cadastrar usuário";
             this.btnCadastrarUsuario.UseVisualStyleBackColor = true;
             // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(363, 155);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(316, 20);
+            this.txtNome.TabIndex = 1;
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Location = new System.Drawing.Point(363, 271);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(316, 20);
+            this.txtSenha.TabIndex = 3;
+            this.txtSenha.TextChanged += new System.EventHandler(this.TxtSenha_TextChanged);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(363, 213);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(316, 20);
+            this.txtEmail.TabIndex = 2;
+            // 
             // btnCadastrar
             // 
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -138,7 +138,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Primary = true;
             this.btnCadastrar.Size = new System.Drawing.Size(141, 36);
-            this.btnCadastrar.TabIndex = 7;
+            this.btnCadastrar.TabIndex = 5;
             this.btnCadastrar.Text = "Enviar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
@@ -152,7 +152,7 @@
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Primary = true;
             this.btnLimpar.Size = new System.Drawing.Size(91, 36);
-            this.btnLimpar.TabIndex = 8;
+            this.btnLimpar.TabIndex = 6;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
@@ -187,7 +187,7 @@
             this.txtConfirmaSenha.Location = new System.Drawing.Point(363, 311);
             this.txtConfirmaSenha.Name = "txtConfirmaSenha";
             this.txtConfirmaSenha.Size = new System.Drawing.Size(316, 20);
-            this.txtConfirmaSenha.TabIndex = 22;
+            this.txtConfirmaSenha.TabIndex = 4;
             this.txtConfirmaSenha.TextChanged += new System.EventHandler(this.TxtConfirmaSenha_TextChanged);
             // 
             // lblSenha1

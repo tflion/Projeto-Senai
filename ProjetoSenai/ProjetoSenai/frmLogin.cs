@@ -75,5 +75,10 @@ namespace ProjetoSenai
             form.ShowDialog();
             this.Close();
         }
+
+        private void TxtSenha_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

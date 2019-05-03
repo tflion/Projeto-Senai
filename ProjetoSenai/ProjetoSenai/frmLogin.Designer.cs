@@ -52,7 +52,7 @@
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.Size = new System.Drawing.Size(316, 23);
-            this.txtEmail.TabIndex = 3;
+            this.txtEmail.TabIndex = 1;
             this.txtEmail.UseSystemPasswordChar = false;
             // 
             // txtSenha
@@ -68,8 +68,9 @@
             this.txtSenha.SelectionLength = 0;
             this.txtSenha.SelectionStart = 0;
             this.txtSenha.Size = new System.Drawing.Size(316, 23);
-            this.txtSenha.TabIndex = 4;
+            this.txtSenha.TabIndex = 2;
             this.txtSenha.UseSystemPasswordChar = false;
+            this.txtSenha.Click += new System.EventHandler(this.TxtSenha_Click);
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // materialDivider1
@@ -123,7 +124,7 @@
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Primary = true;
             this.btnLogin.Size = new System.Drawing.Size(172, 36);
-            this.btnLogin.TabIndex = 10;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "ENTRAR";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);

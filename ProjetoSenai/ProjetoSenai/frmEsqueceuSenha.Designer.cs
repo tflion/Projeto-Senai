@@ -72,7 +72,7 @@
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.Size = new System.Drawing.Size(316, 23);
-            this.txtEmail.TabIndex = 14;
+            this.txtEmail.TabIndex = 1;
             this.txtEmail.UseSystemPasswordChar = false;
             // 
             // lblDigiteEmail
@@ -98,7 +98,7 @@
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Primary = true;
             this.btnEnviar.Size = new System.Drawing.Size(172, 36);
-            this.btnEnviar.TabIndex = 19;
+            this.btnEnviar.TabIndex = 2;
             this.btnEnviar.Text = "ENVIAR";
             this.btnEnviar.UseVisualStyleBackColor = true;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
