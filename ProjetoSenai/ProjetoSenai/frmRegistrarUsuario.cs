@@ -15,6 +15,8 @@ namespace ProjetoSenai
 {
     public partial class frmRegistrarUsuario : MaterialForm
     {
+        ClassUsuario usuario = new ClassUsuario();
+
         public frmRegistrarUsuario()
         {
             InitializeComponent();
@@ -49,15 +51,21 @@ namespace ProjetoSenai
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
-            if(txtSenha != txtConfirmaSenha)
+            if(txtSenha.Text != txtConfirmaSenha.Text)
             {
                 MessageBox.Show("Senhas não conferem, digite a senha novamente.");
                 txtSenha.Text = "";
                 txtConfirmaSenha.Text = "";
-            }
-            else
+            }else
             {
+                usuario.Email = txtEmail.Text;
+                usuario.Senha = txtSenha.Text;
+                usuario.Nome = txtNome.Text;
 
+                if (usuario.InserirUsuario() == true)
+                {
+                    MessageBox.Show("Usuário cadastrado com sucesso.");
+                }
             }
         }
     }
