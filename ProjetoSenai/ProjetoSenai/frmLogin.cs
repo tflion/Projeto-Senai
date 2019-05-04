@@ -76,9 +76,22 @@ namespace ProjetoSenai
             this.Close();
         }
 
-        private void TxtSenha_Click(object sender, EventArgs e)
+        private void TxtEmail_KeyDown(object sender, KeyEventArgs e)
         {
+            //Fazendo o click no botão caso apertar enter
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
+        }
 
+        private void TxtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            //Fazendo o click no botão caso apertar enter
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
         }
     }
 }

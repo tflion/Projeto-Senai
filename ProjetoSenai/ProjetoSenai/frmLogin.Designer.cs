@@ -54,6 +54,7 @@
             this.txtEmail.Size = new System.Drawing.Size(316, 23);
             this.txtEmail.TabIndex = 1;
             this.txtEmail.UseSystemPasswordChar = false;
+            this.txtEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmail_KeyDown);
             // 
             // txtSenha
             // 
@@ -70,7 +71,7 @@
             this.txtSenha.Size = new System.Drawing.Size(316, 23);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.UseSystemPasswordChar = false;
-            this.txtSenha.Click += new System.EventHandler(this.TxtSenha_Click);
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSenha_KeyDown);
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // materialDivider1

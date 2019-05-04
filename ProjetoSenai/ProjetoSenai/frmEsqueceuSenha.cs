@@ -87,6 +87,15 @@ namespace ProjetoSenai
             form.ShowDialog();
             this.Close();
         }
+
+        private void TxtEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            //Fazendo o click no botão caso apertar enter
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnEnviar.PerformClick();
+            }
+        }
     }
     
 }

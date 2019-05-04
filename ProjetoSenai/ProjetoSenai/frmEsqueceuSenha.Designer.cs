@@ -74,6 +74,7 @@
             this.txtEmail.Size = new System.Drawing.Size(316, 23);
             this.txtEmail.TabIndex = 1;
             this.txtEmail.UseSystemPasswordChar = false;
+            this.txtEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmail_KeyDown);
             // 
             // lblDigiteEmail
             // 
