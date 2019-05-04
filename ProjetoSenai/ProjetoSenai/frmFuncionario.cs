@@ -37,5 +37,10 @@ namespace ProjetoSenai
         {
             userImportarDados.BringToFront();
         }
+
+        private void BtnCadastrarEmpresa_Click(object sender, EventArgs e)
+        {
+            userCadastrarEmpresa1.BringToFront();
+        }
     }
 }

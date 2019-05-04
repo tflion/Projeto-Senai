@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionario));
             this.pnlDireito = new System.Windows.Forms.Panel();
+            this.btnCadastrarEmpresa = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnImportarDados = new MaterialSkin.Controls.MaterialRaisedButton();
             this.userPrincipal = new ProjetoSenai.userPrincipal();
             this.userImportarDados = new ProjetoSenai.userImportarDados();
-            this.btnCadastrarEmpresa = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.userCadastrarEmpresa1 = new ProjetoSenai.userCadastrarEmpresa();
             this.pnlDireito.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,20 @@
             this.pnlDireito.Name = "pnlDireito";
             this.pnlDireito.Size = new System.Drawing.Size(199, 490);
             this.pnlDireito.TabIndex = 0;
+            // 
+            // btnCadastrarEmpresa
+            // 
+            this.btnCadastrarEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarEmpresa.Depth = 0;
+            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(-3, 110);
+            this.btnCadastrarEmpresa.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCadastrarEmpresa.Name = "btnCadastrarEmpresa";
+            this.btnCadastrarEmpresa.Primary = true;
+            this.btnCadastrarEmpresa.Size = new System.Drawing.Size(199, 51);
+            this.btnCadastrarEmpresa.TabIndex = 3;
+            this.btnCadastrarEmpresa.Text = "CADASTRAR EMPRESA";
+            this.btnCadastrarEmpresa.UseVisualStyleBackColor = true;
+            this.btnCadastrarEmpresa.Click += new System.EventHandler(this.BtnCadastrarEmpresa_Click);
             // 
             // btnImportarDados
             // 
@@ -75,24 +90,19 @@
             this.userImportarDados.Size = new System.Drawing.Size(549, 490);
             this.userImportarDados.TabIndex = 1;
             // 
-            // btnCadastrarEmpresa
+            // userCadastrarEmpresa1
             // 
-            this.btnCadastrarEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrarEmpresa.Depth = 0;
-            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(-3, 110);
-            this.btnCadastrarEmpresa.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCadastrarEmpresa.Name = "btnCadastrarEmpresa";
-            this.btnCadastrarEmpresa.Primary = true;
-            this.btnCadastrarEmpresa.Size = new System.Drawing.Size(199, 51);
-            this.btnCadastrarEmpresa.TabIndex = 3;
-            this.btnCadastrarEmpresa.Text = "CADASTRAR EMPRESA";
-            this.btnCadastrarEmpresa.UseVisualStyleBackColor = true;
+            this.userCadastrarEmpresa1.Location = new System.Drawing.Point(196, 64);
+            this.userCadastrarEmpresa1.Name = "userCadastrarEmpresa1";
+            this.userCadastrarEmpresa1.Size = new System.Drawing.Size(549, 490);
+            this.userCadastrarEmpresa1.TabIndex = 3;
             // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 554);
+            this.Controls.Add(this.userCadastrarEmpresa1);
             this.Controls.Add(this.userPrincipal);
             this.Controls.Add(this.userImportarDados);
             this.Controls.Add(this.pnlDireito);
@@ -113,5 +123,6 @@
         private userImportarDados userImportarDados;
         private userPrincipal userPrincipal;
         private MaterialSkin.Controls.MaterialRaisedButton btnCadastrarEmpresa;
+        private userCadastrarEmpresa userCadastrarEmpresa1;
     }
 }
