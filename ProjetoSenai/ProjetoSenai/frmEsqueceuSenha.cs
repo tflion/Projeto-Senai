@@ -37,14 +37,16 @@ namespace ProjetoSenai
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             lblResult.Text = "";
+            
 
             if (usuario.VerificarLogin(txtEmail.Text) > 0)
             {
                 //Mandar email
-                string emailCliente = txtEmail.Text;
-
                 MailMessage mail = new MailMessage();
 
+                //Colocando email e senha do cliente
+                string emailCliente = txtEmail.Text;
+                string senhaCliente = usuario.RetSenha(txtEmail.Text).Rows[0]["senha"].ToString();
                 //Quem vai mandar
                 mail.From = new MailAddress("no.suporte.reply@gmail.com");
                 //Quem vai receber
@@ -52,7 +54,7 @@ namespace ProjetoSenai
                 //Assunto
                 mail.Subject = "Recuperação de senha";
                 //Mensagem
-                mail.Body = "Sua senha do programa: ";
+                mail.Body = "Sua senha do programa: " + senhaCliente + " ";
 
                 //Criar smtp para enviar o email
                 using (var smtp = new SmtpClient("smtp.gmail.com"))
