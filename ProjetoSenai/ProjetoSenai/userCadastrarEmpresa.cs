@@ -17,9 +17,13 @@ namespace ProjetoSenai
 {
     public partial class userCadastrarEmpresa : UserControl
     {
+        ClassEmpresa empresa = new ClassEmpresa();
+        int codEmpresaClicada = 0;
+
         public userCadastrarEmpresa()
         {
             InitializeComponent();
+            //dgvEmpresa.DataSource = empresa.RetEmpresas();
         }
         private void MostrarCEP()
         {
@@ -114,6 +118,95 @@ namespace ProjetoSenai
         {
             //Colocar cep nas txtBox a partir do cep dado no mskBox
             MostrarCEP();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            PegarDados();
+            empresa.aluno_codAluno = 0;
+
+            if(empresa.Editar(codEmpresaClicada) == true)
+            {
+                MessageBox.Show("Empresa editada com sucesso.");
+                LimparTxt();
+            }
+        }
+
+        private void userCadastrarEmpresa_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparTxt();
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            PegarDados();
+
+            if(empresa.Inserir() == true)
+            {
+                MessageBox.Show("Empresa cadastrada com sucesso.");
+                LimparTxt();
+            }
+        }
+        private void LimparTxt()
+        {
+            txtNome.Text = "";
+            txtTelefone.Text = "";
+            txtEmail.Text = "";
+            txtCep.Text = "";
+            txtEstado.Text = "";
+            txtCidade.Text = "";
+            txtBairro.Text = "";
+            txtRua.Text = "";
+            txtComplemento.Text = "";
+            txtNumero.Text = "";
+        }
+        private void PegarDados()
+        {
+            //Pegar as informações para a inserção
+            empresa.nomeEmpresa = txtNome.Text;
+            empresa.telefone = txtTelefone.Text;
+            empresa.emailContato = txtEmail.Text;
+            empresa.cidade = txtCidade.Text;
+            empresa.estado = txtEstado.Text;
+            empresa.bairro = txtBairro.Text;
+            empresa.rua = txtRua.Text;
+            empresa.complemento = txtComplemento.Text;
+            empresa.numero = txtNumero.Text;
+            empresa.cep = txtCep.Text;
+        }
+
+        private void dgvEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Se clicar em algum codigo no dgv
+            if (dgvEmpresa.Rows[e.RowIndex].Cells["codEmpresa"].Value.ToString() != "")
+            {
+                //CodClicado recebe o campo clicado
+                codEmpresaClicada = int.Parse(dgvEmpresa.Rows[e.RowIndex].Cells["codEmpresa"].Value.ToString());
+            }
+            txtNome.Text = dgvEmpresa.Rows[e.RowIndex].Cells["nomeEmpresa"].Value.ToString();
+            txtTelefone.Text = dgvEmpresa.Rows[e.RowIndex].Cells["telefone"].Value.ToString();
+            txtEmail.Text = dgvEmpresa.Rows[e.RowIndex].Cells["emailContato"].Value.ToString();
+            txtCep.Text = dgvEmpresa.Rows[e.RowIndex].Cells["cep"].Value.ToString();
+            txtEstado.Text = dgvEmpresa.Rows[e.RowIndex].Cells["estado"].Value.ToString();
+            txtCidade.Text = dgvEmpresa.Rows[e.RowIndex].Cells["cidade"].Value.ToString();
+            txtBairro.Text = dgvEmpresa.Rows[e.RowIndex].Cells["bairro"].Value.ToString();
+            txtRua.Text = dgvEmpresa.Rows[e.RowIndex].Cells["rua"].Value.ToString();
+            txtComplemento.Text = dgvEmpresa.Rows[e.RowIndex].Cells["complemento"].Value.ToString();
+            txtNumero.Text = dgvEmpresa.Rows[e.RowIndex].Cells["numeroCasa"].Value.ToString();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if(empresa.Excluir(codEmpresaClicada) == true)
+            {
+                MessageBox.Show("Empresa excluida com sucesso.");
+                LimparTxt();
+            }
         }
     }
 }

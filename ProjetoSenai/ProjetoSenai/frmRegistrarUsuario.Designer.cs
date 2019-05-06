@@ -139,7 +139,7 @@
             this.btnCadastrar.Primary = true;
             this.btnCadastrar.Size = new System.Drawing.Size(141, 36);
             this.btnCadastrar.TabIndex = 5;
-            this.btnCadastrar.Text = "Enviar";
+            this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 

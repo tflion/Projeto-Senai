@@ -48,6 +48,13 @@
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
+            this.btnCadastrar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnLimpar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.btnEditar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnExcluir = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.dgvEmpresa = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNome
@@ -56,7 +63,7 @@
             this.lblNome.Depth = 0;
             this.lblNome.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNome.Location = new System.Drawing.Point(63, 44);
+            this.lblNome.Location = new System.Drawing.Point(19, 13);
             this.lblNome.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
@@ -69,7 +76,7 @@
             this.lblTelefone.Depth = 0;
             this.lblTelefone.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTelefone.Location = new System.Drawing.Point(45, 82);
+            this.lblTelefone.Location = new System.Drawing.Point(1, 51);
             this.lblTelefone.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(72, 19);
@@ -82,7 +89,7 @@
             this.lblEmail.Depth = 0;
             this.lblEmail.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEmail.Location = new System.Drawing.Point(66, 120);
+            this.lblEmail.Location = new System.Drawing.Point(22, 89);
             this.lblEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(51, 19);
@@ -95,7 +102,7 @@
             this.lblCidade.Depth = 0;
             this.lblCidade.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCidade.Location = new System.Drawing.Point(259, 190);
+            this.lblCidade.Location = new System.Drawing.Point(285, 121);
             this.lblCidade.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(59, 19);
@@ -108,7 +115,7 @@
             this.lblEstado.Depth = 0;
             this.lblEstado.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEstado.Location = new System.Drawing.Point(57, 190);
+            this.lblEstado.Location = new System.Drawing.Point(144, 121);
             this.lblEstado.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(60, 19);
@@ -121,7 +128,7 @@
             this.lblBairro.Depth = 0;
             this.lblBairro.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblBairro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblBairro.Location = new System.Drawing.Point(64, 239);
+            this.lblBairro.Location = new System.Drawing.Point(58, 161);
             this.lblBairro.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(53, 19);
@@ -134,7 +141,7 @@
             this.lblRua.Depth = 0;
             this.lblRua.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblRua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblRua.Location = new System.Drawing.Point(229, 239);
+            this.lblRua.Location = new System.Drawing.Point(223, 161);
             this.lblRua.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblRua.Name = "lblRua";
             this.lblRua.Size = new System.Drawing.Size(97, 19);
@@ -147,7 +154,7 @@
             this.lblComplemento.Depth = 0;
             this.lblComplemento.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblComplemento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblComplemento.Location = new System.Drawing.Point(9, 291);
+            this.lblComplemento.Location = new System.Drawing.Point(3, 187);
             this.lblComplemento.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblComplemento.Name = "lblComplemento";
             this.lblComplemento.Size = new System.Drawing.Size(108, 19);
@@ -160,7 +167,7 @@
             this.lblNumero.Depth = 0;
             this.lblNumero.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNumero.Location = new System.Drawing.Point(259, 291);
+            this.lblNumero.Location = new System.Drawing.Point(253, 187);
             this.lblNumero.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(67, 19);
@@ -173,7 +180,7 @@
             this.lblCep.Depth = 0;
             this.lblCep.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblCep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCep.Location = new System.Drawing.Point(80, 157);
+            this.lblCep.Location = new System.Drawing.Point(36, 119);
             this.lblCep.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(37, 19);
@@ -182,81 +189,163 @@
             // 
             // txtComplemento
             // 
-            this.txtComplemento.Location = new System.Drawing.Point(123, 292);
+            this.txtComplemento.Location = new System.Drawing.Point(117, 188);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(100, 20);
-            this.txtComplemento.TabIndex = 15;
+            this.txtComplemento.TabIndex = 9;
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(123, 240);
+            this.txtBairro.Location = new System.Drawing.Point(117, 162);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(100, 20);
-            this.txtBairro.TabIndex = 16;
+            this.txtBairro.TabIndex = 7;
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(123, 83);
+            this.txtTelefone.Location = new System.Drawing.Point(79, 52);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(291, 20);
-            this.txtTelefone.TabIndex = 19;
+            this.txtTelefone.TabIndex = 2;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(123, 121);
+            this.txtEmail.Location = new System.Drawing.Point(79, 90);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(291, 20);
-            this.txtEmail.TabIndex = 18;
+            this.txtEmail.TabIndex = 3;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(123, 45);
+            this.txtNome.Location = new System.Drawing.Point(79, 14);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(291, 20);
-            this.txtNome.TabIndex = 17;
+            this.txtNome.TabIndex = 1;
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(333, 191);
+            this.txtCidade.Location = new System.Drawing.Point(359, 122);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(100, 20);
-            this.txtCidade.TabIndex = 20;
+            this.txtCidade.Size = new System.Drawing.Size(111, 20);
+            this.txtCidade.TabIndex = 6;
             // 
             // txtRua
             // 
-            this.txtRua.Location = new System.Drawing.Point(333, 240);
+            this.txtRua.Location = new System.Drawing.Point(327, 162);
             this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(100, 20);
-            this.txtRua.TabIndex = 21;
+            this.txtRua.Size = new System.Drawing.Size(138, 20);
+            this.txtRua.TabIndex = 8;
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(333, 292);
+            this.txtNumero.Location = new System.Drawing.Point(327, 188);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 20);
-            this.txtNumero.TabIndex = 22;
+            this.txtNumero.Size = new System.Drawing.Size(138, 20);
+            this.txtNumero.TabIndex = 10;
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(123, 191);
+            this.txtEstado.Location = new System.Drawing.Point(210, 122);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(100, 20);
-            this.txtEstado.TabIndex = 24;
+            this.txtEstado.Size = new System.Drawing.Size(73, 20);
+            this.txtEstado.TabIndex = 5;
             // 
             // txtCep
             // 
-            this.txtCep.Location = new System.Drawing.Point(123, 158);
+            this.txtCep.Location = new System.Drawing.Point(79, 120);
             this.txtCep.Mask = "00000-000";
             this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(100, 20);
-            this.txtCep.TabIndex = 25;
+            this.txtCep.Size = new System.Drawing.Size(59, 20);
+            this.txtCep.TabIndex = 4;
             this.txtCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCep.Leave += new System.EventHandler(this.TxtCep_Leave);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.Depth = 0;
+            this.btnCadastrar.Location = new System.Drawing.Point(40, 286);
+            this.btnCadastrar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Primary = true;
+            this.btnCadastrar.Size = new System.Drawing.Size(141, 36);
+            this.btnCadastrar.TabIndex = 11;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.Depth = 0;
+            this.btnLimpar.Location = new System.Drawing.Point(40, 224);
+            this.btnLimpar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Primary = true;
+            this.btnLimpar.Size = new System.Drawing.Size(109, 36);
+            this.btnLimpar.TabIndex = 29;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // materialDivider1
+            // 
+            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(40, 340);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(430, 2);
+            this.materialDivider1.TabIndex = 30;
+            this.materialDivider1.Text = "materialDivider1";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.Depth = 0;
+            this.btnEditar.Location = new System.Drawing.Point(184, 286);
+            this.btnEditar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Primary = true;
+            this.btnEditar.Size = new System.Drawing.Size(141, 36);
+            this.btnEditar.TabIndex = 12;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluir.Depth = 0;
+            this.btnExcluir.Location = new System.Drawing.Point(328, 286);
+            this.btnExcluir.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Primary = true;
+            this.btnExcluir.Size = new System.Drawing.Size(141, 36);
+            this.btnExcluir.TabIndex = 13;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // dgvEmpresa
+            // 
+            this.dgvEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpresa.Location = new System.Drawing.Point(40, 348);
+            this.dgvEmpresa.Name = "dgvEmpresa";
+            this.dgvEmpresa.Size = new System.Drawing.Size(430, 139);
+            this.dgvEmpresa.TabIndex = 31;
+            this.dgvEmpresa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellClick);
             // 
             // userCadastrarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.dgvEmpresa);
+            this.Controls.Add(this.materialDivider1);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtCep);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtNumero);
@@ -279,6 +368,8 @@
             this.Controls.Add(this.lblNome);
             this.Name = "userCadastrarEmpresa";
             this.Size = new System.Drawing.Size(549, 490);
+            this.Load += new System.EventHandler(this.userCadastrarEmpresa_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +397,11 @@
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.MaskedTextBox txtCep;
+        private MaterialSkin.Controls.MaterialRaisedButton btnCadastrar;
+        private MaterialSkin.Controls.MaterialRaisedButton btnLimpar;
+        private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private MaterialSkin.Controls.MaterialRaisedButton btnEditar;
+        private MaterialSkin.Controls.MaterialRaisedButton btnExcluir;
+        private System.Windows.Forms.DataGridView dgvEmpresa;
     }
 }
