@@ -23,7 +23,7 @@ namespace ProjetoSenai
         public userCadastrarEmpresa()
         {
             InitializeComponent();
-            //dgvEmpresa.DataSource = empresa.RetEmpresas();
+            RetornarEmpresaDgv();
         }
         private void MostrarCEP()
         {
@@ -119,17 +119,63 @@ namespace ProjetoSenai
             //Colocar cep nas txtBox a partir do cep dado no mskBox
             MostrarCEP();
         }
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            if (ChecarTextos() == true)
+            {
+                PegarDados();
+
+                if (empresa.Inserir() == true)
+                {
+                    MessageBox.Show("Empresa cadastrada com sucesso.");
+                    LimparTxt();
+                    dgvEmpresa.DataSource = empresa.RetEmpresas();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Preencha corretamento todos os dados");
+            }
+        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            PegarDados();
-            empresa.aluno_codAluno = 0;
-
-            if(empresa.Editar(codEmpresaClicada) == true)
+            if(ChecarTextos() == true)
             {
-                MessageBox.Show("Empresa editada com sucesso.");
-                LimparTxt();
+                PegarDados();
+                empresa.aluno_codAluno = 0;
+
+                if (empresa.Editar(codEmpresaClicada) == true)
+                {
+                    MessageBox.Show("Empresa editada com sucesso.");
+                    LimparTxt();
+                    RetornarEmpresaDgv();
+                }
+            }else
+            {
+                MessageBox.Show("Preencha corretamento todos os dados");
             }
+
+
+        }
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Tem certeza que deseja excluir", "Exclusão", MessageBoxButtons.OKCancel);
+            if(dialog == DialogResult.Yes)
+            {
+                if (empresa.Excluir(codEmpresaClicada) == true)
+                {
+                    MessageBox.Show("Empresa excluida com sucesso.");
+                    LimparTxt();
+                    RetornarEmpresaDgv();
+                }
+            }
+            else
+            {
+                
+            }
+
+
         }
 
         private void userCadastrarEmpresa_Load(object sender, EventArgs e)
@@ -142,16 +188,7 @@ namespace ProjetoSenai
             LimparTxt();
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            PegarDados();
 
-            if(empresa.Inserir() == true)
-            {
-                MessageBox.Show("Empresa cadastrada com sucesso.");
-                LimparTxt();
-            }
-        }
         private void LimparTxt()
         {
             txtNome.Text = "";
@@ -179,6 +216,21 @@ namespace ProjetoSenai
             empresa.numero = txtNumero.Text;
             empresa.cep = txtCep.Text;
         }
+        private void RetornarEmpresaDgv()
+        {
+            dgvEmpresa.DataSource = empresa.RetEmpresas();
+        }
+        private bool ChecarTextos()
+        {
+            if (String.IsNullOrEmpty(txtNome.Text) || String.IsNullOrEmpty(txtTelefone.Text) || String.IsNullOrEmpty(txtEmail.Text) || String.IsNullOrEmpty(txtEstado.Text) || String.IsNullOrEmpty(txtCidade.Text) || String.IsNullOrEmpty(txtBairro.Text) || String.IsNullOrEmpty(txtNumero.Text) || String.IsNullOrEmpty(txtComplemento.Text) || String.IsNullOrEmpty(txtRua.Text) || String.IsNullOrEmpty(txtCep.Text))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
         private void dgvEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -200,13 +252,9 @@ namespace ProjetoSenai
             txtNumero.Text = dgvEmpresa.Rows[e.RowIndex].Cells["numeroCasa"].Value.ToString();
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(empresa.Excluir(codEmpresaClicada) == true)
-            {
-                MessageBox.Show("Empresa excluida com sucesso.");
-                LimparTxt();
-            }
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

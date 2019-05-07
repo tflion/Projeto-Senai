@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNome = new MaterialSkin.Controls.MaterialLabel();
             this.lblTelefone = new MaterialSkin.Controls.MaterialLabel();
             this.lblEmail = new MaterialSkin.Controls.MaterialLabel();
@@ -40,7 +44,6 @@
             this.lblCep = new MaterialSkin.Controls.MaterialLabel();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
@@ -54,6 +57,7 @@
             this.btnEditar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnExcluir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.dgvEmpresa = new System.Windows.Forms.DataGridView();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,7 +176,7 @@
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(67, 19);
             this.lblNumero.TabIndex = 8;
-            this.lblNumero.Text = "Numero:";
+            this.lblNumero.Text = "Número:";
             // 
             // lblCep
             // 
@@ -200,13 +204,6 @@
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(100, 20);
             this.txtBairro.TabIndex = 7;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(79, 52);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(291, 20);
-            this.txtTelefone.TabIndex = 2;
             // 
             // txtEmail
             // 
@@ -242,6 +239,7 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(138, 20);
             this.txtNumero.TabIndex = 10;
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
             // txtEstado
             // 
@@ -264,11 +262,11 @@
             // 
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.Depth = 0;
-            this.btnCadastrar.Location = new System.Drawing.Point(40, 286);
+            this.btnCadastrar.Location = new System.Drawing.Point(40, 250);
             this.btnCadastrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Primary = true;
-            this.btnCadastrar.Size = new System.Drawing.Size(141, 36);
+            this.btnCadastrar.Size = new System.Drawing.Size(141, 43);
             this.btnCadastrar.TabIndex = 11;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -278,13 +276,13 @@
             // 
             this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.Depth = 0;
-            this.btnLimpar.Location = new System.Drawing.Point(40, 224);
+            this.btnLimpar.Location = new System.Drawing.Point(420, 14);
             this.btnLimpar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Primary = true;
-            this.btnLimpar.Size = new System.Drawing.Size(109, 36);
+            this.btnLimpar.Size = new System.Drawing.Size(109, 56);
             this.btnLimpar.TabIndex = 29;
-            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.Text = "Limpar\r\ndados";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
@@ -292,7 +290,7 @@
             // 
             this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(40, 340);
+            this.materialDivider1.Location = new System.Drawing.Point(40, 314);
             this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider1.Name = "materialDivider1";
             this.materialDivider1.Size = new System.Drawing.Size(430, 2);
@@ -303,11 +301,11 @@
             // 
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Depth = 0;
-            this.btnEditar.Location = new System.Drawing.Point(184, 286);
+            this.btnEditar.Location = new System.Drawing.Point(183, 250);
             this.btnEditar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Primary = true;
-            this.btnEditar.Size = new System.Drawing.Size(141, 36);
+            this.btnEditar.Size = new System.Drawing.Size(141, 43);
             this.btnEditar.TabIndex = 12;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -317,11 +315,11 @@
             // 
             this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcluir.Depth = 0;
-            this.btnExcluir.Location = new System.Drawing.Point(328, 286);
+            this.btnExcluir.Location = new System.Drawing.Point(329, 250);
             this.btnExcluir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Primary = true;
-            this.btnExcluir.Size = new System.Drawing.Size(141, 36);
+            this.btnExcluir.Size = new System.Drawing.Size(141, 43);
             this.btnExcluir.TabIndex = 13;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -329,17 +327,56 @@
             // 
             // dgvEmpresa
             // 
+            this.dgvEmpresa.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpresa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpresa.Location = new System.Drawing.Point(40, 348);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmpresa.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvEmpresa.EnableHeadersVisualStyles = false;
+            this.dgvEmpresa.Location = new System.Drawing.Point(23, 322);
             this.dgvEmpresa.Name = "dgvEmpresa";
-            this.dgvEmpresa.Size = new System.Drawing.Size(430, 139);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            this.dgvEmpresa.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvEmpresa.Size = new System.Drawing.Size(472, 165);
             this.dgvEmpresa.TabIndex = 31;
             this.dgvEmpresa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellClick);
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(79, 51);
+            this.txtTelefone.Mask = "(00)0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefone.TabIndex = 2;
+            this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // userCadastrarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dgvEmpresa);
@@ -351,7 +388,6 @@
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.txtRua);
             this.Controls.Add(this.txtCidade);
-            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtBairro);
@@ -389,7 +425,6 @@
         private MaterialSkin.Controls.MaterialLabel lblCep;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtCidade;
@@ -403,5 +438,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnEditar;
         private MaterialSkin.Controls.MaterialRaisedButton btnExcluir;
         private System.Windows.Forms.DataGridView dgvEmpresa;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }

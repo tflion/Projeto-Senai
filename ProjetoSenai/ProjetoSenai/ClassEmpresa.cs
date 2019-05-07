@@ -28,7 +28,7 @@ namespace ProjetoSenai
             try
             {
                 bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("INSERT INTO Empresa (nomeEmpresa, telefone, emailContato, cidade, estado, bairro, rua, complemento, numero, cep) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", nomeEmpresa, telefone, emailContato, cidade, estado, bairro,
+                bd.ExecutarComandosSql(String.Format("INSERT INTO Empresa (nomeEmpresa, telefone, emailContato, cidade, estado, bairro, rua, complemento, numeroCasa, cep) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", nomeEmpresa, telefone, emailContato, cidade, estado, bairro,
                     rua, complemento, numero, cep));
                 bd.Desconectar();
                 return true;
@@ -45,8 +45,8 @@ namespace ProjetoSenai
             try
             {
                 bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET aluno_codAluno = {0}, nomeEmpresa = '{1}', telefone ='{2}', emailContato = '{3}', cidade = '{4}', estado = '{5}', bairro = '{6}', "
-                    + " rua = '{7}', complemento = '{8}', numero = '{9}', cep = '{10}' WHERE codEmpresa = {11}", aluno_codAluno, nomeEmpresa, telefone, emailContato, cidade, estado,
+                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET nomeEmpresa = '{0}', telefone ='{1}', emailContato = '{2}', cidade = '{3}', estado = '{4}', bairro = '{5}', "
+                    + " rua = '{6}', complemento = '{7}', numeroCasa = '{8}', cep = '{9}' WHERE codEmpresa = {10}", nomeEmpresa, telefone, emailContato, cidade, estado,
                     bairro, rua, complemento, numero, cep, codEmpresaClicada));
 
                 bd.Desconectar();
@@ -76,7 +76,7 @@ namespace ProjetoSenai
         public DataTable RetEmpresas()
         {
             bd.Conectar();
-            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Empresa'"));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Empresa"));
             bd.Desconectar();
             return dt;
         }
