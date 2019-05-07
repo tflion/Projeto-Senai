@@ -43,37 +43,54 @@ namespace ProjetoSenai
            
         }
 
+
         private void btnSelecionarArquivo_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            using (OpenFileDialog of = new OpenFileDialog() { Filter = "Excel Work Book 97-2003|*.xls|Excel Workbook|* .xlsx", ValidateNames = true })
             {
-                this.textBox_path.Text = openFileDialog.FileName;
+                if (of.ShowDialog() == DialogResult.OK)
+                {
+
+                    FileStream fs = File.Open(of.FileName, FileMode.Open, FileAccess.Read);
+                    IExcelDataReader reader;
+                    if (of.FilterIndex == 1)
+                        reader = ExcelReaderFactory.CreateBinaryReader(fs);
+                    else
+                        reader = ExcelReaderFactory.CreateOpenXmlReader(fs);
+
+
+
+                    result = reader.AsDataSet(new ExcelDataSetConfiguration()
+                    {
+                        ConfigureDataTable = (tableReader) => new ExcelDataTableConfiguration()
+                        {
+                            UseHeaderRow = true  // set to true to use excel first row as column in datagridview
+                        }
+
+                    });
+
+                    cboTipo.Items.Clear();
+                    foreach (DataTable dt in result.Tables)
+                    {
+                        cboTipo.Items.Add(dt.TableName);
+
+                    }
+                    reader.Close();
+
+
+                }
             }
         }
 
-        private void textBox_path_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void btnCarregarExcel_Click(object sender, EventArgs e)
+        private void cboTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string PatchConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + textBox_path.Text + ";Extended Properties = \"Excel 12.0 Xml;HDR=YES;Format=xls\"; ";
-            OleDbConnection conn = new OleDbConnection(PatchConn);
-
-            OleDbDataAdapter myDataAdapter = new OleDbDataAdapter("Select * From [" + textBox_sheet.Text + "]", conn);
-            DataTable dt = new DataTable();
-
-            myDataAdapter.Fill(dt);
-
-            dgvExcel.DataSource = dt;
-        }
-
-        private void userImportarDados_Load(object sender, EventArgs e)
-        {
-
+            dgvExcel.DataSource = result.Tables[cboTipo.SelectedIndex];
         }
     }
 }
+
