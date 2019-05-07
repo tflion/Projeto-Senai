@@ -43,7 +43,7 @@
             // 
             this.lblEsqueceuSenha.AutoSize = true;
             this.lblEsqueceuSenha.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEsqueceuSenha.Location = new System.Drawing.Point(64, 206);
+            this.lblEsqueceuSenha.Location = new System.Drawing.Point(73, 215);
             this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
             this.lblEsqueceuSenha.Size = new System.Drawing.Size(328, 44);
             this.lblEsqueceuSenha.TabIndex = 16;
@@ -64,7 +64,7 @@
             this.txtEmail.Depth = 0;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Hint = "Email";
-            this.txtEmail.Location = new System.Drawing.Point(72, 321);
+            this.txtEmail.Location = new System.Drawing.Point(81, 330);
             this.txtEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -82,7 +82,7 @@
             this.lblDigiteEmail.Depth = 0;
             this.lblDigiteEmail.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblDigiteEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDigiteEmail.Location = new System.Drawing.Point(68, 280);
+            this.lblDigiteEmail.Location = new System.Drawing.Point(77, 289);
             this.lblDigiteEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblDigiteEmail.Name = "lblDigiteEmail";
             this.lblDigiteEmail.Size = new System.Drawing.Size(264, 19);
@@ -94,7 +94,7 @@
             this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnviar.Depth = 0;
             this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.Location = new System.Drawing.Point(141, 420);
+            this.btnEnviar.Location = new System.Drawing.Point(150, 429);
             this.btnEnviar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Primary = true;
@@ -121,7 +121,7 @@
             this.lblResult.Depth = 0;
             this.lblResult.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblResult.Location = new System.Drawing.Point(68, 371);
+            this.lblResult.Location = new System.Drawing.Point(77, 380);
             this.lblResult.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(0, 19);

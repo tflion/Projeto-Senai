@@ -21,8 +21,6 @@ namespace ProjetoSenai
         public string numero { get; set; }
         public string cep { get; set; }
 
-        int codEmpresaClicada = 0;
-
         ClassAcessoBD bd = new ClassAcessoBD();
 
         public bool Inserir()
@@ -30,7 +28,7 @@ namespace ProjetoSenai
             try
             {
                 bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("INSERT INTO Empresa (aluno_codAluno, nomeEmpresa, telefone, emailContato, cidade, estado, bairro, rua, complemento, numero, cep) VALUES ({0},'{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')", aluno_codAluno, nomeEmpresa, telefone, emailContato, cidade, estado, bairro,
+                bd.ExecutarComandosSql(String.Format("INSERT INTO Empresa (nomeEmpresa, telefone, emailContato, cidade, estado, bairro, rua, complemento, numero, cep) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", nomeEmpresa, telefone, emailContato, cidade, estado, bairro,
                     rua, complemento, numero, cep));
                 bd.Desconectar();
                 return true;
@@ -66,7 +64,7 @@ namespace ProjetoSenai
             try
             {
                 bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("DELETE FROM Empresa WHERE codEmpresa LIKE %{0}%", codEmpresaClicada));
+                bd.ExecutarComandosSql(String.Format("DELETE FROM Empresa WHERE codEmpresa LIKE {0}", codEmpresaClicada));
                 bd.Desconectar();
                 return true;
             }

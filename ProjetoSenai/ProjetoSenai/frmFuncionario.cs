@@ -40,7 +40,12 @@ namespace ProjetoSenai
 
         private void BtnCadastrarEmpresa_Click(object sender, EventArgs e)
         {
-            userCadastrarEmpresa1.BringToFront();
+            userCadastrarEmpresa2.BringToFront();
+        }
+
+        private void userCadastrarEmpresa1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

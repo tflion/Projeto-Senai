@@ -32,9 +32,10 @@
             this.pnlDireito = new System.Windows.Forms.Panel();
             this.btnCadastrarEmpresa = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnImportarDados = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.userCadastrarEmpresa1 = new ProjetoSenai.userCadastrarEmpresa();
             this.userPrincipal = new ProjetoSenai.userPrincipal();
             this.userImportarDados = new ProjetoSenai.userImportarDados();
-            this.userCadastrarEmpresa1 = new ProjetoSenai.userCadastrarEmpresa();
+            this.userCadastrarEmpresa2 = new ProjetoSenai.userCadastrarEmpresa();
             this.pnlDireito.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +77,14 @@
             this.btnImportarDados.UseVisualStyleBackColor = true;
             this.btnImportarDados.Click += new System.EventHandler(this.btnImportarDados_Click);
             // 
+            // userCadastrarEmpresa1
+            // 
+            this.userCadastrarEmpresa1.Location = new System.Drawing.Point(196, 64);
+            this.userCadastrarEmpresa1.Name = "userCadastrarEmpresa1";
+            this.userCadastrarEmpresa1.Size = new System.Drawing.Size(549, 490);
+            this.userCadastrarEmpresa1.TabIndex = 3;
+            this.userCadastrarEmpresa1.Load += new System.EventHandler(this.userCadastrarEmpresa1_Load);
+            // 
             // userPrincipal
             // 
             this.userPrincipal.Location = new System.Drawing.Point(196, 64);
@@ -90,19 +99,19 @@
             this.userImportarDados.Size = new System.Drawing.Size(549, 490);
             this.userImportarDados.TabIndex = 1;
             // 
-            // userCadastrarEmpresa1
+            // userCadastrarEmpresa2
             // 
-            this.userCadastrarEmpresa1.Location = new System.Drawing.Point(196, 64);
-            this.userCadastrarEmpresa1.Name = "userCadastrarEmpresa1";
-            this.userCadastrarEmpresa1.Size = new System.Drawing.Size(549, 490);
-            this.userCadastrarEmpresa1.TabIndex = 3;
+            this.userCadastrarEmpresa2.Location = new System.Drawing.Point(196, 64);
+            this.userCadastrarEmpresa2.Name = "userCadastrarEmpresa2";
+            this.userCadastrarEmpresa2.Size = new System.Drawing.Size(549, 490);
+            this.userCadastrarEmpresa2.TabIndex = 3;
             // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 554);
-            this.Controls.Add(this.userCadastrarEmpresa1);
+            this.Controls.Add(this.userCadastrarEmpresa2);
             this.Controls.Add(this.userPrincipal);
             this.Controls.Add(this.userImportarDados);
             this.Controls.Add(this.pnlDireito);
@@ -124,5 +133,6 @@
         private userPrincipal userPrincipal;
         private MaterialSkin.Controls.MaterialRaisedButton btnCadastrarEmpresa;
         private userCadastrarEmpresa userCadastrarEmpresa1;
+        private userCadastrarEmpresa userCadastrarEmpresa2;
     }
 }

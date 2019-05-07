@@ -45,10 +45,7 @@ namespace ProjetoSenai
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
-            txtNome.Text = "";
-            txtEmail.Text = "";
-            txtSenha.Text = "";
-            txtConfirmaSenha.Text = "";
+            LimparTxt();
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
@@ -77,10 +74,7 @@ namespace ProjetoSenai
                 if (usuario.InserirUsuario() == true)
                 {
                     MessageBox.Show("Usuário cadastrado com sucesso.");
-                    txtNome.Text = "";
-                    txtEmail.Text = "";
-                    txtSenha.Text = "";
-                    txtConfirmaSenha.Text = "";
+                    LimparTxt();
                 }
             }
         }
@@ -95,6 +89,13 @@ namespace ProjetoSenai
         {
             //Tampar senha
             txtConfirmaSenha.UseSystemPasswordChar = true;
+        }
+        private void LimparTxt()
+        {
+            txtNome.Text = "";
+            txtEmail.Text = "";
+            txtSenha.Text = "";
+            txtConfirmaSenha.Text = "";
         }
     }
 }
