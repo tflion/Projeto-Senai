@@ -56,7 +56,7 @@ namespace ProjetoSenai
             //Se for diferente então irá apagar e mandar msgBox
             if (txtSenha.Text != txtConfirmaSenha.Text)
             {
-                MessageBox.Show("Senhas não conferem, digite a senha novamente.");
+                MyMessageBox.Show("Favor informar a senha novamente!","Senhas não conferem","Confirmar","Cancelar");
                 txtSenha.Text = "";
                 txtConfirmaSenha.Text = "";
                 txtSenha.Focus();
