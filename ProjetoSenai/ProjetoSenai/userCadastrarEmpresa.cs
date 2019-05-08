@@ -160,7 +160,7 @@ namespace ProjetoSenai
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Tem certeza que deseja excluir", "Exclusão", MessageBoxButtons.OKCancel);
+            DialogResult dialog = MessageBox.Show("Tem certeza que deseja excluir", "Exclusão",MessageBoxButtons.OKCancel);
             if(dialog == DialogResult.Yes)
             {
                 if (empresa.Excluir(codEmpresaClicada) == true)
