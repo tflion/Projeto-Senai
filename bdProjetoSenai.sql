@@ -138,5 +138,12 @@ aluno_codAluno	   INT,
 FOREIGN KEY (aluno_codAluno)
 	REFERENCES aluno (codAluno)
 );
+create table test(
+
+codAluno int PRIMARY KEY,
+nome varchar(20),
+curso varchar(20),
+telefone varchar(30));
+
 
 
