@@ -97,5 +97,20 @@ namespace ProjetoSenai
             txtSenha.Text = "";
             txtConfirmaSenha.Text = "";
         }
+
+        private void btnCadastrarUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnImportarDados_MouseEnter(object sender, EventArgs e)
+        {
+            btnImportarDados.BackColor = Color.FromArgb(245, 62, 56);
+        }
+
+        private void btnImportarDados_MouseHover(object sender, EventArgs e)
+        {
+            btnImportarDados.BackColor = Color.FromArgb(245, 62, 56);
+        }
     }
 }

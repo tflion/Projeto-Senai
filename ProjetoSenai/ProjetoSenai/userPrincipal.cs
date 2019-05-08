@@ -30,5 +30,15 @@ namespace ProjetoSenai
                 TextShade.WHITE
             );
         }
+
+        private void lblEscolha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
