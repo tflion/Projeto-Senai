@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionario));
             this.pnlDireito = new System.Windows.Forms.Panel();
-            this.btnCadastrarEmpresa = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnImportarDados = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.userCadastrarEmpresa1 = new ProjetoSenai.userCadastrarEmpresa();
+            this.btnCadastrarEmpresa = new System.Windows.Forms.Button();
+            this.btnImportarDados = new System.Windows.Forms.Button();
+            this.userCadastrarEmpresa2 = new ProjetoSenai.userCadastrarEmpresa();
             this.userPrincipal = new ProjetoSenai.userPrincipal();
             this.userImportarDados = new ProjetoSenai.userImportarDados();
-            this.userCadastrarEmpresa2 = new ProjetoSenai.userCadastrarEmpresa();
+            this.userCadastrarEmpresa1 = new ProjetoSenai.userCadastrarEmpresa();
             this.pnlDireito.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,42 +48,55 @@
             this.pnlDireito.Name = "pnlDireito";
             this.pnlDireito.Size = new System.Drawing.Size(199, 490);
             this.pnlDireito.TabIndex = 0;
+            this.pnlDireito.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDireito_Paint);
             // 
             // btnCadastrarEmpresa
             // 
-            this.btnCadastrarEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrarEmpresa.Depth = 0;
-            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(-3, 110);
-            this.btnCadastrarEmpresa.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCadastrarEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.btnCadastrarEmpresa.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarEmpresa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarEmpresa.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrarEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarEmpresa.Image")));
+            this.btnCadastrarEmpresa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(3, 184);
             this.btnCadastrarEmpresa.Name = "btnCadastrarEmpresa";
-            this.btnCadastrarEmpresa.Primary = true;
-            this.btnCadastrarEmpresa.Size = new System.Drawing.Size(199, 51);
-            this.btnCadastrarEmpresa.TabIndex = 3;
+            this.btnCadastrarEmpresa.Size = new System.Drawing.Size(187, 62);
+            this.btnCadastrarEmpresa.TabIndex = 5;
             this.btnCadastrarEmpresa.Text = "CADASTRAR EMPRESA";
-            this.btnCadastrarEmpresa.UseVisualStyleBackColor = true;
-            this.btnCadastrarEmpresa.Click += new System.EventHandler(this.BtnCadastrarEmpresa_Click);
+            this.btnCadastrarEmpresa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCadastrarEmpresa.UseVisualStyleBackColor = false;
+            this.btnCadastrarEmpresa.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnCadastrarEmpresa.MouseEnter += new System.EventHandler(this.btnCadastrarEmpresa_MouseEnter);
+            this.btnCadastrarEmpresa.MouseHover += new System.EventHandler(this.btnCadastrarEmpresa_MouseHover);
             // 
             // btnImportarDados
             // 
-            this.btnImportarDados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImportarDados.Depth = 0;
-            this.btnImportarDados.Location = new System.Drawing.Point(-3, 53);
-            this.btnImportarDados.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnImportarDados.BackColor = System.Drawing.Color.Transparent;
+            this.btnImportarDados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImportarDados.FlatAppearance.BorderSize = 0;
+            this.btnImportarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportarDados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportarDados.ForeColor = System.Drawing.Color.White;
+            this.btnImportarDados.Image = ((System.Drawing.Image)(resources.GetObject("btnImportarDados.Image")));
+            this.btnImportarDados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnImportarDados.Location = new System.Drawing.Point(3, 61);
             this.btnImportarDados.Name = "btnImportarDados";
-            this.btnImportarDados.Primary = true;
-            this.btnImportarDados.Size = new System.Drawing.Size(199, 51);
-            this.btnImportarDados.TabIndex = 2;
-            this.btnImportarDados.Text = "Importar dados do excel";
-            this.btnImportarDados.UseVisualStyleBackColor = true;
-            this.btnImportarDados.Click += new System.EventHandler(this.btnImportarDados_Click);
+            this.btnImportarDados.Size = new System.Drawing.Size(187, 77);
+            this.btnImportarDados.TabIndex = 4;
+            this.btnImportarDados.Text = "IMPORTAR DADOS DO EXCEL";
+            this.btnImportarDados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnImportarDados.UseVisualStyleBackColor = false;
+            this.btnImportarDados.Click += new System.EventHandler(this.button1_Click);
+            this.btnImportarDados.MouseEnter += new System.EventHandler(this.btnImportarDados_MouseEnter);
+            this.btnImportarDados.MouseHover += new System.EventHandler(this.btnImportarDados_MouseHover_1);
             // 
-            // userCadastrarEmpresa1
+            // userCadastrarEmpresa2
             // 
-            this.userCadastrarEmpresa1.Location = new System.Drawing.Point(196, 64);
-            this.userCadastrarEmpresa1.Name = "userCadastrarEmpresa1";
-            this.userCadastrarEmpresa1.Size = new System.Drawing.Size(549, 490);
-            this.userCadastrarEmpresa1.TabIndex = 3;
-            this.userCadastrarEmpresa1.Load += new System.EventHandler(this.userCadastrarEmpresa1_Load);
+            this.userCadastrarEmpresa2.Location = new System.Drawing.Point(196, 64);
+            this.userCadastrarEmpresa2.Name = "userCadastrarEmpresa2";
+            this.userCadastrarEmpresa2.Size = new System.Drawing.Size(549, 490);
+            this.userCadastrarEmpresa2.TabIndex = 3;
             // 
             // userPrincipal
             // 
@@ -99,12 +112,13 @@
             this.userImportarDados.Size = new System.Drawing.Size(549, 490);
             this.userImportarDados.TabIndex = 1;
             // 
-            // userCadastrarEmpresa2
+            // userCadastrarEmpresa1
             // 
-            this.userCadastrarEmpresa2.Location = new System.Drawing.Point(196, 64);
-            this.userCadastrarEmpresa2.Name = "userCadastrarEmpresa2";
-            this.userCadastrarEmpresa2.Size = new System.Drawing.Size(549, 490);
-            this.userCadastrarEmpresa2.TabIndex = 3;
+            this.userCadastrarEmpresa1.Location = new System.Drawing.Point(196, 64);
+            this.userCadastrarEmpresa1.Name = "userCadastrarEmpresa1";
+            this.userCadastrarEmpresa1.Size = new System.Drawing.Size(549, 490);
+            this.userCadastrarEmpresa1.TabIndex = 3;
+            this.userCadastrarEmpresa1.Load += new System.EventHandler(this.userCadastrarEmpresa1_Load);
             // 
             // frmFuncionario
             // 
@@ -128,11 +142,11 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlDireito;
-        private MaterialSkin.Controls.MaterialRaisedButton btnImportarDados;
         private userImportarDados userImportarDados;
         private userPrincipal userPrincipal;
-        private MaterialSkin.Controls.MaterialRaisedButton btnCadastrarEmpresa;
         private userCadastrarEmpresa userCadastrarEmpresa1;
         private userCadastrarEmpresa userCadastrarEmpresa2;
+        private System.Windows.Forms.Button btnImportarDados;
+        private System.Windows.Forms.Button btnCadastrarEmpresa;
     }
 }

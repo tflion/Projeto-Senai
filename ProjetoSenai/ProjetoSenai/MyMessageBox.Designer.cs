@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyMessageBox));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCancel = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnOk = new MaterialSkin.Controls.MaterialRaisedButton();
             this.lblMensagem = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -43,7 +43,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnOk);
             this.panel1.Controls.Add(this.lblMensagem);
@@ -51,19 +50,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 236);
             this.panel1.TabIndex = 0;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Depth = 0;
-            this.btnCancel.Location = new System.Drawing.Point(133, 202);
-            this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Primary = true;
-            this.btnCancel.Size = new System.Drawing.Size(91, 30);
-            this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -75,6 +61,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 32);
             this.panel2.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjetoSenai.Properties.Resources.Fechar2;
+            this.pictureBox1.Location = new System.Drawing.Point(227, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 22);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblTitulo
             // 
@@ -91,7 +87,7 @@
             // 
             this.btnOk.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOk.Depth = 0;
-            this.btnOk.Location = new System.Drawing.Point(26, 202);
+            this.btnOk.Location = new System.Drawing.Point(79, 196);
             this.btnOk.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnOk.Name = "btnOk";
             this.btnOk.Primary = true;
@@ -99,26 +95,17 @@
             this.btnOk.TabIndex = 9;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click_1);
             // 
             // lblMensagem
             // 
             this.lblMensagem.AutoSize = true;
             this.lblMensagem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensagem.Location = new System.Drawing.Point(3, 112);
+            this.lblMensagem.Location = new System.Drawing.Point(3, 59);
             this.lblMensagem.Name = "lblMensagem";
             this.lblMensagem.Size = new System.Drawing.Size(79, 17);
             this.lblMensagem.TabIndex = 8;
             this.lblMensagem.Text = "Mensagem";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjetoSenai.Properties.Resources.Fechar2;
-            this.pictureBox1.Location = new System.Drawing.Point(227, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 22);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // MyMessageBox
             // 
@@ -129,6 +116,7 @@
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MyMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
@@ -143,7 +131,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private MaterialSkin.Controls.MaterialRaisedButton btnCancel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitulo;
         private MaterialSkin.Controls.MaterialRaisedButton btnOk;

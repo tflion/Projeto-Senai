@@ -33,19 +33,50 @@ namespace ProjetoSenai
             );
         }
 
-        private void btnImportarDados_Click(object sender, EventArgs e)
+        private void userCadastrarEmpresa1_Load(object sender, EventArgs e)
         {
-            userImportarDados.BringToFront();
+
         }
 
-        private void BtnCadastrarEmpresa_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            userImportarDados.BringToFront();
+          
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             userCadastrarEmpresa2.BringToFront();
         }
 
-        private void userCadastrarEmpresa1_Load(object sender, EventArgs e)
+        private void pnlDireito_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnImportarDados_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnImportarDados_MouseEnter(object sender, EventArgs e)
+        {
+            btnImportarDados.BackColor = Color.FromArgb(245, 62, 56);
+        }
+
+        private void btnImportarDados_MouseHover_1(object sender, EventArgs e)
+        {
+            btnImportarDados.BackColor = Color.FromArgb(245, 62, 56);
+        }
+
+        private void btnCadastrarEmpresa_MouseEnter(object sender, EventArgs e)
+        {
+            btnImportarDados.BackColor = Color.FromArgb(245, 62, 56);
+        }
+
+        private void btnCadastrarEmpresa_MouseHover(object sender, EventArgs e)
+        {
+            btnImportarDados.BackColor = Color.FromArgb(245, 62, 56);
         }
     }
 }
