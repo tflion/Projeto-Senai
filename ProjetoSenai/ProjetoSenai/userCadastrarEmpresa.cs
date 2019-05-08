@@ -59,7 +59,7 @@ namespace ProjetoSenai
                                     string[] valor = substring.Split(":".ToCharArray());
                                     if (valor[0] == "  erro")
                                     {
-                                        MessageBox.Show("CEP não encontrado");
+                                        MyMessageBox.Show("  O CEP inserido não foi localizado. \n Favor inserir novamente um válido.", "CEP não encontrado", "OK");
                                         txtCep.Focus();
                                         return;
                                     }
@@ -108,9 +108,9 @@ namespace ProjetoSenai
             }
             else
             {
-                MessageBox.Show("Cep vazio");
+                MyMessageBox.Show(" Favor inserir o CEP para o preenchi- \n mento automático.", "CEP vazio", "OK");
             }
-            
+
 
         }
 
@@ -127,14 +127,14 @@ namespace ProjetoSenai
 
                 if (empresa.Inserir() == true)
                 {
-                    MessageBox.Show("Empresa cadastrada com sucesso.");
+                    MyMessageBox.Show("     A empresa foi cadastrada com \n                      sucesso!", "Cadastro realizado", "OK");
                     LimparTxt();
                     dgvEmpresa.DataSource = empresa.RetEmpresas();
                 }
             }
             else
             {
-                MessageBox.Show("Preencha corretamento todos os dados");
+                MyMessageBox.Show("  Preencha corretamente todos os  \n                      campos!", "Validação", "OK");
             }
         }
 
@@ -147,13 +147,13 @@ namespace ProjetoSenai
 
                 if (empresa.Editar(codEmpresaClicada) == true)
                 {
-                    MessageBox.Show("Empresa editada com sucesso.");
+                    MyMessageBox.Show(" A edição da empresa foi realizada \n                  com sucesso!", "Validação", "OK");
                     LimparTxt();
                     RetornarEmpresaDgv();
                 }
             }else
             {
-                MessageBox.Show("Preencha corretamento todos os dados");
+                MyMessageBox.Show("  Preencha corretamente todos os  \n                      campos!", "Validação", "OK");
             }
 
 
@@ -165,7 +165,7 @@ namespace ProjetoSenai
             {
                 if (empresa.Excluir(codEmpresaClicada) == true)
                 {
-                    MessageBox.Show("Empresa excluida com sucesso.");
+                    MyMessageBox.Show("  A Empresa excluída com sucesso!", "Validação", "OK");
                     LimparTxt();
                     RetornarEmpresaDgv();
                 }

@@ -54,7 +54,7 @@ namespace ProjetoSenai
             }
             else
             {
-                MessageBox.Show("E-mail ou senha incorretos");
+                MyMessageBox.Show("        E-mail ou senha incorretos! \n                Tente novamente.", "Usuário não cadastrado", "OK");
                 txtEmail.Text = "";
                 txtSenha.Text = "";
             }

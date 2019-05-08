@@ -23,29 +23,25 @@ namespace ProjetoSenai
         public enum CustomMessageBoxTxtBoxState { VisibleChar, PasswordChar, VisibleCharReadOnly }
         #endregion
 
-        public static DialogResult Show(string text, string title, CustomMessageBoxButtons buttons)
+        public static DialogResult Show(string text, string title, string btnOk)
         {
             MsgBox = new MyMessageBox();
             MsgBox.lblMensagem.Text = text;
             MsgBox.lblTitulo.Text = title;
             result = DialogResult.No;
-            if (buttons == CustomMessageBoxButtons.Ok)
-            {
-                MsgBox.btnOk.Location = new Point(86, 70);
-                MsgBox.btnCancel.Visible = false;
-            }
+            
             MsgBox.ShowDialog();
             return result;
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Yes;
+            this.DialogResult = DialogResult.OK;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.No;
+            this.Close();
 
         }
 
@@ -53,5 +49,10 @@ namespace ProjetoSenai
         {
             this.Close();
         }
+
+        private void btnOk_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+                }
     }
 }

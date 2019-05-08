@@ -53,7 +53,7 @@ namespace ProjetoSenai
             //Se for diferente então irá apagar e mandar msgBox
             if (txtSenha.Text != txtConfirmaSenha.Text)
             {
-                MessageBox.Show("Favor informar a senha novamente!","Senhas não conferem");
+                MyMessageBox.Show(" Favor informar a senha novamente!", "Senhas não conferem", "OK");
                 txtSenha.Text = "";
                 txtConfirmaSenha.Text = "";
                 txtSenha.Focus();
@@ -61,7 +61,7 @@ namespace ProjetoSenai
             //Verificar email
             }else if(usuario.validarEmail(txtEmail.Text) == false)
             {
-                MessageBox.Show("Email inválido, tente novamente.");
+                MyMessageBox.Show("   Email o email inserido é inválido, \n             tente novamente!", "Email inválido", "OK");
                 txtEmail.Text = "";
                 txtEmail.Focus();
             }else
@@ -73,7 +73,7 @@ namespace ProjetoSenai
 
                 if (usuario.InserirUsuario() == true)
                 {
-                    MessageBox.Show("Usuário cadastrado com sucesso.");
+                    MyMessageBox.Show("  Usuário  cadastrado com sucesso! \n \n \n   Pressione ''voltar'' para efetuar o \n                        login.", "Cadastrado realizado", "OK");
                     LimparTxt();
                 }
             }
