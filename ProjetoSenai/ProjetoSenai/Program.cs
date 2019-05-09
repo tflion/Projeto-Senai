@@ -16,7 +16,7 @@ namespace ProjetoSenai
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new test());
+            Application.Run(new frmLogin());
         }
     }
 }
