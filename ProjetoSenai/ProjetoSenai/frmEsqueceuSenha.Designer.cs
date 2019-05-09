@@ -157,7 +157,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEsqueceuSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SENAI - Serviço de aprendizagem industrial";
+            this.Text = "SENAI - Serviço Nacional de Aprendizagem Industrial";
             this.ResumeLayout(false);
             this.PerformLayout();
 

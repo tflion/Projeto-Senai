@@ -100,6 +100,7 @@
             // 
             // userPrincipal
             // 
+            this.userPrincipal.BackColor = System.Drawing.Color.White;
             this.userPrincipal.Location = new System.Drawing.Point(196, 64);
             this.userPrincipal.Name = "userPrincipal";
             this.userPrincipal.Size = new System.Drawing.Size(549, 490);
@@ -133,7 +134,7 @@
             this.MaximumSize = new System.Drawing.Size(745, 554);
             this.Name = "frmFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SENAI - serviço de aprendizagem industrial";
+            this.Text = "SENAI - Serviço Nacional de Aprendizagem Industrial";
             this.pnlDireito.ResumeLayout(false);
             this.ResumeLayout(false);
 

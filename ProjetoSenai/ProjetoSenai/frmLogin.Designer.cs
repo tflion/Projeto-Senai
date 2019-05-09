@@ -99,6 +99,9 @@
             this.lblEsqueceuSenha.TabIndex = 7;
             this.lblEsqueceuSenha.Text = "Esqueceu a senha ?";
             this.lblEsqueceuSenha.Click += new System.EventHandler(this.lblEsqueceuSenha_Click);
+            this.lblEsqueceuSenha.MouseEnter += new System.EventHandler(this.lblEsqueceuSenha_MouseEnter);
+            this.lblEsqueceuSenha.MouseLeave += new System.EventHandler(this.lblEsqueceuSenha_MouseLeave);
+            this.lblEsqueceuSenha.MouseHover += new System.EventHandler(this.lblEsqueceuSenha_MouseHover);
             // 
             // lblRegistro
             // 
@@ -114,6 +117,9 @@
             this.lblRegistro.TabIndex = 8;
             this.lblRegistro.Text = "Registrar";
             this.lblRegistro.Click += new System.EventHandler(this.lblRegistro_Click);
+            this.lblRegistro.MouseEnter += new System.EventHandler(this.lblRegistro_MouseEnter);
+            this.lblRegistro.MouseLeave += new System.EventHandler(this.lblRegistro_MouseLeave);
+            this.lblRegistro.MouseHover += new System.EventHandler(this.lblRegistro_MouseHover);
             // 
             // btnLogin
             // 
@@ -167,7 +173,7 @@
             this.MaximumSize = new System.Drawing.Size(465, 527);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SENAI - Serviço de aprendizagem industrial";
+            this.Text = "SENAI - Serviço Nacional de Aprendizagem Industrial";
             this.ResumeLayout(false);
             this.PerformLayout();
 

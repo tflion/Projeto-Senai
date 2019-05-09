@@ -93,5 +93,43 @@ namespace ProjetoSenai
                 btnLogin.PerformClick();
             }
         }
+        Label clickedLabel;
+        private void lblEsqueceuSenha_MouseHover(object sender, EventArgs e)
+        {
+            Label theLabel = (Label)sender;
+            if (theLabel != clickedLabel)
+                theLabel.ForeColor = Color.Red;
+        }
+
+        private void lblEsqueceuSenha_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lblEsqueceuSenha_MouseLeave(object sender, EventArgs e)
+        {
+            Label theLabel = (Label)sender;
+            if (theLabel != clickedLabel)
+                theLabel.ForeColor = Color.Black;
+        }
+
+        private void lblRegistro_MouseEnter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void lblRegistro_MouseHover(object sender, EventArgs e)
+        {
+            Label theLabel = (Label)sender;
+            if (theLabel != clickedLabel)
+                theLabel.ForeColor = Color.Red;
+        }
+
+        private void lblRegistro_MouseLeave(object sender, EventArgs e)
+        {
+            Label theLabel = (Label)sender;
+            if (theLabel != clickedLabel)
+                theLabel.ForeColor = Color.Black;
+        }
     }
 }

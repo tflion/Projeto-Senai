@@ -78,5 +78,10 @@ namespace ProjetoSenai
         {
             btnImportarDados.BackColor = Color.FromArgb(245, 62, 56);
         }
+
+        private void materialDivider1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

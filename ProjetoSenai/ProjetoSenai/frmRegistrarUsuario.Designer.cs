@@ -33,10 +33,10 @@
             this.lblEmail = new MaterialSkin.Controls.MaterialLabel();
             this.lblSenha = new MaterialSkin.Controls.MaterialLabel();
             this.pnlDireito = new System.Windows.Forms.Panel();
+            this.btnImportarDados = new System.Windows.Forms.Button();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.btnVoltarLogin = new System.Windows.Forms.Button();
             this.lblSenha1 = new MaterialSkin.Controls.MaterialLabel();
-            this.btnImportarDados = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -94,6 +94,26 @@
             this.pnlDireito.Size = new System.Drawing.Size(206, 490);
             this.pnlDireito.TabIndex = 3;
             // 
+            // btnImportarDados
+            // 
+            this.btnImportarDados.BackColor = System.Drawing.Color.Transparent;
+            this.btnImportarDados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImportarDados.FlatAppearance.BorderSize = 0;
+            this.btnImportarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportarDados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportarDados.ForeColor = System.Drawing.Color.White;
+            this.btnImportarDados.Image = ((System.Drawing.Image)(resources.GetObject("btnImportarDados.Image")));
+            this.btnImportarDados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnImportarDados.Location = new System.Drawing.Point(3, 68);
+            this.btnImportarDados.Name = "btnImportarDados";
+            this.btnImportarDados.Size = new System.Drawing.Size(187, 70);
+            this.btnImportarDados.TabIndex = 5;
+            this.btnImportarDados.Text = "CADASTRAR USUÁRIO";
+            this.btnImportarDados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnImportarDados.UseVisualStyleBackColor = false;
+            this.btnImportarDados.MouseEnter += new System.EventHandler(this.btnImportarDados_MouseEnter);
+            this.btnImportarDados.MouseHover += new System.EventHandler(this.btnImportarDados_MouseHover);
+            // 
             // materialDivider1
             // 
             this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -131,26 +151,6 @@
             this.lblSenha1.Size = new System.Drawing.Size(131, 19);
             this.lblSenha1.TabIndex = 21;
             this.lblSenha1.Text = "Confirme a senha:";
-            // 
-            // btnImportarDados
-            // 
-            this.btnImportarDados.BackColor = System.Drawing.Color.Transparent;
-            this.btnImportarDados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnImportarDados.FlatAppearance.BorderSize = 0;
-            this.btnImportarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportarDados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImportarDados.ForeColor = System.Drawing.Color.White;
-            this.btnImportarDados.Image = ((System.Drawing.Image)(resources.GetObject("btnImportarDados.Image")));
-            this.btnImportarDados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnImportarDados.Location = new System.Drawing.Point(3, 68);
-            this.btnImportarDados.Name = "btnImportarDados";
-            this.btnImportarDados.Size = new System.Drawing.Size(187, 70);
-            this.btnImportarDados.TabIndex = 5;
-            this.btnImportarDados.Text = "CADASTRAR USUÁRIO";
-            this.btnImportarDados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnImportarDados.UseVisualStyleBackColor = false;
-            this.btnImportarDados.MouseEnter += new System.EventHandler(this.btnImportarDados_MouseEnter);
-            this.btnImportarDados.MouseHover += new System.EventHandler(this.btnImportarDados_MouseHover);
             // 
             // txtSenha
             // 
@@ -231,7 +231,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegistrarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SENAI - Serviço de aprendizagem industrial";
+            this.Text = "SENAI - Serviço Nacional de Aprendizagem Industrial";
             this.pnlDireito.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
