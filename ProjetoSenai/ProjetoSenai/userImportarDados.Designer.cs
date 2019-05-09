@@ -32,6 +32,7 @@
             this.btnSelecionarArquivo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.cboTipo = new System.Windows.Forms.ComboBox();
             this.lblTipo = new MaterialSkin.Controls.MaterialLabel();
+            this.btnAdicionar = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,10 +81,26 @@
             this.lblTipo.TabIndex = 8;
             this.lblTipo.Text = "Tipo";
             // 
+            // btnAdicionar
+            // 
+            this.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionar.Depth = 0;
+            this.btnAdicionar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.Location = new System.Drawing.Point(395, 438);
+            this.btnAdicionar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Primary = true;
+            this.btnAdicionar.Size = new System.Drawing.Size(151, 29);
+            this.btnAdicionar.TabIndex = 9;
+            this.btnAdicionar.Text = "Cadastrar Alunos";
+            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
+            // 
             // userImportarDados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.cboTipo);
             this.Controls.Add(this.btnSelecionarArquivo);
@@ -101,5 +118,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnSelecionarArquivo;
         private System.Windows.Forms.ComboBox cboTipo;
         private MaterialSkin.Controls.MaterialLabel lblTipo;
+        private MaterialSkin.Controls.MaterialRaisedButton btnAdicionar;
     }
 }
