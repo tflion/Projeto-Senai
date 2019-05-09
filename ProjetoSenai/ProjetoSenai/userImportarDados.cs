@@ -97,7 +97,7 @@ namespace ProjetoSenai
         {
             string strinConn = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=dbProjetoSenai;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             SqlConnection conexao = new SqlConnection(strinConn);
-            string sql = "INSERT INTO Aluno values (@RegistroAluno,@nomeAluno,@nascimento,@cpf,@email,@identidade,@carteiraTrabalho,@serieCartTrabalho,@dataExpCartTrabalho,@estadoCartTrabalho,@certidaoNumero,@certidaoLivro,@certidaoFolha,@certidaoEstado,@certidaoDistrito,@certidaoData,@certidaoCartorio,@certidaoComarca,@corRaca,@codPai,@idade,@sexo,@grauInstrucao,@nomePai,@nomeMae,@telCelular,@telCelular2,@cartIdentidadeMae,@cartIdentidadePai,@naturalidadeAluno,@nacionalidadeAluno,@nomeInstituicao,@pcd,@auditiva,@fala,@visual,@mental,@valorBolsa,@articuladoSesi,@telCelularPai,@cpfPai,@pisPai,@emailPai,@codMae,@telCelularMae,@cpfMae,@pisMae,@emailMae,@codRespFinanceiro,@nomeRespFinanceiro,@cpfRespFinanceiro,@cepRespFinanceiro,@ruaRespFinanceiro,@numEndRespFinanceiro,@compEndRespFinanceiro,@bairroRespFinanceiro,@celularRespFinanceiro,@telRespFinanceiro,@codRespAcademico,@nomeRespAcademico,@telRespAcademico1,@telRespAcademico2,@cpfRespAcademico,@emailRespAcademico,@cidade,@estado,@bairro,@rua,@complemento,@numeroCasa,@cep,@nomeCurso,@nomeHabilitacao,@codigoTurma,@tipoMatricula,@statusMatricula,@categoria,@articulado,@empresa,@unidade,@irmaoRa,@irmaoNome,@periodoLetivo,@filial,@bolsaParcInicial,@bolsaParcFinal,@nomeServico,@dataMatricula,@codTurma1,@bolsaNome,@bolsaDataInicial,@bolsaDataFinal,@nomeTurma,@nomeReduzidoTurma,@motivoAlteracao,@dataAlteracao,@historicoStatus,@empresa_codEmpresa)";
+            string sql = "INSERT INTO Aluno values (@RegistroAluno,@nomeAluno,@nascimento,@cpf,@email,@identidade,@carteiraTrabalho,@serieCartTrabalho,@dataExpCartTrabalho,@estadoCartTrabalho,@certidaoNumero,@certidaoLivro,@certidaoFolha,@certidaoEstado,@certidaoDistrito,@certidaoData,@certidaoCartorio,@certidaoComarca,@corRaca,@codPai,@idade,@sexo,@grauInstrucao,@nomePai,@nomeMae,@telCelular,@telCelular2,@cartIdentidadeMae,@cartIdentidadePai,@naturalidadeAluno,@nacionalidadeAluno,@nomeInstituicao,@pcd,@auditiva,@fala,@visual,@mental,@valorBolsa,@articuladoSesi,@telCelularPai,@cpfPai,@pisPai,@emailPai,@codMae,@telCelularMae,@cpfMae,@pisMae,@emailMae,@codRespFinanceiro,@nomeRespFinanceiro,@cpfRespFinanceiro,@cepRespFinanceiro,@ruaRespFinanceiro,@numEndRespFinanceiro,@compEndRespFinanceiro,@bairroRespFinanceiro,@celularRespFinanceiro,@telRespFinanceiro,@codRespAcademico,@nomeRespAcademico,@telRespAcademico1,@telRespAcademico2,@cpfRespAcademico,@emailRespAcademico,@cidade,@estado,@bairro,@rua,@complemento,@numeroCasa,@cep,@nomeCurso,@nomeHabilitacao,@codigoTurma,@tipoMatricula,@statusMatricula,@categoria,@articulado,@empresa,@unidade,@irmaoRa,@irmaoNome,@periodoLetivo,@filial,@bolsaParcInicial,@bolsaParcFinal,@nomeServico,@dataMatricula,@codTurma1,@bolsaNome,@bolsaDataInicial,@bolsaDataFinal,@nomeTurma,@nomeReduzidoTurma,@motivoAlteracao,@dataAlteracao,@historicoStatus)";
             try
             {
                 conexao.Open();
@@ -152,29 +152,29 @@ namespace ProjetoSenai
                     comando.Parameters.AddWithValue("@cpfMae", dgvExcel.Rows[i].Cells[45].Value);
                     comando.Parameters.AddWithValue("@pisMae", dgvExcel.Rows[i].Cells[46].Value);
                     comando.Parameters.AddWithValue("@emailMae", dgvExcel.Rows[i].Cells[47].Value);
-                    comando.Parameters.AddWithValue("@emailMae", dgvExcel.Rows[i].Cells[48].Value);
-                    comando.Parameters.AddWithValue("@codRespFinanceiro", dgvExcel.Rows[i].Cells[49].Value);
-                    comando.Parameters.AddWithValue("@nomeRespFinanceiro", dgvExcel.Rows[i].Cells[50].Value);
-                    comando.Parameters.AddWithValue("@cpfRespFinanceiro", dgvExcel.Rows[i].Cells[51].Value);
-                    comando.Parameters.AddWithValue("@cepRespFinanceiro", dgvExcel.Rows[i].Cells[52].Value);
-                    comando.Parameters.AddWithValue("@ruaRespFinanceiro", dgvExcel.Rows[i].Cells[53].Value);
-                    comando.Parameters.AddWithValue("@numEndRespFinanceiro", dgvExcel.Rows[i].Cells[54].Value);
-                    comando.Parameters.AddWithValue("@compEndRespFinanceiro", dgvExcel.Rows[i].Cells[55].Value);
-                    comando.Parameters.AddWithValue("@bairroRespFinanceiro", dgvExcel.Rows[i].Cells[56].Value);
-                    comando.Parameters.AddWithValue("@celularRespFinanceiro", dgvExcel.Rows[i].Cells[57].Value);
-                    comando.Parameters.AddWithValue("@telRespFinanceiro", dgvExcel.Rows[i].Cells[58].Value);
-                    comando.Parameters.AddWithValue("@codRespAcademico", dgvExcel.Rows[i].Cells[59].Value);
-                    comando.Parameters.AddWithValue("@nomeRespAcademico", dgvExcel.Rows[i].Cells[60].Value);
-                    comando.Parameters.AddWithValue("@telRespAcademico1", dgvExcel.Rows[i].Cells[61].Value);
-                    comando.Parameters.AddWithValue("@telRespAcademico2", dgvExcel.Rows[i].Cells[62].Value);
-                    comando.Parameters.AddWithValue("@cpfRespAcademico", dgvExcel.Rows[i].Cells[63].Value);
-                    comando.Parameters.AddWithValue("@emailRespAcademico", dgvExcel.Rows[i].Cells[64].Value);
-                    comando.Parameters.AddWithValue("@cidade", dgvExcel.Rows[i].Cells[65].Value);
-                    comando.Parameters.AddWithValue("@estado", dgvExcel.Rows[i].Cells[66].Value);
-                    comando.Parameters.AddWithValue("@bairro", dgvExcel.Rows[i].Cells[67].Value);
-                    comando.Parameters.AddWithValue("@rua", dgvExcel.Rows[i].Cells[68].Value);
-                    comando.Parameters.AddWithValue("@complemento", dgvExcel.Rows[i].Cells[69].Value);
-                    comando.Parameters.AddWithValue("@numeroCasa", dgvExcel.Rows[i].Cells[70].Value);
+                    comando.Parameters.AddWithValue("@codRespFinanceiro", dgvExcel.Rows[i].Cells[48].Value);
+                    comando.Parameters.AddWithValue("@nomeRespFinanceiro", dgvExcel.Rows[i].Cells[49].Value);
+                    comando.Parameters.AddWithValue("@cpfRespFinanceiro", dgvExcel.Rows[i].Cells[50].Value);
+                    comando.Parameters.AddWithValue("@cepRespFinanceiro", dgvExcel.Rows[i].Cells[51].Value);
+                    comando.Parameters.AddWithValue("@ruaRespFinanceiro", dgvExcel.Rows[i].Cells[52].Value);
+                    comando.Parameters.AddWithValue("@numEndRespFinanceiro", dgvExcel.Rows[i].Cells[53].Value);
+                    comando.Parameters.AddWithValue("@compEndRespFinanceiro", dgvExcel.Rows[i].Cells[54].Value);
+                    comando.Parameters.AddWithValue("@bairroRespFinanceiro", dgvExcel.Rows[i].Cells[55].Value);
+                    comando.Parameters.AddWithValue("@celularRespFinanceiro", dgvExcel.Rows[i].Cells[56].Value);
+                    comando.Parameters.AddWithValue("@telRespFinanceiro", dgvExcel.Rows[i].Cells[57].Value);
+                    comando.Parameters.AddWithValue("@codRespAcademico", dgvExcel.Rows[i].Cells[58].Value);
+                    comando.Parameters.AddWithValue("@nomeRespAcademico", dgvExcel.Rows[i].Cells[59].Value);
+                    comando.Parameters.AddWithValue("@telRespAcademico1", dgvExcel.Rows[i].Cells[60].Value);
+                    comando.Parameters.AddWithValue("@telRespAcademico2", dgvExcel.Rows[i].Cells[61].Value);
+                    comando.Parameters.AddWithValue("@cpfRespAcademico", dgvExcel.Rows[i].Cells[62].Value);
+                    comando.Parameters.AddWithValue("@emailRespAcademico", dgvExcel.Rows[i].Cells[63].Value);
+                    comando.Parameters.AddWithValue("@cidade", dgvExcel.Rows[i].Cells[64].Value);
+                    comando.Parameters.AddWithValue("@estado", dgvExcel.Rows[i].Cells[65].Value);
+                    comando.Parameters.AddWithValue("@bairro", dgvExcel.Rows[i].Cells[66].Value);
+                    comando.Parameters.AddWithValue("@rua", dgvExcel.Rows[i].Cells[67].Value);
+                    comando.Parameters.AddWithValue("@complemento", dgvExcel.Rows[i].Cells[68].Value);
+                    comando.Parameters.AddWithValue("@numeroCasa", dgvExcel.Rows[i].Cells[69].Value);
+                    comando.Parameters.AddWithValue("@cep", dgvExcel.Rows[i].Cells[70].Value);
                     comando.Parameters.AddWithValue("@nomeCurso", dgvExcel.Rows[i].Cells[71].Value);
                     comando.Parameters.AddWithValue("@nomeHabilitacao", dgvExcel.Rows[i].Cells[72].Value);
                     comando.Parameters.AddWithValue("@codigoTurma", dgvExcel.Rows[i].Cells[73].Value);
@@ -201,11 +201,10 @@ namespace ProjetoSenai
                     comando.Parameters.AddWithValue("@motivoAlteracao", dgvExcel.Rows[i].Cells[94].Value);
                     comando.Parameters.AddWithValue("@dataAlteracao", dgvExcel.Rows[i].Cells[95].Value);
                     comando.Parameters.AddWithValue("@historicoStatus", dgvExcel.Rows[i].Cells[96].Value);
-                    comando.Parameters.AddWithValue("@empresa_codEmpresa", dgvExcel.Rows[i].Cells[97].Value);
 
                     comando.CommandText = sql;
                     comando.ExecuteNonQuery();
-                    MessageBox.Show("dados inseridos no banco de dados com sucesso");
+                    
                 }
             }
             catch (Exception ex)
@@ -215,8 +214,8 @@ namespace ProjetoSenai
             finally
             {
                 conexao.Close();
+                MessageBox.Show("dados inseridos no banco de dados com sucesso");
             }
-            dgvExcel.Rows.Clear();
 
         }
     }
