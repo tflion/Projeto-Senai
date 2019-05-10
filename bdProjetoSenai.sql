@@ -6,7 +6,6 @@ USE dbProjetoSenai
 
 GO
 
-SELECT * FROM Aluno
 CREATE TABLE Aluno
 (
 codAluno		   INT PRIMARY KEY IDENTITY (1,1) NOT NULL,
