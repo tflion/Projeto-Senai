@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionario));
             this.pnlDireito = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnCadastrarEmpresa = new System.Windows.Forms.Button();
             this.btnImportarDados = new System.Windows.Forms.Button();
             this.userCadastrarEmpresa2 = new ProjetoSenai.userCadastrarEmpresa();
             this.userPrincipal = new ProjetoSenai.userPrincipal();
             this.userImportarDados = new ProjetoSenai.userImportarDados();
             this.userCadastrarEmpresa1 = new ProjetoSenai.userCadastrarEmpresa();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.pnlDireito.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,41 @@
             this.pnlDireito.TabIndex = 0;
             this.pnlDireito.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDireito_Paint);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(6, 291);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(187, 75);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "VISUALIZAR ALUNOS NA  EMPRESA";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(6, 201);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 75);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "ALOCAR ALUNOS A EMPRESA";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_2);
+            // 
             // btnCadastrarEmpresa
             // 
             this.btnCadastrarEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
@@ -63,9 +98,9 @@
             this.btnCadastrarEmpresa.ForeColor = System.Drawing.Color.White;
             this.btnCadastrarEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarEmpresa.Image")));
             this.btnCadastrarEmpresa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(3, 104);
+            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(6, 104);
             this.btnCadastrarEmpresa.Name = "btnCadastrarEmpresa";
-            this.btnCadastrarEmpresa.Size = new System.Drawing.Size(187, 62);
+            this.btnCadastrarEmpresa.Size = new System.Drawing.Size(187, 75);
             this.btnCadastrarEmpresa.TabIndex = 5;
             this.btnCadastrarEmpresa.Text = "CADASTRAR EMPRESA";
             this.btnCadastrarEmpresa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -84,9 +119,9 @@
             this.btnImportarDados.ForeColor = System.Drawing.Color.White;
             this.btnImportarDados.Image = ((System.Drawing.Image)(resources.GetObject("btnImportarDados.Image")));
             this.btnImportarDados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnImportarDados.Location = new System.Drawing.Point(3, 12);
+            this.btnImportarDados.Location = new System.Drawing.Point(6, 12);
             this.btnImportarDados.Name = "btnImportarDados";
-            this.btnImportarDados.Size = new System.Drawing.Size(187, 77);
+            this.btnImportarDados.Size = new System.Drawing.Size(187, 75);
             this.btnImportarDados.TabIndex = 4;
             this.btnImportarDados.Text = "IMPORTAR DADOS DO EXCEL";
             this.btnImportarDados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -124,41 +159,6 @@
             this.userCadastrarEmpresa1.Size = new System.Drawing.Size(549, 490);
             this.userCadastrarEmpresa1.TabIndex = 3;
             this.userCadastrarEmpresa1.Load += new System.EventHandler(this.userCadastrarEmpresa1_Load);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(6, 214);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 79);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "ALOCAR ALUNOS A EMPRESA";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click_2);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(6, 299);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 75);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "VISUALIZAR ALUNOS NA  EMPRESA";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // frmFuncionario
             // 
