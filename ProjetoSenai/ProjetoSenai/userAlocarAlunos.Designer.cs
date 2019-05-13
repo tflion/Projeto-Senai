@@ -49,6 +49,7 @@
             this.lblBuscarAluno = new System.Windows.Forms.Label();
             this.txtBuscarAluno = new System.Windows.Forms.TextBox();
             this.btnAdicionar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
             this.SuspendLayout();
@@ -113,7 +114,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmpresa.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvEmpresa.EnableHeadersVisualStyles = false;
-            this.dgvEmpresa.Location = new System.Drawing.Point(288, 301);
+            this.dgvEmpresa.Location = new System.Drawing.Point(298, 301);
             this.dgvEmpresa.Name = "dgvEmpresa";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
@@ -125,7 +126,7 @@
             this.dgvEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
             this.dgvEmpresa.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvEmpresa.Size = new System.Drawing.Size(241, 165);
+            this.dgvEmpresa.Size = new System.Drawing.Size(231, 165);
             this.dgvEmpresa.TabIndex = 33;
             this.dgvEmpresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellContentClick);
             // 
@@ -223,10 +224,20 @@
             this.btnAdicionar.Text = "Alocar Aluno a empresa";
             this.btnAdicionar.UseVisualStyleBackColor = true;
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Location = new System.Drawing.Point(247, 424);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(45, 42);
+            this.btnAtualizar.TabIndex = 46;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
             // userAlocarAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.lblBuscarAluno);
             this.Controls.Add(this.txtBuscarAluno);
@@ -264,5 +275,6 @@
         private System.Windows.Forms.Label lblBuscarAluno;
         private System.Windows.Forms.TextBox txtBuscarAluno;
         private MaterialSkin.Controls.MaterialRaisedButton btnAdicionar;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

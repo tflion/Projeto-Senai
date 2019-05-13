@@ -75,8 +75,8 @@ namespace ProjetoSenai
                                 //Complemento
                                 if (cont == 3)
                                 {
-                                    string[] valor = substring.Split(":".ToCharArray());
-                                    txtComplemento.Text = valor[1];
+                                    //string[] valor = substring.Split(":".ToCharArray());
+                                    //txtComplemento.Text = valor[1];
                                 }
 
                                 //Bairro

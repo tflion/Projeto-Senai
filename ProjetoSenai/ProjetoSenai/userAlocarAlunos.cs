@@ -20,6 +20,8 @@ namespace ProjetoSenai
         public userAlocarAlunos()
         {
             InitializeComponent();
+            RetornarAlunoDgv();
+            RetornarEmpresaDgv();
         }
         private void RetornarEmpresaDgv()
         {
@@ -42,6 +44,12 @@ namespace ProjetoSenai
             txtNomeAluno.Text = dgvAluno.Rows[e.RowIndex].Cells["nomeAluno"].Value.ToString();
             txtCpfAluno.Text = dgvAluno.Rows[e.RowIndex].Cells["cpf"].Value.ToString();
 
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            RetornarAlunoDgv();
+            RetornarEmpresaDgv();
         }
 
         private void dgvEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)

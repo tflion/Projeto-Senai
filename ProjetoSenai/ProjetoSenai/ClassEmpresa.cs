@@ -58,6 +58,22 @@ namespace ProjetoSenai
                     ". ");
             }
         }
+        public bool AlocarAluno(int codEmpresaClicada)
+        {
+            try
+            {
+                bd.Conectar();
+                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET aluno_codAluno = {0} WHERE codEmpresa = {1}", aluno_codAluno, codEmpresaClicada));
+
+                bd.Desconectar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message + "Erro ao editar os dados desta empresa" +
+                    ". ");
+            }
+        }
 
         public bool Excluir(int codEmpresaClicada)
         {
