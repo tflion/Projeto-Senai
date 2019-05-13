@@ -34,6 +34,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnCadastrarEmpresa = new System.Windows.Forms.Button();
             this.btnImportarDados = new System.Windows.Forms.Button();
+            this.userVisualizarAlunos1 = new ProjetoSenai.userVisualizarAlunos();
+            this.userAlocarAlunos1 = new ProjetoSenai.userAlocarAlunos();
             this.userCadastrarEmpresa2 = new ProjetoSenai.userCadastrarEmpresa();
             this.userPrincipal = new ProjetoSenai.userPrincipal();
             this.userImportarDados = new ProjetoSenai.userImportarDados();
@@ -70,6 +72,7 @@
             this.button2.Text = "VISUALIZAR ALUNOS NA  EMPRESA";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -130,6 +133,20 @@
             this.btnImportarDados.MouseEnter += new System.EventHandler(this.btnImportarDados_MouseEnter);
             this.btnImportarDados.MouseHover += new System.EventHandler(this.btnImportarDados_MouseHover_1);
             // 
+            // userVisualizarAlunos1
+            // 
+            this.userVisualizarAlunos1.Location = new System.Drawing.Point(196, 64);
+            this.userVisualizarAlunos1.Name = "userVisualizarAlunos1";
+            this.userVisualizarAlunos1.Size = new System.Drawing.Size(549, 490);
+            this.userVisualizarAlunos1.TabIndex = 5;
+            // 
+            // userAlocarAlunos1
+            // 
+            this.userAlocarAlunos1.Location = new System.Drawing.Point(196, 64);
+            this.userAlocarAlunos1.Name = "userAlocarAlunos1";
+            this.userAlocarAlunos1.Size = new System.Drawing.Size(549, 490);
+            this.userAlocarAlunos1.TabIndex = 4;
+            // 
             // userCadastrarEmpresa2
             // 
             this.userCadastrarEmpresa2.Location = new System.Drawing.Point(196, 64);
@@ -165,6 +182,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 554);
+            this.Controls.Add(this.userVisualizarAlunos1);
+            this.Controls.Add(this.userAlocarAlunos1);
             this.Controls.Add(this.userCadastrarEmpresa2);
             this.Controls.Add(this.userPrincipal);
             this.Controls.Add(this.userImportarDados);
@@ -190,5 +209,7 @@
         private System.Windows.Forms.Button btnCadastrarEmpresa;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private userAlocarAlunos userAlocarAlunos1;
+        private userVisualizarAlunos userVisualizarAlunos1;
     }
 }

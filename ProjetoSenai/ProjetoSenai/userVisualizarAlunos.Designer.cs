@@ -39,7 +39,6 @@
             this.lblCpfAluno = new System.Windows.Forms.Label();
             this.txtNomeEmpresa = new System.Windows.Forms.TextBox();
             this.lblNomeEmpresa = new System.Windows.Forms.Label();
-            this.btnEditar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnExcluir = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunosNaEmpresa)).BeginInit();
             this.SuspendLayout();
@@ -129,26 +128,12 @@
             this.lblNomeEmpresa.TabIndex = 43;
             this.lblNomeEmpresa.Text = "Nome da empresa:";
             // 
-            // btnEditar
-            // 
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.Depth = 0;
-            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(19, 252);
-            this.btnEditar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Primary = true;
-            this.btnEditar.Size = new System.Drawing.Size(143, 41);
-            this.btnEditar.TabIndex = 46;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
             // btnExcluir
             // 
             this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcluir.Depth = 0;
             this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(179, 252);
+            this.btnExcluir.Location = new System.Drawing.Point(19, 265);
             this.btnExcluir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Primary = true;
@@ -162,7 +147,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtNomeEmpresa);
             this.Controls.Add(this.lblNomeEmpresa);
             this.Controls.Add(this.txtCpfAluno);
@@ -187,7 +171,6 @@
         private System.Windows.Forms.Label lblCpfAluno;
         private System.Windows.Forms.TextBox txtNomeEmpresa;
         private System.Windows.Forms.Label lblNomeEmpresa;
-        private MaterialSkin.Controls.MaterialRaisedButton btnEditar;
         private MaterialSkin.Controls.MaterialRaisedButton btnExcluir;
     }
 }

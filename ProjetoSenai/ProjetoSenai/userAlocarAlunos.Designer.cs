@@ -49,6 +49,8 @@
             this.lblBuscarAluno = new System.Windows.Forms.Label();
             this.txtBuscarAluno = new System.Windows.Forms.TextBox();
             this.btnAdicionar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.lblCodAluno = new System.Windows.Forms.Label();
+            this.lblCodEmpresa = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +91,7 @@
             this.dgvAluno.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAluno.Size = new System.Drawing.Size(231, 165);
             this.dgvAluno.TabIndex = 32;
+            this.dgvAluno.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAluno_CellContentClick);
             // 
             // dgvEmpresa
             // 
@@ -126,6 +129,7 @@
             this.dgvEmpresa.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvEmpresa.Size = new System.Drawing.Size(241, 165);
             this.dgvEmpresa.TabIndex = 33;
+            this.dgvEmpresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellContentClick);
             // 
             // lblNomeAluno
             // 
@@ -221,10 +225,28 @@
             this.btnAdicionar.Text = "Alocar Aluno a empresa";
             this.btnAdicionar.UseVisualStyleBackColor = true;
             // 
+            // lblCodAluno
+            // 
+            this.lblCodAluno.AutoSize = true;
+            this.lblCodAluno.Location = new System.Drawing.Point(377, 37);
+            this.lblCodAluno.Name = "lblCodAluno";
+            this.lblCodAluno.Size = new System.Drawing.Size(0, 13);
+            this.lblCodAluno.TabIndex = 47;
+            // 
+            // lblCodEmpresa
+            // 
+            this.lblCodEmpresa.AutoSize = true;
+            this.lblCodEmpresa.Location = new System.Drawing.Point(377, 141);
+            this.lblCodEmpresa.Name = "lblCodEmpresa";
+            this.lblCodEmpresa.Size = new System.Drawing.Size(0, 13);
+            this.lblCodEmpresa.TabIndex = 48;
+            // 
             // userAlocarAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblCodEmpresa);
+            this.Controls.Add(this.lblCodAluno);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.lblBuscarAluno);
             this.Controls.Add(this.txtBuscarAluno);
@@ -262,5 +284,7 @@
         private System.Windows.Forms.Label lblBuscarAluno;
         private System.Windows.Forms.TextBox txtBuscarAluno;
         private MaterialSkin.Controls.MaterialRaisedButton btnAdicionar;
+        private System.Windows.Forms.Label lblCodAluno;
+        private System.Windows.Forms.Label lblCodEmpresa;
     }
 }

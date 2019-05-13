@@ -86,7 +86,12 @@ namespace ProjetoSenai
 
         private void Button1_Click_2(object sender, EventArgs e)
         {
+            userAlocarAlunos1.BringToFront();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            userVisualizarAlunos1.BringToFront();
         }
     }
 }

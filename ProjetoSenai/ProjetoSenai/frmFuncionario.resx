@@ -121,7 +121,7 @@
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALEAAACxAcYtSY0AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        YQUAAAAJcEhZcwAAAK0AAACtAVRO1jAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
         AAADmUlEQVRYR91WW08TQRTGJ/0D+uazL/4An/Q3mOiTD6LBlna7u71BabttqniBRKMRb7FKECUGBLRq
         jFESuQSjXBR675ZShHZbwJSqgFIux5llaBpYGmi3PvglX7L9dmbOt2fOTE9ZLqwC12SJ26BUZIIsUH4q
         RsJthVmwfZCaKBe1YT2ovep5Em4rzDHuxKX4NddN4TEvPx/x1RGrh+bZOyScNIZSS3U90/NQCg6m/twj
@@ -143,7 +143,7 @@
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALEAAACxAcYtSY0AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        YQUAAAAJcEhZcwAAAK0AAACtAVRO1jAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
         AAAC9UlEQVRYR9WW7U+SYRTG2dr62Lf+h7609aH/wZeJKxNZsrJlIRLWmjkVJy2zVfYyW41qfaxNXW+r
         tFr5ITdflqYNEdEkhFJwiKTxQAOEq+c8Pg9TuSUkoHVvv3F23+c657rPPbZH9s9Xo7txd5PLcLBpzqDI
         Jfq55jLdtG6PTD/fPMWDXNPwvQmaCU2IDDATsg0ZUJvUSDBgcLXAFojiawAZZYavSbWlPlsaeOTtZhbI
@@ -163,7 +163,7 @@
   <data name="btnCadastrarEmpresa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rAAAAKwBhgk01AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASoSURBVFhH1ZZr
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASoSURBVFhH1ZZr
         TFt1GMZZGB/23YijbAkmfjM4XZY5HHPGL6KSzRhgG5UZx7h7CQgCiwwhwhaJDmRTYIwhOKAbbWEDCWwM
         MhjMcBkgWlous6VcCpxeKBTa0sdzDuccOLPUFsTEN3lyTtrzPs8v//97/q2bqyUncHGIgJK8XpDp4MN8
         /N+VXIuPSQALKcjmbDbyWq8gEAjAnXlk+6uqvensrL4bI1ojKBBaczYleU0dnYYn89j2lIyAsHdcd99o

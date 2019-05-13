@@ -96,7 +96,7 @@ namespace ProjetoSenai
         public DataTable retAlunos()
         {
             bd.Conectar();
-            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno'"));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno"));
             bd.Desconectar();
             return dt;
         }
