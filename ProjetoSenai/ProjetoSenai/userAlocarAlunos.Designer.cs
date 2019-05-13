@@ -89,6 +89,7 @@
             this.dgvAluno.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAluno.Size = new System.Drawing.Size(231, 165);
             this.dgvAluno.TabIndex = 32;
+            this.dgvAluno.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAluno_CellContentClick);
             // 
             // dgvEmpresa
             // 
@@ -126,6 +127,7 @@
             this.dgvEmpresa.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvEmpresa.Size = new System.Drawing.Size(241, 165);
             this.dgvEmpresa.TabIndex = 33;
+            this.dgvEmpresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellContentClick);
             // 
             // lblNomeAluno
             // 

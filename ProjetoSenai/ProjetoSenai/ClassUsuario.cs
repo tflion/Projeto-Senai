@@ -12,6 +12,7 @@ namespace ProjetoSenai
         public string Email { get; set; }
         public string Nome { get; set; }
         public string Senha { get; set; }
+        public int Tipo { get; set; }
 
         ClassAcessoBD bd = new ClassAcessoBD();
 
@@ -20,7 +21,7 @@ namespace ProjetoSenai
             try
             {
                 bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("INSERT INTO Usuario (email,senha,nome) VALUES ('{0}','{1}','{2}')", Email, Senha, Nome));
+                bd.ExecutarComandosSql(String.Format("INSERT INTO Usuario (email,senha,nome,tipo) VALUES ('{0}','{1}','{2}',{3})", Email, Senha, Nome, Tipo));
                 bd.Desconectar();
                 return true;
             }

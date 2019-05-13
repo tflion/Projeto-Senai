@@ -39,7 +39,8 @@
             this.userPrincipal = new ProjetoSenai.userPrincipal();
             this.userImportarDados = new ProjetoSenai.userImportarDados();
             this.userCadastrarEmpresa1 = new ProjetoSenai.userCadastrarEmpresa();
-            this.userAssisteteView1 = new ProjetoSenai.userAssisteteView();
+            this.userAlocarAlunos1 = new ProjetoSenai.userAlocarAlunos();
+            this.userVisualizarAlunos1 = new ProjetoSenai.userVisualizarAlunos();
             this.pnlDireito.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -177,19 +178,27 @@
             this.userCadastrarEmpresa1.TabIndex = 3;
             this.userCadastrarEmpresa1.Load += new System.EventHandler(this.userCadastrarEmpresa1_Load);
             // 
-            // userAssisteteView1
+            // userAlocarAlunos1
             // 
-            this.userAssisteteView1.Location = new System.Drawing.Point(196, 64);
-            this.userAssisteteView1.Name = "userAssisteteView1";
-            this.userAssisteteView1.Size = new System.Drawing.Size(549, 490);
-            this.userAssisteteView1.TabIndex = 4;
+            this.userAlocarAlunos1.Location = new System.Drawing.Point(196, 64);
+            this.userAlocarAlunos1.Name = "userAlocarAlunos1";
+            this.userAlocarAlunos1.Size = new System.Drawing.Size(549, 490);
+            this.userAlocarAlunos1.TabIndex = 4;
+            // 
+            // userVisualizarAlunos1
+            // 
+            this.userVisualizarAlunos1.Location = new System.Drawing.Point(196, 64);
+            this.userVisualizarAlunos1.Name = "userVisualizarAlunos1";
+            this.userVisualizarAlunos1.Size = new System.Drawing.Size(549, 490);
+            this.userVisualizarAlunos1.TabIndex = 5;
             // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 554);
-            this.Controls.Add(this.userAssisteteView1);
+            this.Controls.Add(this.userVisualizarAlunos1);
+            this.Controls.Add(this.userAlocarAlunos1);
             this.Controls.Add(this.userCadastrarEmpresa2);
             this.Controls.Add(this.userPrincipal);
             this.Controls.Add(this.userImportarDados);
@@ -216,6 +225,7 @@
         private System.Windows.Forms.Button btnVisualizarAlunos;
         private System.Windows.Forms.Button btnAlocarAlunos;
         private System.Windows.Forms.Panel pnlIndicador;
-        private userAssisteteView userAssisteteView1;
+        private userAlocarAlunos userAlocarAlunos1;
+        private userVisualizarAlunos userVisualizarAlunos1;
     }
 }
