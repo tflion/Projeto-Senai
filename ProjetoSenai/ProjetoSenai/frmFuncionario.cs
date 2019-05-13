@@ -41,12 +41,16 @@ namespace ProjetoSenai
         private void button1_Click(object sender, EventArgs e)
         {
             userImportarDados.BringToFront();
-          
+            pnlIndicador.Height = btnImportarDados.Height;
+            pnlIndicador.Top = btnImportarDados.Top;
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             userCadastrarEmpresa2.BringToFront();
+            pnlIndicador.Height = btnCadastrarEmpresa.Height;
+            pnlIndicador.Top = btnCadastrarEmpresa.Top;
         }
 
         private void pnlDireito_Paint(object sender, PaintEventArgs e)
@@ -85,6 +89,18 @@ namespace ProjetoSenai
         }
 
         private void Button1_Click_2(object sender, EventArgs e)
+        {
+            pnlIndicador.Height = btnAlocarAlunos.Height;
+            pnlIndicador.Top = btnAlocarAlunos.Top;
+        }
+
+        private void btnVisualizarAlunos_Click(object sender, EventArgs e)
+        {
+            pnlIndicador.Height = btnVisualizarAlunos.Height;
+            pnlIndicador.Top = btnVisualizarAlunos.Top;
+        }
+
+        private void pnlIndicador_Paint(object sender, PaintEventArgs e)
         {
 
         }
