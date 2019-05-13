@@ -90,22 +90,5 @@ namespace ProjetoSenai
             return dt;
         }
 
-        public bool AlocarAluno(int codEmpresaClicada)
-        {
-            try
-            {
-                bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET aluno_codAluno = {0} WHERE codEmpresa = {10}",aluno_codAluno,codEmpresaClicada));
-           
-                bd.Desconectar();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message + "Erro ao alocar alunos na empresa" +
-                    ". ");
-            }
-        }
-
     }
 }

@@ -90,24 +90,20 @@ namespace ProjetoSenai
 
         private void Button1_Click_2(object sender, EventArgs e)
         {
-            userAlocarAlunos1.BringToFront();
             pnlIndicador.Height = btnAlocarAlunos.Height;
             pnlIndicador.Top = btnAlocarAlunos.Top;
         }
 
         private void btnVisualizarAlunos_Click(object sender, EventArgs e)
         {
+            userAssisteteView1.BringToFront();
             pnlIndicador.Height = btnVisualizarAlunos.Height;
             pnlIndicador.Top = btnVisualizarAlunos.Top;
         }
 
         private void pnlIndicador_Paint(object sender, PaintEventArgs e)
         {
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            userVisualizarAlunos1.BringToFront();
+           
         }
     }
 }
