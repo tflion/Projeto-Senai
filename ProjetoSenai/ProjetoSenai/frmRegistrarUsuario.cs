@@ -105,12 +105,18 @@ namespace ProjetoSenai
 
         private void btnImportarDados_MouseEnter(object sender, EventArgs e)
         {
-            btnImportarDados.BackColor = Color.FromArgb(245, 62, 56);
+            btnCadastrarUsuario.BackColor = Color.FromArgb(245, 62, 56);
         }
 
         private void btnImportarDados_MouseHover(object sender, EventArgs e)
         {
-            btnImportarDados.BackColor = Color.FromArgb(245, 62, 56);
+            btnCadastrarUsuario.BackColor = Color.FromArgb(245, 62, 56);
+        }
+
+        private void pnlIndicador_Paint(object sender, PaintEventArgs e)
+        {
+            pnlIndicador.Height = btnCadastrarUsuario.Height;
+            pnlIndicador.Top = btnCadastrarUsuario.Top;
         }
     }
 }

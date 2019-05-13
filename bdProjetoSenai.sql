@@ -107,7 +107,7 @@ mental			   VARCHAR(100),
 valorBolsa		   VARCHAR(100),
 articuladoSesi	   VARCHAR(100),
 );
--- DROP TABLE Aluno
+-- DROP TABLE Usuario
 
 CREATE TABLE Usuario
 (
@@ -115,12 +115,15 @@ codUsuario	INT PRIMARY KEY IDENTITY (1,1) NOT NULL,
 email		VARCHAR(30),
 senha	    VARCHAR(25),
 nome		VARCHAR(40),
+tipo	    INT,
 );
 
 CREATE TABLE Empresa
 (
 codEmpresa		   INT PRIMARY KEY IDENTITY (1,1) NOT NULL,
 nomeEmpresa		   VARCHAR(40),
+cnj				   CHAR(20),
+razaoSocial		   CHAR(40),
 telefone		   VARCHAR(20),
 emailContato	   VARCHAR(40),
 cidade			   VARCHAR(30),
@@ -130,7 +133,11 @@ rua				   VARCHAR(35),
 complemento		   VARCHAR(15),
 numeroCasa		   CHAR(5),
 cep				   CHAR (10),
+responsavelContrato		CHAR(40),
+telefoneResponsavel		CHAR(20),
 aluno_codAluno	   INT,
 FOREIGN KEY (aluno_codAluno)
 	REFERENCES aluno (codAluno)
 );
+
+-- DROP TABLE Empresa
