@@ -122,7 +122,7 @@ CREATE TABLE Empresa
 (
 codEmpresa		   INT PRIMARY KEY IDENTITY (1,1) NOT NULL,
 nomeEmpresa		   VARCHAR(40),
-cnj				   CHAR(20),
+cnpj				   CHAR(20),
 razaoSocial		   CHAR(40),
 telefone		   VARCHAR(20),
 emailContato	   VARCHAR(40),
