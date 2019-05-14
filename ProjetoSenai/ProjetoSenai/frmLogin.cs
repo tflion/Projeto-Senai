@@ -27,8 +27,8 @@ namespace ProjetoSenai
 
             //Cores do form
             materialSkin.ColorScheme = new ColorScheme(
-                Primary.Red500,Primary.Red500,
-                Primary.Red400,Accent.Red400,
+                Primary.Red500, Primary.Red500,
+                Primary.Red400, Accent.Red400,
                 TextShade.WHITE
             );
         }
@@ -45,20 +45,34 @@ namespace ProjetoSenai
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //Se for maior que 0 então achou o login
-            if(usuario.VerificarLogin(txtEmail.Text, txtSenha.Text) >0)
-            {
-                this.Hide();
-                frmFuncionario form = new frmFuncionario();
-                form.ShowDialog();
-                this.Close();
-            }
-            else
+
+            DataTable dt = usuario.VerificarUsu(txtEmail.Text, txtSenha.Text);
+            if(dt.Rows.Count == 0)
             {
                 MyMessageBox.Show("        E-mail ou senha incorretos! \n                Tente novamente.", "Usuário não cadastrado", "OK");
                 txtEmail.Text = "";
                 txtSenha.Text = "";
             }
-            
+            else
+            {
+                string tipo = dt.Rows[0]["tipo"].ToString();
+                if(tipo == "1")
+                {
+                    this.Hide();
+                    frmFuncionario form = new frmFuncionario();
+                    form.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    this.Hide();
+                    frmAssistente form = new frmAssistente();
+                    form.ShowDialog();
+                    this.Close();
+                }
+
+            }
+
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
@@ -103,7 +117,7 @@ namespace ProjetoSenai
 
         private void lblEsqueceuSenha_MouseEnter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void lblEsqueceuSenha_MouseLeave(object sender, EventArgs e)
@@ -115,7 +129,7 @@ namespace ProjetoSenai
 
         private void lblRegistro_MouseEnter(object sender, EventArgs e)
         {
-           
+
         }
 
         private void lblRegistro_MouseHover(object sender, EventArgs e)

@@ -31,14 +31,17 @@ namespace ProjetoSenai
             }
 
         }
-        public int VerificarLogin(string email, string senha)
+
+        public DataTable VerificarUsu(string login, string senha)
         {
             bd.Conectar();
-            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Usuario WHERE email = '{0}' AND senha = '{1}'",email,senha));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Usuario WHERE email = '{0}' AND senha = '{1}'", login, senha));
+            bd.Conectar();
             bd.Desconectar();
-            int linha = (dt.Rows.Count > 0) ? 1 : 0;
-            return linha;
+
+            return dt;
         }
+
         public int VerificarLogin(string email)
         {
             bd.Conectar();
@@ -56,6 +59,7 @@ namespace ProjetoSenai
             return dt;
         }
 
+        
 
         //Função para validar Email
         public bool validarEmail(string Email)

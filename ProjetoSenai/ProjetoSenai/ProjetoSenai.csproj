@@ -68,6 +68,12 @@
     <Compile Include="ClassAluno.cs" />
     <Compile Include="ClassEmpresa.cs" />
     <Compile Include="ClassUsuario.cs" />
+    <Compile Include="frmAssistente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAssistente.Designer.cs">
+      <DependentUpon>frmAssistente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEsqueceuSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     <Compile Include="userVisualizarAlunos.Designer.cs">
       <DependentUpon>userVisualizarAlunos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAssistente.resx">
+      <DependentUpon>frmAssistente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEsqueceuSenha.resx">
       <DependentUpon>frmEsqueceuSenha.cs</DependentUpon>
     </EmbeddedResource>

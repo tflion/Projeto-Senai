@@ -13,6 +13,8 @@ namespace ProjetoSenai
     public partial class userAssisteteView : UserControl
     {
         ClassEmpresa empresa = new ClassEmpresa();
+        ClassAluno aluno = new ClassAluno();
+        
 
         public userAssisteteView()
         {
@@ -22,6 +24,16 @@ namespace ProjetoSenai
         private void btnVerEmpresa_Click(object sender, EventArgs e)
         {
             dgvVisualizar.DataSource = empresa.RetEmpresas();
+        }
+
+        private void btnVerAlunos_Click(object sender, EventArgs e)
+        {
+            dgvVisualizar.DataSource = aluno.retAlunos();
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            dgvVisualizar.DataSource = empresa.RetAlunosAlocadosInnerJoin();
         }
     }
 }

@@ -93,10 +93,33 @@ namespace ProjetoSenai
                 throw new Exception(ex.Message + "Erro ao excluir os dados do aluno. ");
             }
         }
+        public bool ExcluirTudo()
+        {
+            try
+            {
+                bd.Conectar();
+                bd.ExecutarComandosSql(String.Format("DELETE FROM Aluno"));
+                bd.Desconectar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message + "Erro ao excluir os dados do aluno. ");
+            }
+
+        }
         public DataTable retAlunos()
         {
             bd.Conectar();
             DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno"));
+            bd.Desconectar();
+            return dt;
+        }
+
+        public DataTable verificarRA(string ra)
+        {
+            bd.Conectar();
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Aluno WHERE registroAluno LIKE '{0}'", ra));
             bd.Desconectar();
             return dt;
         }
