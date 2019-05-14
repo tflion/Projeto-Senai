@@ -31,6 +31,23 @@ namespace ProjetoSenai
         {
             dgvAluno.DataSource = aluno.retAlunos();
         }
+        private void LimparTxt()
+        {
+            txtNomeAluno.Text = "";
+            txtCpfAluno.Text = "";
+            txtNomeEmpresa.Text = "";
+        }
+        private bool VerificarDados()
+        {
+            if(String.IsNullOrEmpty(txtNomeAluno.Text) || String.IsNullOrEmpty(txtCpfAluno.Text) || String.IsNullOrEmpty(txtNomeEmpresa.Text))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
 
         private void dgvAluno_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -50,6 +67,19 @@ namespace ProjetoSenai
         {
             RetornarAlunoDgv();
             RetornarEmpresaDgv();
+        }
+
+        private void BtnAdicionar_Click(object sender, EventArgs e)
+        {
+            if(VerificarDados() == true)
+            {
+                empresa.aluno_codAluno = codAlunoClicado;
+                if(empresa.AlocarAluno(codEmpresaClicada) == true)
+                {
+                    MessageBox.Show("Aluno alocado a empresa com sucesso.");
+                    LimparTxt();
+                }
+            }
         }
 
         private void dgvEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
