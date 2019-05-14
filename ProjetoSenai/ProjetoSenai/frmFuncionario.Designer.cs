@@ -70,6 +70,7 @@
             // btnVisualizarAlunos
             // 
             this.btnVisualizarAlunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.btnVisualizarAlunos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVisualizarAlunos.FlatAppearance.BorderSize = 0;
             this.btnVisualizarAlunos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVisualizarAlunos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,6 +89,7 @@
             // btnAlocarAlunos
             // 
             this.btnAlocarAlunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.btnAlocarAlunos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlocarAlunos.FlatAppearance.BorderSize = 0;
             this.btnAlocarAlunos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlocarAlunos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,6 +108,7 @@
             // btnCadastrarEmpresa
             // 
             this.btnCadastrarEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.btnCadastrarEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrarEmpresa.FlatAppearance.BorderSize = 0;
             this.btnCadastrarEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarEmpresa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,6 +130,7 @@
             // 
             this.btnImportarDados.BackColor = System.Drawing.Color.Transparent;
             this.btnImportarDados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImportarDados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImportarDados.FlatAppearance.BorderSize = 0;
             this.btnImportarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportarDados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
