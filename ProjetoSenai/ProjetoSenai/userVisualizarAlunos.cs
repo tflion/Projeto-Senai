@@ -22,7 +22,7 @@ namespace ProjetoSenai
 
         private void RetornarAlunosAlocadosDgv()
         {
-            dgvAlunosNaEmpresa.DataSource = empresa.RetAlunosAlocados();
+            dgvAlunosNaEmpresa.DataSource = empresa.RetAlunosAlocadosInnerJoin();
         }
 
         private void BtnAtualizar_Click(object sender, EventArgs e)

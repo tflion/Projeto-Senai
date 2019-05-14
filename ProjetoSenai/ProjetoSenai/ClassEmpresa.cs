@@ -81,6 +81,13 @@ namespace ProjetoSenai
             bd.Desconectar();
             return dt;
         }
+        public DataTable RetAlunosAlocadosInnerJoin()
+        {
+            bd.Conectar();
+            DataTable dt = bd.RetDataTable(String.Format("SELECT Ep.codEmprego,Emp.nomeEmpresa,Emp.cnpj,Emp.telefoneResponsavel,A.nomeAluno,A.cpf,A.idade FROM Emprego AS Ep INNER JOIN Empresa AS Emp ON Ep.empresa_codEmpresa = Emp.codEmpresa INNER JOIN Aluno AS A ON Ep.aluno_codAluno = A.codAluno"));
+            bd.Desconectar();
+            return dt;
+        }
 
         public bool Excluir(int codEmpresaClicada)
         {
