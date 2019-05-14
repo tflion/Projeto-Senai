@@ -82,6 +82,67 @@ namespace ProjetoSenai
             }
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtBuscarAluno.Text.Length < 1 || txtBuscarAluno.Text == "Insira o código da Turma")
+            {
+                MessageBox.Show("Insira um valor no campo de filtro de Turma ao lado da opção 'Filtrar por Turma'");
+            }
+            else
+            {
+                //Validação para o caso da tabela não tenha sido selecionada ainda
+                if (dgvAluno.Rows.Count == 0)
+                {
+                    MessageBox.Show("Por favor, selecione uma tabela antes de filtrar!");
+                }
+                else
+                {
+                    //Código para filtrar o datagridview, para colocar mais filtros juntos só adicionar AND/OR e a condição, 
+                    // como faria no banco de dados 
+                    (dgvAluno.DataSource as DataTable).DefaultView.RowFilter =
+                    string.Format("sexo LIKE '{0}%' OR idade LIKE '{0}%' OR nomeAluno LIKE '{0}%' OR cidade LIKE '{0}%' OR bairro LIKE '{0}%' ", txtBuscarAluno.Text);
+                }
+            }
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            if (txtBuscarEmpresa.Text.Length < 1 || txtBuscarEmpresa.Text == "Insira o código da Turma")
+            {
+                MessageBox.Show("Insira um valor no campo de filtro de Turma ao lado da opção 'Filtrar por Turma'");
+            }
+            else
+            {
+                //Validação para o caso da tabela não tenha sido selecionada ainda
+                if (dgvEmpresa.Rows.Count == 0)
+                {
+                    MessageBox.Show("Por favor, selecione uma tabela antes de filtrar!");
+                }
+                else
+                {
+                    //Código para filtrar o datagridview, para colocar mais filtros juntos só adicionar AND/OR e a condição, 
+                    // como faria no banco de dados 
+                    (dgvEmpresa.DataSource as DataTable).DefaultView.RowFilter =
+                    string.Format("nomeEmpresa LIKE '{0}%' OR cidade LIKE '{0}%'  ", txtBuscarEmpresa.Text);
+                }
+            }
+        }
+
+        private void userAlocarAlunos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBuscarEmpresa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarEmpresa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void dgvEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //Se clicar em algum codigo no dgv
@@ -93,5 +154,5 @@ namespace ProjetoSenai
             txtNomeEmpresa.Text = dgvEmpresa.Rows[e.RowIndex].Cells["nomeEmpresa"].Value.ToString();
 
         }
-    }
+    }  
 }
