@@ -29,5 +29,10 @@ namespace ProjetoSenai
         {
             RetornarAlunosAlocadosDgv();
         }
+
+        private void dgvAlunosNaEmpresa_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.dgvAlunosNaEmpresa.Columns["codEmprego"].Visible = false;
+        }
     }
 }

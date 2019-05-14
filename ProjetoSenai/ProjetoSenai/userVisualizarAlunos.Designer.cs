@@ -81,6 +81,7 @@
             this.dgvAlunosNaEmpresa.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAlunosNaEmpresa.Size = new System.Drawing.Size(457, 165);
             this.dgvAlunosNaEmpresa.TabIndex = 32;
+            this.dgvAlunosNaEmpresa.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvAlunosNaEmpresa_DataBindingComplete);
             // 
             // txtNomeAluno
             // 

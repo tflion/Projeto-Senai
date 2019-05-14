@@ -117,7 +117,7 @@ namespace ProjetoSenai
         private void TxtCep_Leave(object sender, EventArgs e)
         {
             //Colocar cep nas txtBox a partir do cep dado no mskBox
-            MostrarCEP();
+            //MostrarCEP();
         }
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
