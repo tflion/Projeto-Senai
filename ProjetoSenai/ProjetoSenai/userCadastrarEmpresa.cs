@@ -160,8 +160,7 @@ namespace ProjetoSenai
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Tem certeza que deseja excluir", "Exclusão",MessageBoxButtons.OKCancel);
-            if(dialog == DialogResult.Yes)
+            if(MessageBox.Show("Tem certeza que deseja excluir", "Exclusão",MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 if (empresa.Excluir(codEmpresaClicada) == true)
                 {
@@ -201,11 +200,17 @@ namespace ProjetoSenai
             txtRua.Text = "";
             txtComplemento.Text = "";
             txtNumero.Text = "";
+            txtRazao.Text = "";
+            mskCnpj.Text = "";
+            txtRespNome.Text = "";
+            mskTelefoneResp.Text = "";
         }
         private void PegarDados()
         {
             //Pegar as informações para a inserção
             empresa.nomeEmpresa = txtNome.Text;
+            empresa.cnpj = mskCnpj.Text;
+            empresa.razaoSocial = txtRazao.Text;
             empresa.telefone = txtTelefone.Text;
             empresa.emailContato = txtEmail.Text;
             empresa.cidade = txtCidade.Text;
@@ -215,6 +220,9 @@ namespace ProjetoSenai
             empresa.complemento = txtComplemento.Text;
             empresa.numero = txtNumero.Text;
             empresa.cep = txtCep.Text;
+            empresa.responsavelContrato = txtRespNome.Text;
+            empresa.telefoneResponsavel = mskTelefoneResp.Text;
+
         }
         private void RetornarEmpresaDgv()
         {
@@ -241,6 +249,8 @@ namespace ProjetoSenai
                 codEmpresaClicada = int.Parse(dgvEmpresa.Rows[e.RowIndex].Cells["codEmpresa"].Value.ToString());
             }
             txtNome.Text = dgvEmpresa.Rows[e.RowIndex].Cells["nomeEmpresa"].Value.ToString();
+            mskCnpj.Text = dgvEmpresa.Rows[e.RowIndex].Cells["cnpj"].Value.ToString();
+            txtRazao.Text = dgvEmpresa.Rows[e.RowIndex].Cells["razaoSocial"].Value.ToString();
             txtTelefone.Text = dgvEmpresa.Rows[e.RowIndex].Cells["telefone"].Value.ToString();
             txtEmail.Text = dgvEmpresa.Rows[e.RowIndex].Cells["emailContato"].Value.ToString();
             txtCep.Text = dgvEmpresa.Rows[e.RowIndex].Cells["cep"].Value.ToString();
@@ -250,6 +260,8 @@ namespace ProjetoSenai
             txtRua.Text = dgvEmpresa.Rows[e.RowIndex].Cells["rua"].Value.ToString();
             txtComplemento.Text = dgvEmpresa.Rows[e.RowIndex].Cells["complemento"].Value.ToString();
             txtNumero.Text = dgvEmpresa.Rows[e.RowIndex].Cells["numeroCasa"].Value.ToString();
+            txtRespNome.Text = dgvEmpresa.Rows[e.RowIndex].Cells["responsavelContrato"].Value.ToString();
+            mskTelefoneResp.Text = dgvEmpresa.Rows[e.RowIndex].Cells["telefoneResponsavel"].Value.ToString();
         }
 
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)

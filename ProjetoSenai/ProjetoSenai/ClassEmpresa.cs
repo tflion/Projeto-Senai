@@ -11,6 +11,8 @@ namespace ProjetoSenai
     {
         public int aluno_codAluno { get; set; }
         public string nomeEmpresa { get; set; }
+        public string razaoSocial { get; set; }
+        public string cnpj { get; set; }
         public string telefone { get; set; }
         public string emailContato { get; set; }
         public string cidade { get; set; }
@@ -20,6 +22,8 @@ namespace ProjetoSenai
         public string complemento { get; set; }
         public string numero { get; set; }
         public string cep { get; set; }
+        public string responsavelContrato { get; set; }
+        public string telefoneResponsavel { get; set; }
 
         ClassAcessoBD bd = new ClassAcessoBD();
 
@@ -28,8 +32,8 @@ namespace ProjetoSenai
             try
             {
                 bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("INSERT INTO Empresa (nomeEmpresa, telefone, emailContato, cidade, estado, bairro, rua, complemento, numeroCasa, cep) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", nomeEmpresa, telefone, emailContato, cidade, estado, bairro,
-                    rua, complemento, numero, cep));
+                bd.ExecutarComandosSql(String.Format("INSERT INTO Empresa (nomeEmpresa, cnpj, razaoSocial, telefone, emailContato, cidade, estado, bairro, rua, complemento, numeroCasa, cep, responsavelContrato, telefoneResponsavel) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')", nomeEmpresa, cnpj, razaoSocial, telefone, emailContato, cidade, estado, bairro,
+                    rua, complemento, numero, cep, responsavelContrato, telefoneResponsavel));
                 bd.Desconectar();
                 return true;
             }
@@ -45,9 +49,9 @@ namespace ProjetoSenai
             try
             {
                 bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET nomeEmpresa = '{0}', telefone ='{1}', emailContato = '{2}', cidade = '{3}', estado = '{4}', bairro = '{5}', "
-                    + " rua = '{6}', complemento = '{7}', numeroCasa = '{8}', cep = '{9}' WHERE codEmpresa = {10}", nomeEmpresa, telefone, emailContato, cidade, estado,
-                    bairro, rua, complemento, numero, cep, codEmpresaClicada));
+                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET nomeEmpresa = '{0}', cnpj = '{1}', razaoSocial = '{2}', telefone ='{3}', emailContato = '{4}', cidade = '{5}', estado = '{6}', bairro = '{7}', "
+                    + " rua = '{8}', complemento = '{9}', numeroCasa = '{10}', cep = '{11}', responsavelContrato = '{12}', telefoneResponsavel = '{13}' WHERE codEmpresa = {14}", nomeEmpresa, cnpj, razaoSocial, telefone, emailContato, cidade, estado,
+                    bairro, rua, complemento, numero, cep, responsavelContrato, telefoneResponsavel, codEmpresaClicada));
 
                 bd.Desconectar();
                 return true;
