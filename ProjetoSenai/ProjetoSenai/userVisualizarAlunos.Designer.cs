@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userVisualizarAlunos));
             this.dgvAlunosNaEmpresa = new System.Windows.Forms.DataGridView();
             this.txtNomeAluno = new System.Windows.Forms.TextBox();
             this.lblNomeAluno = new System.Windows.Forms.Label();
@@ -39,8 +40,8 @@
             this.lblCpfAluno = new System.Windows.Forms.Label();
             this.txtNomeEmpresa = new System.Windows.Forms.TextBox();
             this.lblNomeEmpresa = new System.Windows.Forms.Label();
-            this.btnEditar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnExcluir = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunosNaEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +79,7 @@
             this.dgvAlunosNaEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dgvAlunosNaEmpresa.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvAlunosNaEmpresa.Size = new System.Drawing.Size(510, 165);
+            this.dgvAlunosNaEmpresa.Size = new System.Drawing.Size(457, 165);
             this.dgvAlunosNaEmpresa.TabIndex = 32;
             // 
             // txtNomeAluno
@@ -129,40 +130,38 @@
             this.lblNomeEmpresa.TabIndex = 43;
             this.lblNomeEmpresa.Text = "Nome da empresa:";
             // 
-            // btnEditar
-            // 
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.Depth = 0;
-            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(19, 252);
-            this.btnEditar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Primary = true;
-            this.btnEditar.Size = new System.Drawing.Size(143, 41);
-            this.btnEditar.TabIndex = 46;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
             // btnExcluir
             // 
             this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcluir.Depth = 0;
             this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(179, 252);
+            this.btnExcluir.Location = new System.Drawing.Point(19, 265);
             this.btnExcluir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Primary = true;
-            this.btnExcluir.Size = new System.Drawing.Size(143, 41);
+            this.btnExcluir.Size = new System.Drawing.Size(206, 41);
             this.btnExcluir.TabIndex = 47;
-            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Text = "remover aluno da empresa";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.FlatAppearance.BorderSize = 0;
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.Image")));
+            this.btnAtualizar.Location = new System.Drawing.Point(482, 435);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(45, 42);
+            this.btnAtualizar.TabIndex = 48;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.BtnAtualizar_Click);
             // 
             // userVisualizarAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtNomeEmpresa);
             this.Controls.Add(this.lblNomeEmpresa);
             this.Controls.Add(this.txtCpfAluno);
@@ -187,7 +186,7 @@
         private System.Windows.Forms.Label lblCpfAluno;
         private System.Windows.Forms.TextBox txtNomeEmpresa;
         private System.Windows.Forms.Label lblNomeEmpresa;
-        private MaterialSkin.Controls.MaterialRaisedButton btnEditar;
         private MaterialSkin.Controls.MaterialRaisedButton btnExcluir;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

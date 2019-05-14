@@ -135,9 +135,16 @@ numeroCasa		   CHAR(5),
 cep				   CHAR (10),
 responsavelContrato		CHAR(40),
 telefoneResponsavel		CHAR(20),
-aluno_codAluno	   INT,
-FOREIGN KEY (aluno_codAluno)
-	REFERENCES aluno (codAluno)
 );
 
+CREATE TABLE Emprego
+(
+codEmprego			INT PRIMARY KEY IDENTITY (1,1),
+aluno_codAluno		INT,
+empresa_codEmpresa  INT,
+FOREIGN KEY (aluno_codAluno) REFERENCES Aluno (codAluno),
+FOREIGN KEY (empresa_codEmpresa) REFERENCES Empresa (codEmpresa)
+);
+
+SELECT Ep.codEmprego,Emp.nomeEmpresa,Emp.cnpj,Emp.telefoneResponsavel,A.nomeAluno,A.cpf,A.idade FROM Emprego AS Ep INNER JOIN Empresa AS Emp ON Ep.empresa_codEmpresa = Emp.codEmpresa INNER JOIN Aluno AS A ON Ep.aluno_codAluno = A.codAluno;
 -- DROP TABLE Empresa

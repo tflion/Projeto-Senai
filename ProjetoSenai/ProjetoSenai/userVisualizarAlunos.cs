@@ -12,9 +12,22 @@ namespace ProjetoSenai
 {
     public partial class userVisualizarAlunos : UserControl
     {
+        ClassEmpresa empresa = new ClassEmpresa();
+
         public userVisualizarAlunos()
         {
             InitializeComponent();
+            RetornarAlunosAlocadosDgv();
+        }
+
+        private void RetornarAlunosAlocadosDgv()
+        {
+            dgvAlunosNaEmpresa.DataSource = empresa.RetAlunosAlocados();
+        }
+
+        private void BtnAtualizar_Click(object sender, EventArgs e)
+        {
+            RetornarAlunosAlocadosDgv();
         }
     }
 }

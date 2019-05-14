@@ -63,7 +63,7 @@ namespace ProjetoSenai
             try
             {
                 bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("UPDATE Empresa SET aluno_codAluno = {0} WHERE codEmpresa = {1}", aluno_codAluno, codEmpresaClicada));
+                bd.ExecutarComandosSql(String.Format("INSERT INTO Emprego (aluno_codAluno, empresa_codEmpresa) VALUES({0},{1})", aluno_codAluno, codEmpresaClicada));
 
                 bd.Desconectar();
                 return true;
@@ -73,6 +73,13 @@ namespace ProjetoSenai
                 throw new Exception(ex.Message + "Erro ao editar os dados desta empresa" +
                     ". ");
             }
+        }
+        public DataTable RetAlunosAlocados()
+        {
+            bd.Conectar();
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Emprego"));
+            bd.Desconectar();
+            return dt;
         }
 
         public bool Excluir(int codEmpresaClicada)
