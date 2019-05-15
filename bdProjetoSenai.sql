@@ -136,15 +136,21 @@ cep				   CHAR (10),
 responsavelContrato		CHAR(40),
 telefoneResponsavel		CHAR(20),
 );
-
 CREATE TABLE Emprego
 (
 codEmprego			INT PRIMARY KEY IDENTITY (1,1),
-aluno_codAluno		INT,
-empresa_codEmpresa  INT,
-FOREIGN KEY (aluno_codAluno) REFERENCES Aluno (codAluno),
-FOREIGN KEY (empresa_codEmpresa) REFERENCES Empresa (codEmpresa)
+nomeEmpresa			VARCHAR(100),
+cnpjEmpresa			VARCHAR(20),
+telefoneResponsavel VARCHAR(20),
+nomeAluno			VARCHAR(100),
+cpfAluno			VARCHAR(100),
+idadeAluno			VARCHAR(100),
+FOREIGN KEY (nomeEmpresa) REFERENCES Empresa (nomeEmpresa),
+FOREIGN KEY (cnpjEmpresa) REFERENCES Empresa (cnpj),
+FOREIGN KEY (telefoneResponsavel) REFERENCES Empresa (telefoneResponsavel),
+FOREIGN KEY (nomeAluno) REFERENCES Aluno (nomeAluno),
+FOREIGN KEY (cpfAluno) REFERENCES Aluno (cpf),
+FOREIGN KEY (idadeAluno) REFERENCES Aluno (idade)
 );
 
-SELECT Ep.codEmprego,Emp.nomeEmpresa,Emp.cnpj,Emp.telefoneResponsavel,A.nomeAluno,A.cpf,A.idade FROM Emprego AS Ep INNER JOIN Empresa AS Emp ON Ep.empresa_codEmpresa = Emp.codEmpresa INNER JOIN Aluno AS A ON Ep.aluno_codAluno = A.codAluno;
 -- DROP TABLE Empresa
