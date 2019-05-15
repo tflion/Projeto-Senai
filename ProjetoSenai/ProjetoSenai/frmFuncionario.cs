@@ -97,7 +97,10 @@ namespace ProjetoSenai
 
         private void btnVisualizarAlunos_Click(object sender, EventArgs e)
         {
-            userVisualizarAlunos1.BringToFront();
+            this.Hide();
+            frmRelatorio form = new frmRelatorio();
+            form.ShowDialog();
+            this.Close();
             pnlIndicador.Height = btnVisualizarAlunos.Height;
             pnlIndicador.Top = btnVisualizarAlunos.Top;
         }

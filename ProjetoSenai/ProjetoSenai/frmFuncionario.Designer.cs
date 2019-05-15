@@ -40,7 +40,6 @@
             this.userImportarDados = new ProjetoSenai.userImportarDados();
             this.userCadastrarEmpresa1 = new ProjetoSenai.userCadastrarEmpresa();
             this.userAlocarAlunos1 = new ProjetoSenai.userAlocarAlunos();
-            this.userVisualizarAlunos1 = new ProjetoSenai.userVisualizarAlunos();
             this.pnlDireito.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,9 +51,9 @@
             this.pnlDireito.Controls.Add(this.btnAlocarAlunos);
             this.pnlDireito.Controls.Add(this.btnCadastrarEmpresa);
             this.pnlDireito.Controls.Add(this.btnImportarDados);
-            this.pnlDireito.Location = new System.Drawing.Point(0, 52);
+            this.pnlDireito.Location = new System.Drawing.Point(0, 64);
             this.pnlDireito.Name = "pnlDireito";
-            this.pnlDireito.Size = new System.Drawing.Size(194, 502);
+            this.pnlDireito.Size = new System.Drawing.Size(194, 490);
             this.pnlDireito.TabIndex = 0;
             this.pnlDireito.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDireito_Paint);
             // 
@@ -189,19 +188,11 @@
             this.userAlocarAlunos1.Size = new System.Drawing.Size(549, 490);
             this.userAlocarAlunos1.TabIndex = 4;
             // 
-            // userVisualizarAlunos1
-            // 
-            this.userVisualizarAlunos1.Location = new System.Drawing.Point(196, 64);
-            this.userVisualizarAlunos1.Name = "userVisualizarAlunos1";
-            this.userVisualizarAlunos1.Size = new System.Drawing.Size(549, 490);
-            this.userVisualizarAlunos1.TabIndex = 5;
-            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 554);
-            this.Controls.Add(this.userVisualizarAlunos1);
             this.Controls.Add(this.userAlocarAlunos1);
             this.Controls.Add(this.userCadastrarEmpresa2);
             this.Controls.Add(this.userPrincipal);
@@ -230,6 +221,6 @@
         private System.Windows.Forms.Button btnAlocarAlunos;
         private System.Windows.Forms.Panel pnlIndicador;
         private userAlocarAlunos userAlocarAlunos1;
-        private userVisualizarAlunos userVisualizarAlunos1;
+       
     }
 }

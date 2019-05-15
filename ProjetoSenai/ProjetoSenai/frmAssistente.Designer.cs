@@ -33,7 +33,6 @@
             this.pnlIndicador = new System.Windows.Forms.Panel();
             this.btnVisualizarAlunos = new System.Windows.Forms.Button();
             this.userPrincipal1 = new ProjetoSenai.userPrincipal();
-            this.userAssisteteView1 = new ProjetoSenai.userAssisteteView();
             this.pnlDireito.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +71,7 @@
             this.btnVisualizarAlunos.Text = "VISUALIZAR ALUNOS E EMPRESAS";
             this.btnVisualizarAlunos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVisualizarAlunos.UseVisualStyleBackColor = false;
+            this.btnVisualizarAlunos.Click += new System.EventHandler(this.BtnVisualizarAlunos_Click);
             // 
             // userPrincipal1
             // 
@@ -81,22 +81,14 @@
             this.userPrincipal1.Size = new System.Drawing.Size(553, 490);
             this.userPrincipal1.TabIndex = 2;
             // 
-            // userAssisteteView1
-            // 
-            this.userAssisteteView1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.userAssisteteView1.Location = new System.Drawing.Point(180, 64);
-            this.userAssisteteView1.Name = "userAssisteteView1";
-            this.userAssisteteView1.Size = new System.Drawing.Size(553, 490);
-            this.userAssisteteView1.TabIndex = 3;
-            // 
             // frmAssistente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 554);
-            this.Controls.Add(this.userAssisteteView1);
             this.Controls.Add(this.userPrincipal1);
             this.Controls.Add(this.pnlDireito);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAssistente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SENAI - Serviço Nacional de Aprendizagem Industrial";
@@ -111,6 +103,5 @@
         private System.Windows.Forms.Panel pnlIndicador;
         private System.Windows.Forms.Button btnVisualizarAlunos;
         private userPrincipal userPrincipal1;
-        private userAssisteteView userAssisteteView1;
     }
 }
