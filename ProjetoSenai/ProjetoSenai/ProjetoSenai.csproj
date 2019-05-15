@@ -91,16 +91,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetEmprego.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dbProjetoSenai.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbProjetoSenai.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dbProjetoSenaiDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbProjetoSenaiDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="frmAssistente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,28 +223,6 @@
     </None>
     <None Include="DataSetEmprego.xss">
       <DependentUpon>DataSetEmprego.xsd</DependentUpon>
-    </None>
-    <None Include="dbProjetoSenai.xsc">
-      <DependentUpon>dbProjetoSenai.xsd</DependentUpon>
-    </None>
-    <None Include="dbProjetoSenai.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbProjetoSenai.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbProjetoSenai.xss">
-      <DependentUpon>dbProjetoSenai.xsd</DependentUpon>
-    </None>
-    <None Include="dbProjetoSenaiDataSet.xsc">
-      <DependentUpon>dbProjetoSenaiDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbProjetoSenaiDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbProjetoSenaiDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbProjetoSenaiDataSet.xss">
-      <DependentUpon>dbProjetoSenaiDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
