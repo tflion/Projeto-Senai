@@ -136,12 +136,16 @@ cep				   CHAR (10),
 responsavelContrato		CHAR(40),
 telefoneResponsavel		CHAR(20),
 );
-DROP TABLE Emprego
 CREATE TABLE Emprego
 (
 codEmprego			INT PRIMARY KEY IDENTITY (1,1),
 aluno_codAluno		INT,
 empresa_codEmpresa	INT,
+nomeAluno			VARCHAR(100),
+nomeEmpresa			VARCHAR(100),
+cpfAluno			VARCHAR(100),
+cnpjEmpresa			VARCHAR(100),
+idadeAluno			VARCHAR(100),
 FOREIGN KEY (empresa_codEmpresa) REFERENCES Empresa (codEmpresa),
 FOREIGN KEY (aluno_codAluno) REFERENCES Aluno (codAluno),
 );
