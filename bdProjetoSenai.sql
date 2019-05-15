@@ -140,10 +140,10 @@ DROP TABLE Emprego
 CREATE TABLE Emprego
 (
 codEmprego			INT PRIMARY KEY IDENTITY (1,1),
-codEmpresa			INT,
-codAluno			INT,
-FOREIGN KEY (codEmpresa) REFERENCES Empresa (codEmpresa),
-FOREIGN KEY (codAluno) REFERENCES Aluno (codAluno),
+aluno_codAluno		INT,
+empresa_codEmpresa	INT,
+FOREIGN KEY (empresa_codEmpresa) REFERENCES Empresa (codEmpresa),
+FOREIGN KEY (aluno_codAluno) REFERENCES Aluno (codAluno),
 );
 
 -- DROP TABLE Empresa
