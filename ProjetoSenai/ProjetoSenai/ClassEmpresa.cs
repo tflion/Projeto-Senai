@@ -62,12 +62,12 @@ namespace ProjetoSenai
                     ". ");
             }
         }
-        public bool AlocarAluno(int codEmpresaClicada)
+        public bool AlocarAluno(int codEmpresaClicada,string nomeAluno,string cpfAluno,string idadeAluno)
         {
             try
             {
                 bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("INSERT INTO Emprego (aluno_codAluno, empresa_codEmpresa) VALUES({0},{1})", aluno_codAluno, codEmpresaClicada));
+                bd.ExecutarComandosSql(String.Format("INSERT INTO Emprego (aluno_codAluno, empresa_codEmpresa, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno) VALUES({0},{1},'{2}','{3}','{4}','{5}','{6}')", aluno_codAluno, codEmpresaClicada,nomeAluno,nomeEmpresa,cpfAluno,cnpj,idadeAluno));
 
                 bd.Desconectar();
                 return true;

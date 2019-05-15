@@ -60,6 +60,7 @@ namespace ProjetoSenai
             }
             txtNomeAluno.Text = dgvAluno.Rows[e.RowIndex].Cells["nomeAluno"].Value.ToString();
             txtCpfAluno.Text = dgvAluno.Rows[e.RowIndex].Cells["cpf"].Value.ToString();
+            txtIdade.Text = dgvAluno.Rows[e.RowIndex].Cells["idade"].Value.ToString();
 
         }
 
@@ -74,7 +75,7 @@ namespace ProjetoSenai
             if(VerificarDados() == true)
             {
                 empresa.aluno_codAluno = codAlunoClicado;
-                if(empresa.AlocarAluno(codEmpresaClicada) == true)
+                if(empresa.AlocarAluno(codEmpresaClicada,txtNomeAluno.Text,txtCpfAluno.Text,txtIdade.Text) == true)
                 {
                     MessageBox.Show("Aluno alocado a empresa com sucesso.");
                     LimparTxt();
@@ -143,6 +144,11 @@ namespace ProjetoSenai
 
         }
 
+        private void LblIdade_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void dgvEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //Se clicar em algum codigo no dgv
@@ -152,6 +158,7 @@ namespace ProjetoSenai
                 codEmpresaClicada = int.Parse(dgvEmpresa.Rows[e.RowIndex].Cells["codEmpresa"].Value.ToString());
             }
             txtNomeEmpresa.Text = dgvEmpresa.Rows[e.RowIndex].Cells["nomeEmpresa"].Value.ToString();
+            txtCnpj.Text = dgvEmpresa.Rows[e.RowIndex].Cells["cnpj"].Value.ToString();
 
         }
     }  

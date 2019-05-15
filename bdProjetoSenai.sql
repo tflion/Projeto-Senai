@@ -149,5 +149,4 @@ idadeAluno			VARCHAR(100),
 FOREIGN KEY (empresa_codEmpresa) REFERENCES Empresa (codEmpresa),
 FOREIGN KEY (aluno_codAluno) REFERENCES Aluno (codAluno),
 );
-
 -- DROP TABLE Empresa
