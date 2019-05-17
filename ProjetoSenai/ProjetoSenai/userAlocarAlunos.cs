@@ -36,6 +36,8 @@ namespace ProjetoSenai
             txtNomeAluno.Text = "";
             txtCpfAluno.Text = "";
             txtNomeEmpresa.Text = "";
+            txtCnpj.Text = "";
+            txtIdade.Text = "";
         }
         private bool VerificarDados()
         {
@@ -75,6 +77,8 @@ namespace ProjetoSenai
             if(VerificarDados() == true)
             {
                 empresa.aluno_codAluno = codAlunoClicado;
+                empresa.nomeEmpresa = txtNomeEmpresa.Text;
+                empresa.cnpj = txtCnpj.Text;
                 if(empresa.AlocarAluno(codEmpresaClicada,txtNomeAluno.Text,txtCpfAluno.Text,txtIdade.Text) == true)
                 {
                     MessageBox.Show("Aluno alocado a empresa com sucesso.");
