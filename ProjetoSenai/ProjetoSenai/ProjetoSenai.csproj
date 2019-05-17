@@ -86,6 +86,9 @@
     <Compile Include="ClassAluno.cs" />
     <Compile Include="ClassEmpresa.cs" />
     <Compile Include="ClassUsuario.cs" />
+    <Compile Include="DataSetEmprego.cs">
+      <DependentUpon>DataSetEmprego.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetEmprego.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

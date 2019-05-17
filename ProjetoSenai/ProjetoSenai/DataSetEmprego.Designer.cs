@@ -281,6 +281,10 @@ namespace ProjetoSenai {
             
             private global::System.Data.DataColumn columncodEmprego;
             
+            private global::System.Data.DataColumn columnaluno_codAluno;
+            
+            private global::System.Data.DataColumn columnempresa_codEmpresa;
+            
             private global::System.Data.DataColumn columnnomeAluno;
             
             private global::System.Data.DataColumn columnnomeEmpresa;
@@ -329,6 +333,22 @@ namespace ProjetoSenai {
             public global::System.Data.DataColumn codEmpregoColumn {
                 get {
                     return this.columncodEmprego;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn aluno_codAlunoColumn {
+                get {
+                    return this.columnaluno_codAluno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn empresa_codEmpresaColumn {
+                get {
+                    return this.columnempresa_codEmpresa;
                 }
             }
             
@@ -409,10 +429,12 @@ namespace ProjetoSenai {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EmpregoRow AddEmpregoRow(string nomeAluno, string nomeEmpresa, string cpfAluno, string cnpjEmpresa, string idadeAluno) {
+            public EmpregoRow AddEmpregoRow(int aluno_codAluno, int empresa_codEmpresa, string nomeAluno, string nomeEmpresa, string cpfAluno, string cnpjEmpresa, string idadeAluno) {
                 EmpregoRow rowEmpregoRow = ((EmpregoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
+                        aluno_codAluno,
+                        empresa_codEmpresa,
                         nomeAluno,
                         nomeEmpresa,
                         cpfAluno,
@@ -448,6 +470,8 @@ namespace ProjetoSenai {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columncodEmprego = base.Columns["codEmprego"];
+                this.columnaluno_codAluno = base.Columns["aluno_codAluno"];
+                this.columnempresa_codEmpresa = base.Columns["empresa_codEmpresa"];
                 this.columnnomeAluno = base.Columns["nomeAluno"];
                 this.columnnomeEmpresa = base.Columns["nomeEmpresa"];
                 this.columncpfAluno = base.Columns["cpfAluno"];
@@ -460,6 +484,10 @@ namespace ProjetoSenai {
             private void InitClass() {
                 this.columncodEmprego = new global::System.Data.DataColumn("codEmprego", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodEmprego);
+                this.columnaluno_codAluno = new global::System.Data.DataColumn("aluno_codAluno", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaluno_codAluno);
+                this.columnempresa_codEmpresa = new global::System.Data.DataColumn("empresa_codEmpresa", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnempresa_codEmpresa);
                 this.columnnomeAluno = new global::System.Data.DataColumn("nomeAluno", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnomeAluno);
                 this.columnnomeEmpresa = new global::System.Data.DataColumn("nomeEmpresa", typeof(string), null, global::System.Data.MappingType.Element);
@@ -636,6 +664,38 @@ namespace ProjetoSenai {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int aluno_codAluno {
+                get {
+                    try {
+                        return ((int)(this[this.tableEmprego.aluno_codAlunoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'aluno_codAluno\' in table \'Emprego\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmprego.aluno_codAlunoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int empresa_codEmpresa {
+                get {
+                    try {
+                        return ((int)(this[this.tableEmprego.empresa_codEmpresaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'empresa_codEmpresa\' in table \'Emprego\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmprego.empresa_codEmpresaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string nomeAluno {
                 get {
                     try {
@@ -712,6 +772,30 @@ namespace ProjetoSenai {
                 set {
                     this[this.tableEmprego.idadeAlunoColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isaluno_codAlunoNull() {
+                return this.IsNull(this.tableEmprego.aluno_codAlunoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setaluno_codAlunoNull() {
+                this[this.tableEmprego.aluno_codAlunoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isempresa_codEmpresaNull() {
+                return this.IsNull(this.tableEmprego.empresa_codEmpresaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setempresa_codEmpresaNull() {
+                this[this.tableEmprego.empresa_codEmpresaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -935,6 +1019,8 @@ namespace ProjetoSenai.DataSetEmpregoTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Emprego";
             tableMapping.ColumnMappings.Add("codEmprego", "codEmprego");
+            tableMapping.ColumnMappings.Add("aluno_codAluno", "aluno_codAluno");
+            tableMapping.ColumnMappings.Add("empresa_codEmpresa", "empresa_codEmpresa");
             tableMapping.ColumnMappings.Add("nomeAluno", "nomeAluno");
             tableMapping.ColumnMappings.Add("nomeEmpresa", "nomeEmpresa");
             tableMapping.ColumnMappings.Add("cpfAluno", "cpfAluno");
@@ -943,9 +1029,13 @@ namespace ProjetoSenai.DataSetEmpregoTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Emprego] WHERE (([codEmprego] = @Original_codEmprego) AND ((@IsNull_nomeAluno = 1 AND [nomeAluno] IS NULL) OR ([nomeAluno] = @Original_nomeAluno)) AND ((@IsNull_nomeEmpresa = 1 AND [nomeEmpresa] IS NULL) OR ([nomeEmpresa] = @Original_nomeEmpresa)) AND ((@IsNull_cpfAluno = 1 AND [cpfAluno] IS NULL) OR ([cpfAluno] = @Original_cpfAluno)) AND ((@IsNull_cnpjEmpresa = 1 AND [cnpjEmpresa] IS NULL) OR ([cnpjEmpresa] = @Original_cnpjEmpresa)) AND ((@IsNull_idadeAluno = 1 AND [idadeAluno] IS NULL) OR ([idadeAluno] = @Original_idadeAluno)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Emprego] WHERE (([codEmprego] = @Original_codEmprego) AND ((@IsNull_aluno_codAluno = 1 AND [aluno_codAluno] IS NULL) OR ([aluno_codAluno] = @Original_aluno_codAluno)) AND ((@IsNull_empresa_codEmpresa = 1 AND [empresa_codEmpresa] IS NULL) OR ([empresa_codEmpresa] = @Original_empresa_codEmpresa)) AND ((@IsNull_nomeAluno = 1 AND [nomeAluno] IS NULL) OR ([nomeAluno] = @Original_nomeAluno)) AND ((@IsNull_nomeEmpresa = 1 AND [nomeEmpresa] IS NULL) OR ([nomeEmpresa] = @Original_nomeEmpresa)) AND ((@IsNull_cpfAluno = 1 AND [cpfAluno] IS NULL) OR ([cpfAluno] = @Original_cpfAluno)) AND ((@IsNull_cnpjEmpresa = 1 AND [cnpjEmpresa] IS NULL) OR ([cnpjEmpresa] = @Original_cnpjEmpresa)) AND ((@IsNull_idadeAluno = 1 AND [idadeAluno] IS NULL) OR ([idadeAluno] = @Original_idadeAluno)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codEmprego", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codEmprego", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_aluno_codAluno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "aluno_codAluno", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_aluno_codAluno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "aluno_codAluno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_empresa_codEmpresa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "empresa_codEmpresa", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_empresa_codEmpresa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "empresa_codEmpresa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nomeAluno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomeAluno", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nomeAluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomeAluno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nomeEmpresa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomeEmpresa", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -958,9 +1048,11 @@ namespace ProjetoSenai.DataSetEmpregoTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idadeAluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idadeAluno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Emprego] ([nomeAluno], [nomeEmpresa], [cpfAluno], [cnpjEmpresa], [idadeAluno]) VALUES (@nomeAluno, @nomeEmpresa, @cpfAluno, @cnpjEmpresa, @idadeAluno);
-SELECT codEmprego, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno FROM Emprego WHERE (codEmprego = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Emprego] ([aluno_codAluno], [empresa_codEmpresa], [nomeAluno], [nomeEmpresa], [cpfAluno], [cnpjEmpresa], [idadeAluno]) VALUES (@aluno_codAluno, @empresa_codEmpresa, @nomeAluno, @nomeEmpresa, @cpfAluno, @cnpjEmpresa, @idadeAluno);
+SELECT codEmprego, aluno_codAluno, empresa_codEmpresa, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno FROM Emprego WHERE (codEmprego = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@aluno_codAluno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "aluno_codAluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@empresa_codEmpresa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "empresa_codEmpresa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nomeAluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomeAluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nomeEmpresa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomeEmpresa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cpfAluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpfAluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -968,15 +1060,21 @@ SELECT codEmprego, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno FRO
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idadeAluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idadeAluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Emprego] SET [nomeAluno] = @nomeAluno, [nomeEmpresa] = @nomeEmpresa, [cpfAluno] = @cpfAluno, [cnpjEmpresa] = @cnpjEmpresa, [idadeAluno] = @idadeAluno WHERE (([codEmprego] = @Original_codEmprego) AND ((@IsNull_nomeAluno = 1 AND [nomeAluno] IS NULL) OR ([nomeAluno] = @Original_nomeAluno)) AND ((@IsNull_nomeEmpresa = 1 AND [nomeEmpresa] IS NULL) OR ([nomeEmpresa] = @Original_nomeEmpresa)) AND ((@IsNull_cpfAluno = 1 AND [cpfAluno] IS NULL) OR ([cpfAluno] = @Original_cpfAluno)) AND ((@IsNull_cnpjEmpresa = 1 AND [cnpjEmpresa] IS NULL) OR ([cnpjEmpresa] = @Original_cnpjEmpresa)) AND ((@IsNull_idadeAluno = 1 AND [idadeAluno] IS NULL) OR ([idadeAluno] = @Original_idadeAluno)));
-SELECT codEmprego, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno FROM Emprego WHERE (codEmprego = @codEmprego)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Emprego] SET [aluno_codAluno] = @aluno_codAluno, [empresa_codEmpresa] = @empresa_codEmpresa, [nomeAluno] = @nomeAluno, [nomeEmpresa] = @nomeEmpresa, [cpfAluno] = @cpfAluno, [cnpjEmpresa] = @cnpjEmpresa, [idadeAluno] = @idadeAluno WHERE (([codEmprego] = @Original_codEmprego) AND ((@IsNull_aluno_codAluno = 1 AND [aluno_codAluno] IS NULL) OR ([aluno_codAluno] = @Original_aluno_codAluno)) AND ((@IsNull_empresa_codEmpresa = 1 AND [empresa_codEmpresa] IS NULL) OR ([empresa_codEmpresa] = @Original_empresa_codEmpresa)) AND ((@IsNull_nomeAluno = 1 AND [nomeAluno] IS NULL) OR ([nomeAluno] = @Original_nomeAluno)) AND ((@IsNull_nomeEmpresa = 1 AND [nomeEmpresa] IS NULL) OR ([nomeEmpresa] = @Original_nomeEmpresa)) AND ((@IsNull_cpfAluno = 1 AND [cpfAluno] IS NULL) OR ([cpfAluno] = @Original_cpfAluno)) AND ((@IsNull_cnpjEmpresa = 1 AND [cnpjEmpresa] IS NULL) OR ([cnpjEmpresa] = @Original_cnpjEmpresa)) AND ((@IsNull_idadeAluno = 1 AND [idadeAluno] IS NULL) OR ([idadeAluno] = @Original_idadeAluno)));
+SELECT codEmprego, aluno_codAluno, empresa_codEmpresa, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno FROM Emprego WHERE (codEmprego = @codEmprego)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@aluno_codAluno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "aluno_codAluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@empresa_codEmpresa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "empresa_codEmpresa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nomeAluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomeAluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nomeEmpresa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomeEmpresa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cpfAluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpfAluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cnpjEmpresa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cnpjEmpresa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idadeAluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idadeAluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codEmprego", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codEmprego", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_aluno_codAluno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "aluno_codAluno", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_aluno_codAluno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "aluno_codAluno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_empresa_codEmpresa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "empresa_codEmpresa", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_empresa_codEmpresa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "empresa_codEmpresa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nomeAluno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomeAluno", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nomeAluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomeAluno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nomeEmpresa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomeEmpresa", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1003,8 +1101,8 @@ SELECT codEmprego, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno FRO
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT codEmprego, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno FROM" +
-                " Emprego";
+            this._commandCollection[0].CommandText = "SELECT codEmprego, aluno_codAluno, empresa_codEmpresa, nomeAluno, nomeEmpresa, cp" +
+                "fAluno, cnpjEmpresa, idadeAluno FROM dbo.Emprego";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1065,47 +1163,63 @@ SELECT codEmprego, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_codEmprego, string Original_nomeAluno, string Original_nomeEmpresa, string Original_cpfAluno, string Original_cnpjEmpresa, string Original_idadeAluno) {
+        public virtual int Delete(int Original_codEmprego, global::System.Nullable<int> Original_aluno_codAluno, global::System.Nullable<int> Original_empresa_codEmpresa, string Original_nomeAluno, string Original_nomeEmpresa, string Original_cpfAluno, string Original_cnpjEmpresa, string Original_idadeAluno) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_codEmprego));
-            if ((Original_nomeAluno == null)) {
+            if ((Original_aluno_codAluno.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_aluno_codAluno.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_nomeAluno));
+            if ((Original_empresa_codEmpresa.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_empresa_codEmpresa.Value));
             }
-            if ((Original_nomeEmpresa == null)) {
+            else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_nomeEmpresa));
-            }
-            if ((Original_cpfAluno == null)) {
+            if ((Original_nomeAluno == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_cpfAluno));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_nomeAluno));
             }
-            if ((Original_cnpjEmpresa == null)) {
+            if ((Original_nomeEmpresa == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_cnpjEmpresa));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_nomeEmpresa));
             }
-            if ((Original_idadeAluno == null)) {
+            if ((Original_cpfAluno == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_idadeAluno));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_cpfAluno));
+            }
+            if ((Original_cnpjEmpresa == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_cnpjEmpresa));
+            }
+            if ((Original_idadeAluno == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_idadeAluno));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1127,36 +1241,48 @@ SELECT codEmprego, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string nomeAluno, string nomeEmpresa, string cpfAluno, string cnpjEmpresa, string idadeAluno) {
-            if ((nomeAluno == null)) {
+        public virtual int Insert(global::System.Nullable<int> aluno_codAluno, global::System.Nullable<int> empresa_codEmpresa, string nomeAluno, string nomeEmpresa, string cpfAluno, string cnpjEmpresa, string idadeAluno) {
+            if ((aluno_codAluno.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(aluno_codAluno.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(nomeAluno));
+            if ((empresa_codEmpresa.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(empresa_codEmpresa.Value));
             }
-            if ((nomeEmpresa == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nomeEmpresa));
-            }
-            if ((cpfAluno == null)) {
+            if ((nomeAluno == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(cpfAluno));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(nomeAluno));
             }
-            if ((cnpjEmpresa == null)) {
+            if ((nomeEmpresa == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(cnpjEmpresa));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(nomeEmpresa));
             }
-            if ((idadeAluno == null)) {
+            if ((cpfAluno == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(idadeAluno));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(cpfAluno));
+            }
+            if ((cnpjEmpresa == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(cnpjEmpresa));
+            }
+            if ((idadeAluno == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(idadeAluno));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1178,79 +1304,123 @@ SELECT codEmprego, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nomeAluno, string nomeEmpresa, string cpfAluno, string cnpjEmpresa, string idadeAluno, int Original_codEmprego, string Original_nomeAluno, string Original_nomeEmpresa, string Original_cpfAluno, string Original_cnpjEmpresa, string Original_idadeAluno, int codEmprego) {
-            if ((nomeAluno == null)) {
+        public virtual int Update(
+                    global::System.Nullable<int> aluno_codAluno, 
+                    global::System.Nullable<int> empresa_codEmpresa, 
+                    string nomeAluno, 
+                    string nomeEmpresa, 
+                    string cpfAluno, 
+                    string cnpjEmpresa, 
+                    string idadeAluno, 
+                    int Original_codEmprego, 
+                    global::System.Nullable<int> Original_aluno_codAluno, 
+                    global::System.Nullable<int> Original_empresa_codEmpresa, 
+                    string Original_nomeAluno, 
+                    string Original_nomeEmpresa, 
+                    string Original_cpfAluno, 
+                    string Original_cnpjEmpresa, 
+                    string Original_idadeAluno, 
+                    int codEmprego) {
+            if ((aluno_codAluno.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(aluno_codAluno.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(nomeAluno));
+            if ((empresa_codEmpresa.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(empresa_codEmpresa.Value));
             }
-            if ((nomeEmpresa == null)) {
+            else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nomeEmpresa));
-            }
-            if ((cpfAluno == null)) {
+            if ((nomeAluno == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(cpfAluno));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(nomeAluno));
             }
-            if ((cnpjEmpresa == null)) {
+            if ((nomeEmpresa == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(cnpjEmpresa));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(nomeEmpresa));
             }
-            if ((idadeAluno == null)) {
+            if ((cpfAluno == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(idadeAluno));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(cpfAluno));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_codEmprego));
-            if ((Original_nomeAluno == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            if ((cnpjEmpresa == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_nomeAluno));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(cnpjEmpresa));
             }
-            if ((Original_nomeEmpresa == null)) {
+            if ((idadeAluno == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(idadeAluno));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_codEmprego));
+            if ((Original_aluno_codAluno.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_aluno_codAluno.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_nomeEmpresa));
+            if ((Original_empresa_codEmpresa.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_empresa_codEmpresa.Value));
             }
-            if ((Original_cpfAluno == null)) {
+            else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_cpfAluno));
-            }
-            if ((Original_cnpjEmpresa == null)) {
+            if ((Original_nomeAluno == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_cnpjEmpresa));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_nomeAluno));
             }
-            if ((Original_idadeAluno == null)) {
+            if ((Original_nomeEmpresa == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_idadeAluno));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_nomeEmpresa));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(codEmprego));
+            if ((Original_cpfAluno == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_cpfAluno));
+            }
+            if ((Original_cnpjEmpresa == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_cnpjEmpresa));
+            }
+            if ((Original_idadeAluno == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_idadeAluno));
+            }
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(codEmprego));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1271,8 +1441,8 @@ SELECT codEmprego, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nomeAluno, string nomeEmpresa, string cpfAluno, string cnpjEmpresa, string idadeAluno, int Original_codEmprego, string Original_nomeAluno, string Original_nomeEmpresa, string Original_cpfAluno, string Original_cnpjEmpresa, string Original_idadeAluno) {
-            return this.Update(nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno, Original_codEmprego, Original_nomeAluno, Original_nomeEmpresa, Original_cpfAluno, Original_cnpjEmpresa, Original_idadeAluno, Original_codEmprego);
+        public virtual int Update(global::System.Nullable<int> aluno_codAluno, global::System.Nullable<int> empresa_codEmpresa, string nomeAluno, string nomeEmpresa, string cpfAluno, string cnpjEmpresa, string idadeAluno, int Original_codEmprego, global::System.Nullable<int> Original_aluno_codAluno, global::System.Nullable<int> Original_empresa_codEmpresa, string Original_nomeAluno, string Original_nomeEmpresa, string Original_cpfAluno, string Original_cnpjEmpresa, string Original_idadeAluno) {
+            return this.Update(aluno_codAluno, empresa_codEmpresa, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno, Original_codEmprego, Original_aluno_codAluno, Original_empresa_codEmpresa, Original_nomeAluno, Original_nomeEmpresa, Original_cpfAluno, Original_cnpjEmpresa, Original_idadeAluno, Original_codEmprego);
         }
     }
     
