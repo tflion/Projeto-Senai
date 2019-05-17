@@ -117,7 +117,7 @@ namespace ProjetoSenai
         private void TxtCep_Leave(object sender, EventArgs e)
         {
             //Colocar cep nas txtBox a partir do cep dado no mskBox
-            //MostrarCEP();
+            MostrarCEP();
         }
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -267,6 +267,11 @@ namespace ProjetoSenai
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void mskTelefoneResp_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

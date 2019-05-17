@@ -81,7 +81,7 @@ namespace ProjetoSenai
                 empresa.cnpj = txtCnpj.Text;
                 if(empresa.AlocarAluno(codEmpresaClicada,txtNomeAluno.Text,txtCpfAluno.Text,txtIdade.Text) == true)
                 {
-                    MessageBox.Show("Aluno alocado a empresa com sucesso.");
+                    MyMessageBox.Show("Aluno alocado a empresa com sucesso","Alocação", "OK");
                     LimparTxt();
                 }
             }
@@ -91,14 +91,14 @@ namespace ProjetoSenai
         {
             if (txtBuscarAluno.Text.Length < 1 || txtBuscarAluno.Text == "Insira o código da Turma")
             {
-                MessageBox.Show("Insira um valor no campo de filtro de Turma ao lado da opção 'Filtrar por Turma'");
+                MyMessageBox.Show("Insira um valor no campo de filtro de \n             Turma ao lado da opção ''Filtrar por Turma''", "Atenção", "OK");
             }
             else
             {
                 //Validação para o caso da tabela não tenha sido selecionada ainda
                 if (dgvAluno.Rows.Count == 0)
                 {
-                    MessageBox.Show("Por favor, selecione uma tabela antes de filtrar!");
+                    MyMessageBox.Show("Por favor, selecione uma tabela antes de filtrar!", "Atenção", "OK");
                 }
                 else
                 {
@@ -114,14 +114,14 @@ namespace ProjetoSenai
         {
             if (txtBuscarEmpresa.Text.Length < 1 || txtBuscarEmpresa.Text == "Insira o código da Turma")
             {
-                MessageBox.Show("Insira um valor no campo de filtro de Turma ao lado da opção 'Filtrar por Turma'");
+                MyMessageBox.Show("Insira um valor no campo de filtro de \n             Turma ao lado da opção ''Filtrar por Turma''", "Atenção", "OK");
             }
             else
             {
                 //Validação para o caso da tabela não tenha sido selecionada ainda
                 if (dgvEmpresa.Rows.Count == 0)
                 {
-                    MessageBox.Show("Por favor, selecione uma tabela antes de filtrar!");
+                    MyMessageBox.Show("Por favor, selecione uma tabela antes de filtrar!", "Atenção", "OK");
                 }
                 else
                 {

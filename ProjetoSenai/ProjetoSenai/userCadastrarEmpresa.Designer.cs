@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblNome = new MaterialSkin.Controls.MaterialLabel();
-            this.lblTelefone = new MaterialSkin.Controls.MaterialLabel();
-            this.lblEmail = new MaterialSkin.Controls.MaterialLabel();
-            this.lblCidade = new MaterialSkin.Controls.MaterialLabel();
-            this.lblEstado = new MaterialSkin.Controls.MaterialLabel();
-            this.lblBairro = new MaterialSkin.Controls.MaterialLabel();
-            this.lblRua = new MaterialSkin.Controls.MaterialLabel();
-            this.lblComplemento = new MaterialSkin.Controls.MaterialLabel();
-            this.lblNumero = new MaterialSkin.Controls.MaterialLabel();
-            this.lblCep = new MaterialSkin.Controls.MaterialLabel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -58,157 +48,37 @@
             this.btnExcluir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.dgvEmpresa = new System.Windows.Forms.DataGridView();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.lblCnpj = new MaterialSkin.Controls.MaterialLabel();
             this.txtRazao = new System.Windows.Forms.TextBox();
-            this.lblRazao = new MaterialSkin.Controls.MaterialLabel();
             this.mskCnpj = new System.Windows.Forms.MaskedTextBox();
             this.mskTelefoneResp = new System.Windows.Forms.MaskedTextBox();
-            this.lblTelefoneRep = new MaterialSkin.Controls.MaterialLabel();
-            this.lblRepContr = new MaterialSkin.Controls.MaterialLabel();
             this.txtRespNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblRazao = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCnpj = new System.Windows.Forms.Label();
+            this.lblCep = new System.Windows.Forms.Label();
+            this.lblBairro = new System.Windows.Forms.Label();
+            this.lblComplemento = new System.Windows.Forms.Label();
+            this.lblRespContr = new System.Windows.Forms.Label();
+            this.lblTelResp = new System.Windows.Forms.Label();
+            this.lblTelefone = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.lblRuaAv = new System.Windows.Forms.Label();
+            this.lblNum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Depth = 0;
-            this.lblNome.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNome.Location = new System.Drawing.Point(19, 13);
-            this.lblNome.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(54, 19);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome:";
-            // 
-            // lblTelefone
-            // 
-            this.lblTelefone.AutoSize = true;
-            this.lblTelefone.Depth = 0;
-            this.lblTelefone.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTelefone.Location = new System.Drawing.Point(197, 100);
-            this.lblTelefone.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(72, 19);
-            this.lblTelefone.TabIndex = 1;
-            this.lblTelefone.Text = "Telefone:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Depth = 0;
-            this.lblEmail.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEmail.Location = new System.Drawing.Point(22, 64);
-            this.lblEmail.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 19);
-            this.lblEmail.TabIndex = 2;
-            this.lblEmail.Text = "Email:";
-            // 
-            // lblCidade
-            // 
-            this.lblCidade.AutoSize = true;
-            this.lblCidade.Depth = 0;
-            this.lblCidade.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCidade.Location = new System.Drawing.Point(285, 139);
-            this.lblCidade.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(59, 19);
-            this.lblCidade.TabIndex = 3;
-            this.lblCidade.Text = "Cidade:";
-            // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Depth = 0;
-            this.lblEstado.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEstado.Location = new System.Drawing.Point(144, 139);
-            this.lblEstado.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(60, 19);
-            this.lblEstado.TabIndex = 4;
-            this.lblEstado.Text = "Estado:";
-            // 
-            // lblBairro
-            // 
-            this.lblBairro.AutoSize = true;
-            this.lblBairro.Depth = 0;
-            this.lblBairro.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblBairro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblBairro.Location = new System.Drawing.Point(58, 168);
-            this.lblBairro.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Size = new System.Drawing.Size(53, 19);
-            this.lblBairro.TabIndex = 5;
-            this.lblBairro.Text = "Bairro:";
-            // 
-            // lblRua
-            // 
-            this.lblRua.AutoSize = true;
-            this.lblRua.Depth = 0;
-            this.lblRua.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblRua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblRua.Location = new System.Drawing.Point(223, 168);
-            this.lblRua.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblRua.Name = "lblRua";
-            this.lblRua.Size = new System.Drawing.Size(97, 19);
-            this.lblRua.TabIndex = 6;
-            this.lblRua.Text = "Rua/Avenida:";
-            // 
-            // lblComplemento
-            // 
-            this.lblComplemento.AutoSize = true;
-            this.lblComplemento.Depth = 0;
-            this.lblComplemento.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblComplemento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblComplemento.Location = new System.Drawing.Point(3, 194);
-            this.lblComplemento.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblComplemento.Name = "lblComplemento";
-            this.lblComplemento.Size = new System.Drawing.Size(108, 19);
-            this.lblComplemento.TabIndex = 7;
-            this.lblComplemento.Text = "Complemento:";
-            // 
-            // lblNumero
-            // 
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Depth = 0;
-            this.lblNumero.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNumero.Location = new System.Drawing.Point(253, 194);
-            this.lblNumero.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(67, 19);
-            this.lblNumero.TabIndex = 8;
-            this.lblNumero.Text = "Número:";
-            // 
-            // lblCep
-            // 
-            this.lblCep.AutoSize = true;
-            this.lblCep.Depth = 0;
-            this.lblCep.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblCep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCep.Location = new System.Drawing.Point(36, 137);
-            this.lblCep.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblCep.Name = "lblCep";
-            this.lblCep.Size = new System.Drawing.Size(37, 19);
-            this.lblCep.TabIndex = 9;
-            this.lblCep.Text = "cep:";
-            // 
             // txtComplemento
             // 
-            this.txtComplemento.Location = new System.Drawing.Point(117, 195);
+            this.txtComplemento.Location = new System.Drawing.Point(120, 189);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(100, 20);
             this.txtComplemento.TabIndex = 9;
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(117, 169);
+            this.txtBairro.Location = new System.Drawing.Point(65, 166);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(100, 20);
             this.txtBairro.TabIndex = 7;
@@ -236,14 +106,14 @@
             // 
             // txtRua
             // 
-            this.txtRua.Location = new System.Drawing.Point(327, 169);
+            this.txtRua.Location = new System.Drawing.Point(275, 166);
             this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(138, 20);
+            this.txtRua.Size = new System.Drawing.Size(190, 20);
             this.txtRua.TabIndex = 8;
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(327, 195);
+            this.txtNumero.Location = new System.Drawing.Point(327, 192);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(138, 20);
             this.txtNumero.TabIndex = 10;
@@ -337,36 +207,36 @@
             // 
             this.dgvEmpresa.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpresa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpresa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmpresa.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmpresa.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmpresa.EnableHeadersVisualStyles = false;
             this.dgvEmpresa.Location = new System.Drawing.Point(23, 356);
             this.dgvEmpresa.Name = "dgvEmpresa";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            this.dgvEmpresa.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvEmpresa.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEmpresa.Size = new System.Drawing.Size(472, 131);
             this.dgvEmpresa.TabIndex = 31;
             this.dgvEmpresa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellClick);
@@ -380,19 +250,6 @@
             this.txtTelefone.TabIndex = 2;
             this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // lblCnpj
-            // 
-            this.lblCnpj.AutoSize = true;
-            this.lblCnpj.Depth = 0;
-            this.lblCnpj.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblCnpj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCnpj.Location = new System.Drawing.Point(32, 98);
-            this.lblCnpj.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblCnpj.Name = "lblCnpj";
-            this.lblCnpj.Size = new System.Drawing.Size(41, 19);
-            this.lblCnpj.TabIndex = 32;
-            this.lblCnpj.Text = "cnpj:";
-            // 
             // txtRazao
             // 
             this.txtRazao.Location = new System.Drawing.Point(109, 37);
@@ -400,81 +257,193 @@
             this.txtRazao.Size = new System.Drawing.Size(262, 20);
             this.txtRazao.TabIndex = 35;
             // 
-            // lblRazao
-            // 
-            this.lblRazao.AutoSize = true;
-            this.lblRazao.Depth = 0;
-            this.lblRazao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblRazao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblRazao.Location = new System.Drawing.Point(4, 37);
-            this.lblRazao.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblRazao.Name = "lblRazao";
-            this.lblRazao.Size = new System.Drawing.Size(99, 18);
-            this.lblRazao.TabIndex = 34;
-            this.lblRazao.Text = "Razão social:";
-            // 
             // mskCnpj
             // 
             this.mskCnpj.Location = new System.Drawing.Point(79, 99);
-            this.mskCnpj.Mask = "99.999.999/9999-99";
+            this.mskCnpj.Mask = "99\\.999\\.999/9999-99";
             this.mskCnpj.Name = "mskCnpj";
             this.mskCnpj.Size = new System.Drawing.Size(112, 20);
             this.mskCnpj.TabIndex = 36;
             // 
             // mskTelefoneResp
             // 
-            this.mskTelefoneResp.Location = new System.Drawing.Point(201, 252);
+            this.mskTelefoneResp.Location = new System.Drawing.Point(275, 244);
             this.mskTelefoneResp.Mask = "(00)0000-0000";
             this.mskTelefoneResp.Name = "mskTelefoneResp";
-            this.mskTelefoneResp.Size = new System.Drawing.Size(95, 20);
+            this.mskTelefoneResp.Size = new System.Drawing.Size(116, 20);
             this.mskTelefoneResp.TabIndex = 38;
             this.mskTelefoneResp.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // lblTelefoneRep
-            // 
-            this.lblTelefoneRep.AutoSize = true;
-            this.lblTelefoneRep.Depth = 0;
-            this.lblTelefoneRep.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblTelefoneRep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTelefoneRep.Location = new System.Drawing.Point(17, 251);
-            this.lblTelefoneRep.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblTelefoneRep.Name = "lblTelefoneRep";
-            this.lblTelefoneRep.Size = new System.Drawing.Size(178, 19);
-            this.lblTelefoneRep.TabIndex = 37;
-            this.lblTelefoneRep.Text = "Telefone do responsável:";
-            // 
-            // lblRepContr
-            // 
-            this.lblRepContr.AutoSize = true;
-            this.lblRepContr.Depth = 0;
-            this.lblRepContr.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblRepContr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblRepContr.Location = new System.Drawing.Point(3, 230);
-            this.lblRepContr.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblRepContr.Name = "lblRepContr";
-            this.lblRepContr.Size = new System.Drawing.Size(192, 19);
-            this.lblRepContr.TabIndex = 39;
-            this.lblRepContr.Text = "Responsável pelo contrato:";
+            this.mskTelefoneResp.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskTelefoneResp_MaskInputRejected);
             // 
             // txtRespNome
             // 
-            this.txtRespNome.Location = new System.Drawing.Point(201, 229);
+            this.txtRespNome.Location = new System.Drawing.Point(275, 221);
             this.txtRespNome.Name = "txtRespNome";
-            this.txtRespNome.Size = new System.Drawing.Size(169, 20);
+            this.txtRespNome.Size = new System.Drawing.Size(190, 20);
             this.txtRespNome.TabIndex = 40;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(12, 17);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(52, 17);
+            this.lblNome.TabIndex = 41;
+            this.lblNome.Text = "Nome:";
+            // 
+            // lblRazao
+            // 
+            this.lblRazao.AutoSize = true;
+            this.lblRazao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRazao.Location = new System.Drawing.Point(12, 40);
+            this.lblRazao.Name = "lblRazao";
+            this.lblRazao.Size = new System.Drawing.Size(95, 17);
+            this.lblRazao.TabIndex = 42;
+            this.lblRazao.Text = "Razão Social:";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(12, 68);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(47, 17);
+            this.lblEmail.TabIndex = 43;
+            this.lblEmail.Text = "Email:";
+            // 
+            // lblCnpj
+            // 
+            this.lblCnpj.AutoSize = true;
+            this.lblCnpj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCnpj.Location = new System.Drawing.Point(12, 102);
+            this.lblCnpj.Name = "lblCnpj";
+            this.lblCnpj.Size = new System.Drawing.Size(47, 17);
+            this.lblCnpj.TabIndex = 44;
+            this.lblCnpj.Text = "CNPJ:";
+            // 
+            // lblCep
+            // 
+            this.lblCep.AutoSize = true;
+            this.lblCep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCep.Location = new System.Drawing.Point(12, 141);
+            this.lblCep.Name = "lblCep";
+            this.lblCep.Size = new System.Drawing.Size(38, 17);
+            this.lblCep.TabIndex = 45;
+            this.lblCep.Text = "CEP:";
+            // 
+            // lblBairro
+            // 
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBairro.Location = new System.Drawing.Point(12, 169);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(48, 17);
+            this.lblBairro.TabIndex = 46;
+            this.lblBairro.Text = "Bairro:";
+            // 
+            // lblComplemento
+            // 
+            this.lblComplemento.AutoSize = true;
+            this.lblComplemento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplemento.Location = new System.Drawing.Point(12, 192);
+            this.lblComplemento.Name = "lblComplemento";
+            this.lblComplemento.Size = new System.Drawing.Size(108, 17);
+            this.lblComplemento.TabIndex = 47;
+            this.lblComplemento.Text = "Complemento:";
+            // 
+            // lblRespContr
+            // 
+            this.lblRespContr.AutoSize = true;
+            this.lblRespContr.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRespContr.Location = new System.Drawing.Point(49, 222);
+            this.lblRespContr.Name = "lblRespContr";
+            this.lblRespContr.Size = new System.Drawing.Size(186, 17);
+            this.lblRespContr.TabIndex = 48;
+            this.lblRespContr.Text = "Responsável pelo contrato:";
+            // 
+            // lblTelResp
+            // 
+            this.lblTelResp.AutoSize = true;
+            this.lblTelResp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelResp.Location = new System.Drawing.Point(53, 245);
+            this.lblTelResp.Name = "lblTelResp";
+            this.lblTelResp.Size = new System.Drawing.Size(167, 17);
+            this.lblTelResp.TabIndex = 49;
+            this.lblTelResp.Text = "Telefone do responsável:";
+            // 
+            // lblTelefone
+            // 
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefone.Location = new System.Drawing.Point(203, 101);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(65, 17);
+            this.lblTelefone.TabIndex = 50;
+            this.lblTelefone.Text = "Telefone:";
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(144, 141);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(60, 17);
+            this.lblEstado.TabIndex = 51;
+            this.lblEstado.Text = "Estado: ";
+            // 
+            // lblCidade
+            // 
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCidade.Location = new System.Drawing.Point(289, 141);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(65, 17);
+            this.lblCidade.TabIndex = 52;
+            this.lblCidade.Text = "Cidade: ";
+            // 
+            // lblRuaAv
+            // 
+            this.lblRuaAv.AutoSize = true;
+            this.lblRuaAv.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRuaAv.Location = new System.Drawing.Point(172, 167);
+            this.lblRuaAv.Name = "lblRuaAv";
+            this.lblRuaAv.Size = new System.Drawing.Size(97, 17);
+            this.lblRuaAv.TabIndex = 53;
+            this.lblRuaAv.Text = "Rua/Avenida:";
+            // 
+            // lblNum
+            // 
+            this.lblNum.AutoSize = true;
+            this.lblNum.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNum.Location = new System.Drawing.Point(240, 193);
+            this.lblNum.Name = "lblNum";
+            this.lblNum.Size = new System.Drawing.Size(68, 17);
+            this.lblNum.TabIndex = 54;
+            this.lblNum.Text = "Número: ";
             // 
             // userCadastrarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblNum);
+            this.Controls.Add(this.lblRuaAv);
+            this.Controls.Add(this.lblCidade);
+            this.Controls.Add(this.lblEstado);
+            this.Controls.Add(this.lblTelefone);
+            this.Controls.Add(this.lblTelResp);
+            this.Controls.Add(this.lblRespContr);
+            this.Controls.Add(this.lblComplemento);
+            this.Controls.Add(this.lblBairro);
+            this.Controls.Add(this.lblCep);
+            this.Controls.Add(this.lblCnpj);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblRazao);
+            this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtRespNome);
-            this.Controls.Add(this.lblRepContr);
             this.Controls.Add(this.mskTelefoneResp);
-            this.Controls.Add(this.lblTelefoneRep);
             this.Controls.Add(this.mskCnpj);
             this.Controls.Add(this.txtRazao);
-            this.Controls.Add(this.lblRazao);
-            this.Controls.Add(this.lblCnpj);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
@@ -491,16 +460,6 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.txtComplemento);
-            this.Controls.Add(this.lblCep);
-            this.Controls.Add(this.lblNumero);
-            this.Controls.Add(this.lblComplemento);
-            this.Controls.Add(this.lblRua);
-            this.Controls.Add(this.lblBairro);
-            this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.lblCidade);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblTelefone);
-            this.Controls.Add(this.lblNome);
             this.Name = "userCadastrarEmpresa";
             this.Size = new System.Drawing.Size(549, 490);
             this.Load += new System.EventHandler(this.userCadastrarEmpresa_Load);
@@ -511,17 +470,6 @@
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialLabel lblNome;
-        private MaterialSkin.Controls.MaterialLabel lblTelefone;
-        private MaterialSkin.Controls.MaterialLabel lblEmail;
-        private MaterialSkin.Controls.MaterialLabel lblCidade;
-        private MaterialSkin.Controls.MaterialLabel lblEstado;
-        private MaterialSkin.Controls.MaterialLabel lblBairro;
-        private MaterialSkin.Controls.MaterialLabel lblRua;
-        private MaterialSkin.Controls.MaterialLabel lblComplemento;
-        private MaterialSkin.Controls.MaterialLabel lblNumero;
-        private MaterialSkin.Controls.MaterialLabel lblCep;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TextBox txtEmail;
@@ -538,13 +486,23 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnExcluir;
         private System.Windows.Forms.DataGridView dgvEmpresa;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
-        private MaterialSkin.Controls.MaterialLabel lblCnpj;
         private System.Windows.Forms.TextBox txtRazao;
-        private MaterialSkin.Controls.MaterialLabel lblRazao;
         private System.Windows.Forms.MaskedTextBox mskCnpj;
         private System.Windows.Forms.MaskedTextBox mskTelefoneResp;
-        private MaterialSkin.Controls.MaterialLabel lblTelefoneRep;
-        private MaterialSkin.Controls.MaterialLabel lblRepContr;
         private System.Windows.Forms.TextBox txtRespNome;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblRazao;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblCnpj;
+        private System.Windows.Forms.Label lblCep;
+        private System.Windows.Forms.Label lblBairro;
+        private System.Windows.Forms.Label lblComplemento;
+        private System.Windows.Forms.Label lblRespContr;
+        private System.Windows.Forms.Label lblTelResp;
+        private System.Windows.Forms.Label lblTelefone;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblCidade;
+        private System.Windows.Forms.Label lblRuaAv;
+        private System.Windows.Forms.Label lblNum;
     }
 }

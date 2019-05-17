@@ -105,7 +105,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cod emprego</Value>
+                              <Value>Cod. emprego</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -140,7 +140,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Cod aluno</Value>
+                              <Value>Cod. aluno</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -175,7 +175,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Cod empresa</Value>
+                              <Value>Cod. empresa</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>

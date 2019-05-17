@@ -220,7 +220,7 @@ namespace ProjetoSenai
             finally
             {
                 conexao.Close();
-                MessageBox.Show("dados inseridos no banco de dados com sucesso");
+                MyMessageBox.Show("Dados cadastrados com sucesso!","Cadastro","OK");
             }
 
         }
