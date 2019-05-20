@@ -43,7 +43,7 @@ namespace ProjetoSenai
             }
 
         }
-        //Editar 
+
         public bool Editar(int codEmpresaClicada)
         {
             try
@@ -62,7 +62,8 @@ namespace ProjetoSenai
                     ". ");
             }
         }
-        public bool AlocarAluno(int codEmpresaClicada,string nomeAluno,string cpfAluno,string idadeAluno)
+
+        public bool AlocarAlunoEmprego(int codEmpresaClicada,string nomeAluno,string cpfAluno,string idadeAluno)
         {
             try
             {
@@ -78,6 +79,24 @@ namespace ProjetoSenai
                     ". ");
             }
         }
+
+        public bool AlocarAlunoHistorico(int codEmpresaClicada, string nomeAluno, string cpfAluno, string idadeAluno)
+        {
+            try
+            {
+                bd.Conectar();
+                bd.ExecutarComandosSql(String.Format("INSERT INTO HistoricoEmprego (aluno_codAluno, empresa_codEmpresa, nomeAluno, nomeEmpresa, cpfAluno, cnpjEmpresa, idadeAluno) VALUES({0},{1},'{2}','{3}','{4}','{5}','{6}')", aluno_codAluno, codEmpresaClicada, nomeAluno, nomeEmpresa, cpfAluno, cnpj, idadeAluno));
+
+                bd.Desconectar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message + "Erro ao editar os dados desta empresa" +
+                    ". ");
+            }
+        }
+
         public DataTable RetAlunosAlocados()
         {
             bd.Conectar();
@@ -85,6 +104,15 @@ namespace ProjetoSenai
             bd.Desconectar();
             return dt;
         }
+
+        public DataTable RetHistoricoAlunos()
+        {
+            bd.Conectar();
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM HistoricoEmprego"));
+            bd.Desconectar();
+            return dt;
+        }
+
         public DataTable RetAlunosAlocadosInnerJoin()
         {
             bd.Conectar();
@@ -107,6 +135,22 @@ namespace ProjetoSenai
                 throw new Exception(ex.Message + "Erro ao excluir os dados da empresa. ");
             }
         }
+
+        public bool ExcluirAlunoEmprego(int codAlunoClicado)
+        {
+            try
+            {
+                bd.Conectar();
+                bd.ExecutarComandosSql(String.Format("DELETE FROM Emprego WHERE aluno_codAluno LIKE {0}", codAlunoClicado));
+                bd.Desconectar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message + "Erro ao excluir os dados da empresa. ");
+            }
+        }
+
         public DataTable RetEmpresas()
         {
             bd.Conectar();

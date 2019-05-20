@@ -160,21 +160,6 @@ namespace ProjetoSenai
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Tem certeza que deseja excluir", "Exclusão",MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                if (empresa.Excluir(codEmpresaClicada) == true)
-                {
-                    MyMessageBox.Show("  A Empresa excluída com sucesso!", "Validação", "OK");
-                    LimparTxt();
-                    RetornarEmpresaDgv();
-                }
-            }
-            else
-            {
-                
-            }
-
-
         }
 
         private void userCadastrarEmpresa_Load(object sender, EventArgs e)

@@ -45,7 +45,6 @@
             this.btnLimpar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.btnEditar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnExcluir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.dgvEmpresa = new System.Windows.Forms.DataGridView();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtRazao = new System.Windows.Forms.TextBox();
@@ -179,7 +178,7 @@
             // 
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Depth = 0;
-            this.btnEditar.Location = new System.Drawing.Point(183, 288);
+            this.btnEditar.Location = new System.Drawing.Point(324, 288);
             this.btnEditar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Primary = true;
@@ -188,20 +187,6 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluir.Depth = 0;
-            this.btnExcluir.Location = new System.Drawing.Point(329, 288);
-            this.btnExcluir.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Primary = true;
-            this.btnExcluir.Size = new System.Drawing.Size(141, 43);
-            this.btnExcluir.TabIndex = 13;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // dgvEmpresa
             // 
@@ -240,6 +225,7 @@
             this.dgvEmpresa.Size = new System.Drawing.Size(472, 131);
             this.dgvEmpresa.TabIndex = 31;
             this.dgvEmpresa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellClick);
+            this.dgvEmpresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellClick);
             // 
             // txtTelefone
             // 
@@ -445,7 +431,6 @@
             this.Controls.Add(this.mskCnpj);
             this.Controls.Add(this.txtRazao);
             this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dgvEmpresa);
             this.Controls.Add(this.materialDivider1);
@@ -483,7 +468,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnLimpar;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialRaisedButton btnEditar;
-        private MaterialSkin.Controls.MaterialRaisedButton btnExcluir;
         private System.Windows.Forms.DataGridView dgvEmpresa;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.TextBox txtRazao;

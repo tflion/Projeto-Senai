@@ -109,5 +109,17 @@ namespace ProjetoSenai
         {
            
         }
+
+        private void btnVizualizarHistorico_Click(object sender, EventArgs e)
+        {
+            userHistoricoEmprego1.BringToFront();
+            pnlIndicador.Height = btnVizualizarHistorico.Height;
+            pnlIndicador.Top = btnVizualizarHistorico.Top;
+        }
+
+        private void userHistoricoEmprego1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

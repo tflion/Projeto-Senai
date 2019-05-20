@@ -157,6 +157,12 @@
     <Compile Include="userCadastrarEmpresa.Designer.cs">
       <DependentUpon>userCadastrarEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="userHistoricoEmprego.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userHistoricoEmprego.Designer.cs">
+      <DependentUpon>userHistoricoEmprego.cs</DependentUpon>
+    </Compile>
     <Compile Include="userImportarDados.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userCadastrarEmpresa.resx">
       <DependentUpon>userCadastrarEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userHistoricoEmprego.resx">
+      <DependentUpon>userHistoricoEmprego.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userImportarDados.resx">
       <DependentUpon>userImportarDados.cs</DependentUpon>

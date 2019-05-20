@@ -30,22 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionario));
             this.pnlDireito = new System.Windows.Forms.Panel();
+            this.btnVizualizarHistorico = new System.Windows.Forms.Button();
             this.pnlIndicador = new System.Windows.Forms.Panel();
             this.btnVisualizarAlunos = new System.Windows.Forms.Button();
             this.btnAlocarAlunos = new System.Windows.Forms.Button();
             this.btnCadastrarEmpresa = new System.Windows.Forms.Button();
             this.btnImportarDados = new System.Windows.Forms.Button();
+            this.userHistoricoEmprego1 = new ProjetoSenai.userHistoricoEmprego();
+            this.userAlocarAlunos1 = new ProjetoSenai.userAlocarAlunos();
             this.userCadastrarEmpresa2 = new ProjetoSenai.userCadastrarEmpresa();
             this.userPrincipal = new ProjetoSenai.userPrincipal();
             this.userImportarDados = new ProjetoSenai.userImportarDados();
             this.userCadastrarEmpresa1 = new ProjetoSenai.userCadastrarEmpresa();
-            this.userAlocarAlunos1 = new ProjetoSenai.userAlocarAlunos();
             this.pnlDireito.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlDireito
             // 
             this.pnlDireito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.pnlDireito.Controls.Add(this.btnVizualizarHistorico);
             this.pnlDireito.Controls.Add(this.pnlIndicador);
             this.pnlDireito.Controls.Add(this.btnVisualizarAlunos);
             this.pnlDireito.Controls.Add(this.btnAlocarAlunos);
@@ -56,6 +59,25 @@
             this.pnlDireito.Size = new System.Drawing.Size(194, 490);
             this.pnlDireito.TabIndex = 0;
             this.pnlDireito.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDireito_Paint);
+            // 
+            // btnVizualizarHistorico
+            // 
+            this.btnVizualizarHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.btnVizualizarHistorico.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVizualizarHistorico.FlatAppearance.BorderSize = 0;
+            this.btnVizualizarHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVizualizarHistorico.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVizualizarHistorico.ForeColor = System.Drawing.Color.White;
+            this.btnVizualizarHistorico.Image = ((System.Drawing.Image)(resources.GetObject("btnVizualizarHistorico.Image")));
+            this.btnVizualizarHistorico.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVizualizarHistorico.Location = new System.Drawing.Point(7, 301);
+            this.btnVizualizarHistorico.Name = "btnVizualizarHistorico";
+            this.btnVizualizarHistorico.Size = new System.Drawing.Size(187, 81);
+            this.btnVizualizarHistorico.TabIndex = 16;
+            this.btnVizualizarHistorico.Text = "VISUALIZAR HISTÓRICO DE ALUNOS";
+            this.btnVizualizarHistorico.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVizualizarHistorico.UseVisualStyleBackColor = false;
+            this.btnVizualizarHistorico.Click += new System.EventHandler(this.btnVizualizarHistorico_Click);
             // 
             // pnlIndicador
             // 
@@ -76,7 +98,7 @@
             this.btnVisualizarAlunos.ForeColor = System.Drawing.Color.White;
             this.btnVisualizarAlunos.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarAlunos.Image")));
             this.btnVisualizarAlunos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVisualizarAlunos.Location = new System.Drawing.Point(8, 295);
+            this.btnVisualizarAlunos.Location = new System.Drawing.Point(7, 400);
             this.btnVisualizarAlunos.Name = "btnVisualizarAlunos";
             this.btnVisualizarAlunos.Size = new System.Drawing.Size(187, 67);
             this.btnVisualizarAlunos.TabIndex = 7;
@@ -95,7 +117,7 @@
             this.btnAlocarAlunos.ForeColor = System.Drawing.Color.White;
             this.btnAlocarAlunos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlocarAlunos.Image")));
             this.btnAlocarAlunos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAlocarAlunos.Location = new System.Drawing.Point(8, 201);
+            this.btnAlocarAlunos.Location = new System.Drawing.Point(6, 201);
             this.btnAlocarAlunos.Name = "btnAlocarAlunos";
             this.btnAlocarAlunos.Size = new System.Drawing.Size(187, 75);
             this.btnAlocarAlunos.TabIndex = 6;
@@ -114,7 +136,7 @@
             this.btnCadastrarEmpresa.ForeColor = System.Drawing.Color.White;
             this.btnCadastrarEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarEmpresa.Image")));
             this.btnCadastrarEmpresa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(6, 111);
+            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(4, 111);
             this.btnCadastrarEmpresa.Name = "btnCadastrarEmpresa";
             this.btnCadastrarEmpresa.Size = new System.Drawing.Size(190, 60);
             this.btnCadastrarEmpresa.TabIndex = 5;
@@ -136,7 +158,7 @@
             this.btnImportarDados.ForeColor = System.Drawing.Color.White;
             this.btnImportarDados.Image = ((System.Drawing.Image)(resources.GetObject("btnImportarDados.Image")));
             this.btnImportarDados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnImportarDados.Location = new System.Drawing.Point(8, 12);
+            this.btnImportarDados.Location = new System.Drawing.Point(6, 12);
             this.btnImportarDados.Name = "btnImportarDados";
             this.btnImportarDados.Size = new System.Drawing.Size(187, 75);
             this.btnImportarDados.TabIndex = 4;
@@ -146,6 +168,21 @@
             this.btnImportarDados.Click += new System.EventHandler(this.button1_Click);
             this.btnImportarDados.MouseEnter += new System.EventHandler(this.btnImportarDados_MouseEnter);
             this.btnImportarDados.MouseHover += new System.EventHandler(this.btnImportarDados_MouseHover_1);
+            // 
+            // userHistoricoEmprego1
+            // 
+            this.userHistoricoEmprego1.Location = new System.Drawing.Point(196, 64);
+            this.userHistoricoEmprego1.Name = "userHistoricoEmprego1";
+            this.userHistoricoEmprego1.Size = new System.Drawing.Size(549, 490);
+            this.userHistoricoEmprego1.TabIndex = 5;
+            this.userHistoricoEmprego1.Load += new System.EventHandler(this.userHistoricoEmprego1_Load);
+            // 
+            // userAlocarAlunos1
+            // 
+            this.userAlocarAlunos1.Location = new System.Drawing.Point(196, 64);
+            this.userAlocarAlunos1.Name = "userAlocarAlunos1";
+            this.userAlocarAlunos1.Size = new System.Drawing.Size(549, 490);
+            this.userAlocarAlunos1.TabIndex = 4;
             // 
             // userCadastrarEmpresa2
             // 
@@ -181,18 +218,12 @@
             this.userCadastrarEmpresa1.TabIndex = 3;
             this.userCadastrarEmpresa1.Load += new System.EventHandler(this.userCadastrarEmpresa1_Load);
             // 
-            // userAlocarAlunos1
-            // 
-            this.userAlocarAlunos1.Location = new System.Drawing.Point(196, 64);
-            this.userAlocarAlunos1.Name = "userAlocarAlunos1";
-            this.userAlocarAlunos1.Size = new System.Drawing.Size(549, 490);
-            this.userAlocarAlunos1.TabIndex = 4;
-            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 554);
+            this.Controls.Add(this.userHistoricoEmprego1);
             this.Controls.Add(this.userAlocarAlunos1);
             this.Controls.Add(this.userCadastrarEmpresa2);
             this.Controls.Add(this.userPrincipal);
@@ -221,6 +252,7 @@
         private System.Windows.Forms.Button btnAlocarAlunos;
         private System.Windows.Forms.Panel pnlIndicador;
         private userAlocarAlunos userAlocarAlunos1;
-       
+        private System.Windows.Forms.Button btnVizualizarHistorico;
+        private userHistoricoEmprego userHistoricoEmprego1;
     }
 }

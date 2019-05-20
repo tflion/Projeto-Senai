@@ -37,6 +37,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userAlocarAlunos));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAluno = new System.Windows.Forms.DataGridView();
             this.dgvEmpresa = new System.Windows.Forms.DataGridView();
             this.lblNomeAluno = new System.Windows.Forms.Label();
@@ -57,8 +61,12 @@
             this.lblCnpj = new System.Windows.Forms.Label();
             this.txtIdade = new System.Windows.Forms.TextBox();
             this.lblIdade = new System.Windows.Forms.Label();
+            this.btnDesalocarAluno = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.dgvAlunoNaEmpresa = new System.Windows.Forms.DataGridView();
+            this.lblAlunosAlocados = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlunoNaEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAluno
@@ -83,7 +91,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAluno.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAluno.EnableHeadersVisualStyles = false;
-            this.dgvAluno.Location = new System.Drawing.Point(13, 301);
+            this.dgvAluno.Location = new System.Drawing.Point(13, 332);
             this.dgvAluno.Name = "dgvAluno";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -95,8 +103,9 @@
             this.dgvAluno.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dgvAluno.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvAluno.Size = new System.Drawing.Size(231, 165);
+            this.dgvAluno.Size = new System.Drawing.Size(231, 134);
             this.dgvAluno.TabIndex = 32;
+            this.dgvAluno.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAluno_CellContentClick);
             this.dgvAluno.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAluno_CellContentClick);
             // 
             // dgvEmpresa
@@ -121,7 +130,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmpresa.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvEmpresa.EnableHeadersVisualStyles = false;
-            this.dgvEmpresa.Location = new System.Drawing.Point(298, 301);
+            this.dgvEmpresa.Location = new System.Drawing.Point(298, 332);
             this.dgvEmpresa.Name = "dgvEmpresa";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
@@ -133,8 +142,9 @@
             this.dgvEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
             this.dgvEmpresa.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvEmpresa.Size = new System.Drawing.Size(231, 165);
+            this.dgvEmpresa.Size = new System.Drawing.Size(231, 134);
             this.dgvEmpresa.TabIndex = 33;
+            this.dgvEmpresa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellContentClick);
             this.dgvEmpresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellContentClick);
             // 
             // lblNomeAluno
@@ -190,7 +200,7 @@
             // 
             // txtBuscarEmpresa
             // 
-            this.txtBuscarEmpresa.Location = new System.Drawing.Point(365, 275);
+            this.txtBuscarEmpresa.Location = new System.Drawing.Point(365, 310);
             this.txtBuscarEmpresa.Name = "txtBuscarEmpresa";
             this.txtBuscarEmpresa.Size = new System.Drawing.Size(109, 20);
             this.txtBuscarEmpresa.TabIndex = 41;
@@ -200,7 +210,7 @@
             // 
             this.lblBuscarEmpresa.AutoSize = true;
             this.lblBuscarEmpresa.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarEmpresa.Location = new System.Drawing.Point(270, 277);
+            this.lblBuscarEmpresa.Location = new System.Drawing.Point(270, 312);
             this.lblBuscarEmpresa.Name = "lblBuscarEmpresa";
             this.lblBuscarEmpresa.Size = new System.Drawing.Size(95, 16);
             this.lblBuscarEmpresa.TabIndex = 42;
@@ -211,7 +221,7 @@
             // 
             this.lblBuscarAluno.AutoSize = true;
             this.lblBuscarAluno.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarAluno.Location = new System.Drawing.Point(10, 278);
+            this.lblBuscarAluno.Location = new System.Drawing.Point(10, 313);
             this.lblBuscarAluno.Name = "lblBuscarAluno";
             this.lblBuscarAluno.Size = new System.Drawing.Size(79, 16);
             this.lblBuscarAluno.TabIndex = 44;
@@ -219,7 +229,7 @@
             // 
             // txtBuscarAluno
             // 
-            this.txtBuscarAluno.Location = new System.Drawing.Point(92, 276);
+            this.txtBuscarAluno.Location = new System.Drawing.Point(92, 311);
             this.txtBuscarAluno.Name = "txtBuscarAluno";
             this.txtBuscarAluno.Size = new System.Drawing.Size(100, 20);
             this.txtBuscarAluno.TabIndex = 43;
@@ -229,11 +239,11 @@
             this.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdicionar.Depth = 0;
             this.btnAdicionar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionar.Location = new System.Drawing.Point(170, 192);
+            this.btnAdicionar.Location = new System.Drawing.Point(20, 167);
             this.btnAdicionar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Primary = true;
-            this.btnAdicionar.Size = new System.Drawing.Size(186, 41);
+            this.btnAdicionar.Size = new System.Drawing.Size(211, 41);
             this.btnAdicionar.TabIndex = 45;
             this.btnAdicionar.Text = "Alocar Aluno a empresa";
             this.btnAdicionar.UseVisualStyleBackColor = true;
@@ -256,7 +266,7 @@
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.Depth = 0;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(198, 277);
+            this.btnBuscar.Location = new System.Drawing.Point(198, 312);
             this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Primary = true;
@@ -271,7 +281,7 @@
             this.btnEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEmpresa.Depth = 0;
             this.btnEmpresa.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpresa.Location = new System.Drawing.Point(480, 277);
+            this.btnEmpresa.Location = new System.Drawing.Point(480, 312);
             this.btnEmpresa.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEmpresa.Name = "btnEmpresa";
             this.btnEmpresa.Primary = true;
@@ -285,7 +295,7 @@
             // 
             this.txtCnpj.Location = new System.Drawing.Point(148, 129);
             this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(100, 20);
+            this.txtCnpj.Size = new System.Drawing.Size(124, 20);
             this.txtCnpj.TabIndex = 50;
             // 
             // lblCnpj
@@ -316,10 +326,77 @@
             this.lblIdade.Text = "Idade do aluno:";
             this.lblIdade.Click += new System.EventHandler(this.LblIdade_Click);
             // 
+            // btnDesalocarAluno
+            // 
+            this.btnDesalocarAluno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDesalocarAluno.Depth = 0;
+            this.btnDesalocarAluno.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDesalocarAluno.Location = new System.Drawing.Point(20, 214);
+            this.btnDesalocarAluno.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDesalocarAluno.Name = "btnDesalocarAluno";
+            this.btnDesalocarAluno.Primary = true;
+            this.btnDesalocarAluno.Size = new System.Drawing.Size(211, 41);
+            this.btnDesalocarAluno.TabIndex = 53;
+            this.btnDesalocarAluno.Text = "Remover Aluno da empresa";
+            this.btnDesalocarAluno.UseVisualStyleBackColor = true;
+            this.btnDesalocarAluno.Click += new System.EventHandler(this.btnDesalocarAluno_Click);
+            // 
+            // dgvAlunoNaEmpresa
+            // 
+            this.dgvAlunoNaEmpresa.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvAlunoNaEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAlunoNaEmpresa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvAlunoNaEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAlunoNaEmpresa.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvAlunoNaEmpresa.EnableHeadersVisualStyles = false;
+            this.dgvAlunoNaEmpresa.Location = new System.Drawing.Point(298, 167);
+            this.dgvAlunoNaEmpresa.Name = "dgvAlunoNaEmpresa";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAlunoNaEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            this.dgvAlunoNaEmpresa.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvAlunoNaEmpresa.Size = new System.Drawing.Size(231, 88);
+            this.dgvAlunoNaEmpresa.TabIndex = 54;
+            this.dgvAlunoNaEmpresa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlunoNaEmpresa_CellContentClick);
+            this.dgvAlunoNaEmpresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlunoNaEmpresa_CellContentClick);
+            // 
+            // lblAlunosAlocados
+            // 
+            this.lblAlunosAlocados.AutoSize = true;
+            this.lblAlunosAlocados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlunosAlocados.Location = new System.Drawing.Point(295, 147);
+            this.lblAlunosAlocados.Name = "lblAlunosAlocados";
+            this.lblAlunosAlocados.Size = new System.Drawing.Size(200, 17);
+            this.lblAlunosAlocados.TabIndex = 55;
+            this.lblAlunosAlocados.Text = "Alunos alocados na empresa:";
+            // 
             // userAlocarAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblAlunosAlocados);
+            this.Controls.Add(this.dgvAlunoNaEmpresa);
+            this.Controls.Add(this.btnDesalocarAluno);
             this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.lblIdade);
             this.Controls.Add(this.txtCnpj);
@@ -345,6 +422,7 @@
             this.Load += new System.EventHandler(this.userAlocarAlunos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlunoNaEmpresa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,5 +450,8 @@
         private System.Windows.Forms.Label lblCnpj;
         private System.Windows.Forms.TextBox txtIdade;
         private System.Windows.Forms.Label lblIdade;
+        private MaterialSkin.Controls.MaterialRaisedButton btnDesalocarAluno;
+        private System.Windows.Forms.DataGridView dgvAlunoNaEmpresa;
+        private System.Windows.Forms.Label lblAlunosAlocados;
     }
 }

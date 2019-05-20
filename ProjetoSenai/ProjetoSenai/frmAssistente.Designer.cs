@@ -89,6 +89,7 @@
             this.Controls.Add(this.userPrincipal1);
             this.Controls.Add(this.pnlDireito);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(733, 554);
             this.Name = "frmAssistente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SENAI - Serviço Nacional de Aprendizagem Industrial";

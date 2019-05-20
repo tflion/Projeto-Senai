@@ -268,6 +268,7 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblNome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(745, 554);
             this.Name = "frmRegistrarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SENAI - Serviço Nacional de Aprendizagem Industrial";

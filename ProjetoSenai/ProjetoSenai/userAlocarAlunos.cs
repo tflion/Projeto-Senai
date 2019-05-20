@@ -22,6 +22,7 @@ namespace ProjetoSenai
             InitializeComponent();
             RetornarAlunoDgv();
             RetornarEmpresaDgv();
+            RetornarAlunoNaEmpresa();
         }
         private void RetornarEmpresaDgv()
         {
@@ -30,6 +31,10 @@ namespace ProjetoSenai
         private void RetornarAlunoDgv()
         {
             dgvAluno.DataSource = aluno.retAlunos();
+        }
+        private void RetornarAlunoNaEmpresa()
+        {
+            dgvAlunoNaEmpresa.DataSource = empresa.RetAlunosAlocados();
         }
         private void LimparTxt()
         {
@@ -70,6 +75,7 @@ namespace ProjetoSenai
         {
             RetornarAlunoDgv();
             RetornarEmpresaDgv();
+            RetornarAlunoNaEmpresa();
         }
 
         private void BtnAdicionar_Click(object sender, EventArgs e)
@@ -79,9 +85,9 @@ namespace ProjetoSenai
                 empresa.aluno_codAluno = codAlunoClicado;
                 empresa.nomeEmpresa = txtNomeEmpresa.Text;
                 empresa.cnpj = txtCnpj.Text;
-                if(empresa.AlocarAluno(codEmpresaClicada,txtNomeAluno.Text,txtCpfAluno.Text,txtIdade.Text) == true)
+                if((empresa.AlocarAlunoEmprego(codEmpresaClicada,txtNomeAluno.Text,txtCpfAluno.Text,txtIdade.Text) == true) && (empresa.AlocarAlunoHistorico(codEmpresaClicada, txtNomeAluno.Text, txtCpfAluno.Text, txtIdade.Text) == true))
                 {
-                    MyMessageBox.Show("Aluno alocado a empresa com sucesso","Alocação", "OK");
+                    MyMessageBox.Show("       Aluno alocado com sucesso!","Alocação", "OK");
                     LimparTxt();
                 }
             }
@@ -151,6 +157,30 @@ namespace ProjetoSenai
         private void LblIdade_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDesalocarAluno_Click(object sender, EventArgs e)
+        {
+            if(empresa.ExcluirAlunoEmprego(codAlunoClicado) == true)
+            {
+                MyMessageBox.Show("   Aluno desalocado com sucesso!","Desalocação","OK");
+                LimparTxt();
+            }
+
+        }
+
+        private void dgvAlunoNaEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["aluno_codAluno"].Value.ToString() != "")
+            {
+                //CodClicado recebe o campo clicado
+                codAlunoClicado = int.Parse(dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["aluno_codAluno"].Value.ToString());
+            }
+            txtNomeEmpresa.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["nomeEmpresa"].Value.ToString();
+            txtCnpj.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["cnpjEmpresa"].Value.ToString();
+            txtNomeAluno.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["nomeAluno"].Value.ToString();
+            txtCpfAluno.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["cpfAluno"].Value.ToString();
+            txtIdade.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["idadeAluno"].Value.ToString();
         }
 
         private void dgvEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
