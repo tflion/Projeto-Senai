@@ -64,6 +64,8 @@
             this.btnDesalocarAluno = new MaterialSkin.Controls.MaterialRaisedButton();
             this.dgvAlunoNaEmpresa = new System.Windows.Forms.DataGridView();
             this.lblAlunosAlocados = new System.Windows.Forms.Label();
+            this.lblOutraBusca = new System.Windows.Forms.Label();
+            this.txtBuscaMultipla = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunoNaEmpresa)).BeginInit();
@@ -221,7 +223,7 @@
             // 
             this.lblBuscarAluno.AutoSize = true;
             this.lblBuscarAluno.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarAluno.Location = new System.Drawing.Point(10, 313);
+            this.lblBuscarAluno.Location = new System.Drawing.Point(10, 287);
             this.lblBuscarAluno.Name = "lblBuscarAluno";
             this.lblBuscarAluno.Size = new System.Drawing.Size(79, 16);
             this.lblBuscarAluno.TabIndex = 44;
@@ -229,7 +231,7 @@
             // 
             // txtBuscarAluno
             // 
-            this.txtBuscarAluno.Location = new System.Drawing.Point(92, 311);
+            this.txtBuscarAluno.Location = new System.Drawing.Point(92, 285);
             this.txtBuscarAluno.Name = "txtBuscarAluno";
             this.txtBuscarAluno.Size = new System.Drawing.Size(100, 20);
             this.txtBuscarAluno.TabIndex = 43;
@@ -266,11 +268,11 @@
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.Depth = 0;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(198, 312);
+            this.btnBuscar.Location = new System.Drawing.Point(198, 286);
             this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Primary = true;
-            this.btnBuscar.Size = new System.Drawing.Size(66, 17);
+            this.btnBuscar.Size = new System.Drawing.Size(66, 46);
             this.btnBuscar.TabIndex = 47;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -390,10 +392,30 @@
             this.lblAlunosAlocados.TabIndex = 55;
             this.lblAlunosAlocados.Text = "Alunos alocados na empresa:";
             // 
+            // lblOutraBusca
+            // 
+            this.lblOutraBusca.AutoSize = true;
+            this.lblOutraBusca.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutraBusca.Location = new System.Drawing.Point(0, 313);
+            this.lblOutraBusca.Name = "lblOutraBusca";
+            this.lblOutraBusca.Size = new System.Drawing.Size(89, 16);
+            this.lblOutraBusca.TabIndex = 57;
+            this.lblOutraBusca.Text = "Busca múltipla:";
+            // 
+            // txtBuscaMultipla
+            // 
+            this.txtBuscaMultipla.Location = new System.Drawing.Point(92, 312);
+            this.txtBuscaMultipla.Name = "txtBuscaMultipla";
+            this.txtBuscaMultipla.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscaMultipla.TabIndex = 56;
+            this.txtBuscaMultipla.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // userAlocarAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblOutraBusca);
+            this.Controls.Add(this.txtBuscaMultipla);
             this.Controls.Add(this.lblAlunosAlocados);
             this.Controls.Add(this.dgvAlunoNaEmpresa);
             this.Controls.Add(this.btnDesalocarAluno);
@@ -453,5 +475,7 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnDesalocarAluno;
         private System.Windows.Forms.DataGridView dgvAlunoNaEmpresa;
         private System.Windows.Forms.Label lblAlunosAlocados;
+        private System.Windows.Forms.Label lblOutraBusca;
+        private System.Windows.Forms.TextBox txtBuscaMultipla;
     }
 }

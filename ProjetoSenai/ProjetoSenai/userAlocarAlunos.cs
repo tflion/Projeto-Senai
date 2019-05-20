@@ -95,9 +95,9 @@ namespace ProjetoSenai
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (txtBuscarAluno.Text.Length < 1 || txtBuscarAluno.Text == "Insira o código da Turma")
+            if (txtBuscarAluno.Text.Length < 1 || txtBuscarAluno.Text == " ")
             {
-                MyMessageBox.Show("Insira um valor no campo de filtro de \n             Turma ao lado da opção ''Filtrar por Turma''", "Atenção", "OK");
+               
             }
             else
             {
@@ -111,8 +111,18 @@ namespace ProjetoSenai
                     //Código para filtrar o datagridview, para colocar mais filtros juntos só adicionar AND/OR e a condição, 
                     // como faria no banco de dados 
                     (dgvAluno.DataSource as DataTable).DefaultView.RowFilter =
-                    string.Format("sexo LIKE '{0}%' OR idade LIKE '{0}%' OR nomeAluno LIKE '{0}%' OR cidade LIKE '{0}%' OR bairro LIKE '{0}%' ", txtBuscarAluno.Text);
+                    string.Format("sexo LIKE '{0}%' OR idade LIKE '{0}%' OR nomeAluno LIKE '{0}%' OR cidade LIKE '{0}%' OR bairro LIKE '{0}%' OR dataMatricula LIKE '{0}%' ", txtBuscarAluno.Text);
                 }
+            }
+            if (dgvAluno.Rows.Count == 0)
+            {
+              
+            } else
+            {
+                //Código para filtrar o datagridview, para colocar mais filtros juntos só adicionar AND/OR e a condição, 
+                // como faria no banco de dados 
+                (dgvAluno.DataSource as DataTable).DefaultView.RowFilter =
+                string.Format("sexo LIKE '{0}%' AND idade LIKE '{0}%' OR nomeAluno LIKE '{0}%' OR cidade LIKE '{0}%' OR bairro LIKE '{0}%' OR dataMatricula LIKE '{0}%' ", txtBuscaMultipla.Text);
             }
         }
 
@@ -136,7 +146,10 @@ namespace ProjetoSenai
                     (dgvEmpresa.DataSource as DataTable).DefaultView.RowFilter =
                     string.Format("nomeEmpresa LIKE '{0}%' OR cidade LIKE '{0}%'  ", txtBuscarEmpresa.Text);
                 }
-            }
+                
+                
+            } 
+             
         }
 
         private void userAlocarAlunos_Load(object sender, EventArgs e)
@@ -181,6 +194,11 @@ namespace ProjetoSenai
             txtNomeAluno.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["nomeAluno"].Value.ToString();
             txtCpfAluno.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["cpfAluno"].Value.ToString();
             txtIdade.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["idadeAluno"].Value.ToString();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
 
         private void dgvEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
