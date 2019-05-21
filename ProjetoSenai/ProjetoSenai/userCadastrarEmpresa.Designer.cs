@@ -70,7 +70,7 @@
             // 
             // txtComplemento
             // 
-            this.txtComplemento.Location = new System.Drawing.Point(120, 189);
+            this.txtComplemento.Location = new System.Drawing.Point(120, 192);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(100, 20);
             this.txtComplemento.TabIndex = 9;
@@ -253,17 +253,17 @@
             // 
             // mskTelefoneResp
             // 
-            this.mskTelefoneResp.Location = new System.Drawing.Point(275, 244);
+            this.mskTelefoneResp.Location = new System.Drawing.Point(204, 246);
             this.mskTelefoneResp.Mask = "(00)0000-0000";
             this.mskTelefoneResp.Name = "mskTelefoneResp";
-            this.mskTelefoneResp.Size = new System.Drawing.Size(116, 20);
+            this.mskTelefoneResp.Size = new System.Drawing.Size(95, 20);
             this.mskTelefoneResp.TabIndex = 38;
             this.mskTelefoneResp.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.mskTelefoneResp.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskTelefoneResp_MaskInputRejected);
             // 
             // txtRespNome
             // 
-            this.txtRespNome.Location = new System.Drawing.Point(275, 221);
+            this.txtRespNome.Location = new System.Drawing.Point(204, 222);
             this.txtRespNome.Name = "txtRespNome";
             this.txtRespNome.Size = new System.Drawing.Size(190, 20);
             this.txtRespNome.TabIndex = 40;
@@ -332,7 +332,7 @@
             // 
             this.lblComplemento.AutoSize = true;
             this.lblComplemento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComplemento.Location = new System.Drawing.Point(12, 192);
+            this.lblComplemento.Location = new System.Drawing.Point(12, 195);
             this.lblComplemento.Name = "lblComplemento";
             this.lblComplemento.Size = new System.Drawing.Size(108, 17);
             this.lblComplemento.TabIndex = 47;
@@ -342,7 +342,7 @@
             // 
             this.lblRespContr.AutoSize = true;
             this.lblRespContr.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRespContr.Location = new System.Drawing.Point(49, 222);
+            this.lblRespContr.Location = new System.Drawing.Point(12, 222);
             this.lblRespContr.Name = "lblRespContr";
             this.lblRespContr.Size = new System.Drawing.Size(186, 17);
             this.lblRespContr.TabIndex = 48;
@@ -352,7 +352,7 @@
             // 
             this.lblTelResp.AutoSize = true;
             this.lblTelResp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelResp.Location = new System.Drawing.Point(53, 245);
+            this.lblTelResp.Location = new System.Drawing.Point(12, 247);
             this.lblTelResp.Name = "lblTelResp";
             this.lblTelResp.Size = new System.Drawing.Size(167, 17);
             this.lblTelResp.TabIndex = 49;
