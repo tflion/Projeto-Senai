@@ -145,12 +145,6 @@
     <Compile Include="userAlocarAlunos.Designer.cs">
       <DependentUpon>userAlocarAlunos.cs</DependentUpon>
     </Compile>
-    <Compile Include="userAssisteteView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="userAssisteteView.Designer.cs">
-      <DependentUpon>userAssisteteView.cs</DependentUpon>
-    </Compile>
     <Compile Include="userCadastrarEmpresa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,9 +203,6 @@
     <EmbeddedResource Include="rptEmprego.rdlc" />
     <EmbeddedResource Include="userAlocarAlunos.resx">
       <DependentUpon>userAlocarAlunos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="userAssisteteView.resx">
-      <DependentUpon>userAssisteteView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userCadastrarEmpresa.resx">
       <DependentUpon>userCadastrarEmpresa.cs</DependentUpon>

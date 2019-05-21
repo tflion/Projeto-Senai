@@ -227,6 +227,8 @@ namespace ProjetoSenai
 
         private void dgvEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return; 
+
             //Se clicar em algum codigo no dgv
             if (dgvEmpresa.Rows[e.RowIndex].Cells["codEmpresa"].Value.ToString() != "")
             {

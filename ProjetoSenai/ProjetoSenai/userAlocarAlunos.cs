@@ -27,14 +27,17 @@ namespace ProjetoSenai
         private void RetornarEmpresaDgv()
         {
             dgvEmpresa.DataSource = empresa.RetEmpresas();
+            dgvEmpresa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
         private void RetornarAlunoDgv()
         {
             dgvAluno.DataSource = aluno.retAlunos();
+            dgvAluno.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
         private void RetornarAlunoNaEmpresa()
         {
             dgvAlunoNaEmpresa.DataSource = empresa.RetAlunosAlocados();
+            dgvAlunoNaEmpresa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
         private void LimparTxt()
         {
@@ -59,6 +62,8 @@ namespace ProjetoSenai
 
         private void dgvAluno_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;
+
             //Se clicar em algum codigo no dgv
             if (dgvAluno.Rows[e.RowIndex].Cells["codAluno"].Value.ToString() != "")
             {
@@ -95,7 +100,7 @@ namespace ProjetoSenai
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (txtBuscarAluno.Text.Length < 1 || txtBuscarAluno.Text == " ")
+            if (txtBuscarAluno.Text.Length < 1 || txtBuscarAluno.Text == "ERR0 ")
             {
                
             }
@@ -112,18 +117,12 @@ namespace ProjetoSenai
                     // como faria no banco de dados 
                     (dgvAluno.DataSource as DataTable).DefaultView.RowFilter =
                     string.Format("sexo LIKE '{0}%' OR idade LIKE '{0}%' OR nomeAluno LIKE '{0}%' OR cidade LIKE '{0}%' OR bairro LIKE '{0}%' OR dataMatricula LIKE '{0}%' ", txtBuscarAluno.Text);
+                } 
+                {
+
                 }
             }
-            if (dgvAluno.Rows.Count == 0)
-            {
-              
-            } else
-            {
-                //Código para filtrar o datagridview, para colocar mais filtros juntos só adicionar AND/OR e a condição, 
-                // como faria no banco de dados 
-                (dgvAluno.DataSource as DataTable).DefaultView.RowFilter =
-                string.Format("sexo LIKE '{0}%' AND idade LIKE '{0}%' OR nomeAluno LIKE '{0}%' OR cidade LIKE '{0}%' OR bairro LIKE '{0}%' OR dataMatricula LIKE '{0}%' ", txtBuscaMultipla.Text);
-            }
+           
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
@@ -184,6 +183,8 @@ namespace ProjetoSenai
 
         private void dgvAlunoNaEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;
+
             if (dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["aluno_codAluno"].Value.ToString() != "")
             {
                 //CodClicado recebe o campo clicado
@@ -201,8 +202,46 @@ namespace ProjetoSenai
             
         }
 
+        private void btnBuscaMultipla_Click(object sender, EventArgs e)
+        {
+            if (txtBuscaMultipla.Text.Length < 1 || txtBuscaMultipla.Text == "Insira o código da Turma")
+            {
+                MyMessageBox.Show("Insira um valor no campo de filtro de \n Turma ao lado da opção ''Filtrar por Turma''", "Atenção", "OK");
+            }
+            else
+            {
+                //Validação para o caso da tabela não tenha sido selecionada ainda
+                if (dgvAluno.Rows.Count == 0)
+                {
+                    MyMessageBox.Show("Por favor, selecione uma tabela antes de filtrar!", "Atenção", "OK");
+                }
+                else
+                {
+                    //Código para filtrar o datagridview, para colocar mais filtros juntos só adicionar AND/OR e a condição, 
+                    // como faria no banco de dados 
+                    (dgvAluno.DataSource as DataTable).DefaultView.RowFilter =
+                    string.Format("nomeAluno LIKE '{0}%' AND bairro LIKE '{1}%'  ", txtBuscarAluno.Text,txtBuscaMultipla.Text);
+                }
+
+
+            }
+
+        }
+
+        private void lblBuscarAluno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarAluno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void dgvEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;
+
             //Se clicar em algum codigo no dgv
             if (dgvEmpresa.Rows[e.RowIndex].Cells["codEmpresa"].Value.ToString() != "")
             {

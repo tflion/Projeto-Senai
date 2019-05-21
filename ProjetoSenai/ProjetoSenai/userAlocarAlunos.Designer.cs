@@ -66,6 +66,7 @@
             this.lblAlunosAlocados = new System.Windows.Forms.Label();
             this.lblOutraBusca = new System.Windows.Forms.Label();
             this.txtBuscaMultipla = new System.Windows.Forms.TextBox();
+            this.btnBuscaMultipla = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunoNaEmpresa)).BeginInit();
@@ -93,7 +94,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAluno.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAluno.EnableHeadersVisualStyles = false;
-            this.dgvAluno.Location = new System.Drawing.Point(13, 332);
+            this.dgvAluno.Location = new System.Drawing.Point(10, 332);
             this.dgvAluno.Name = "dgvAluno";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -197,7 +198,7 @@
             // 
             this.txtCpfAluno.Location = new System.Drawing.Point(147, 45);
             this.txtCpfAluno.Name = "txtCpfAluno";
-            this.txtCpfAluno.Size = new System.Drawing.Size(100, 20);
+            this.txtCpfAluno.Size = new System.Drawing.Size(125, 20);
             this.txtCpfAluno.TabIndex = 39;
             // 
             // txtBuscarEmpresa
@@ -228,6 +229,7 @@
             this.lblBuscarAluno.Size = new System.Drawing.Size(79, 16);
             this.lblBuscarAluno.TabIndex = 44;
             this.lblBuscarAluno.Text = "Buscar Aluno:";
+            this.lblBuscarAluno.Click += new System.EventHandler(this.lblBuscarAluno_Click);
             // 
             // txtBuscarAluno
             // 
@@ -235,6 +237,7 @@
             this.txtBuscarAluno.Name = "txtBuscarAluno";
             this.txtBuscarAluno.Size = new System.Drawing.Size(100, 20);
             this.txtBuscarAluno.TabIndex = 43;
+            this.txtBuscarAluno.TextChanged += new System.EventHandler(this.txtBuscarAluno_TextChanged);
             // 
             // btnAdicionar
             // 
@@ -272,7 +275,7 @@
             this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Primary = true;
-            this.btnBuscar.Size = new System.Drawing.Size(66, 46);
+            this.btnBuscar.Size = new System.Drawing.Size(66, 19);
             this.btnBuscar.TabIndex = 47;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -314,7 +317,7 @@
             // 
             this.txtIdade.Location = new System.Drawing.Point(147, 73);
             this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(100, 20);
+            this.txtIdade.Size = new System.Drawing.Size(125, 20);
             this.txtIdade.TabIndex = 52;
             // 
             // lblIdade
@@ -396,11 +399,11 @@
             // 
             this.lblOutraBusca.AutoSize = true;
             this.lblOutraBusca.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOutraBusca.Location = new System.Drawing.Point(0, 313);
+            this.lblOutraBusca.Location = new System.Drawing.Point(9, 316);
             this.lblOutraBusca.Name = "lblOutraBusca";
-            this.lblOutraBusca.Size = new System.Drawing.Size(89, 16);
+            this.lblOutraBusca.Size = new System.Drawing.Size(77, 16);
             this.lblOutraBusca.TabIndex = 57;
-            this.lblOutraBusca.Text = "Busca múltipla:";
+            this.lblOutraBusca.Text = "Busca bairro:";
             // 
             // txtBuscaMultipla
             // 
@@ -410,10 +413,26 @@
             this.txtBuscaMultipla.TabIndex = 56;
             this.txtBuscaMultipla.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // btnBuscaMultipla
+            // 
+            this.btnBuscaMultipla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscaMultipla.Depth = 0;
+            this.btnBuscaMultipla.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscaMultipla.Location = new System.Drawing.Point(198, 310);
+            this.btnBuscaMultipla.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBuscaMultipla.Name = "btnBuscaMultipla";
+            this.btnBuscaMultipla.Primary = true;
+            this.btnBuscaMultipla.Size = new System.Drawing.Size(66, 19);
+            this.btnBuscaMultipla.TabIndex = 58;
+            this.btnBuscaMultipla.Text = "Buscar";
+            this.btnBuscaMultipla.UseVisualStyleBackColor = true;
+            this.btnBuscaMultipla.Click += new System.EventHandler(this.btnBuscaMultipla_Click);
+            // 
             // userAlocarAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnBuscaMultipla);
             this.Controls.Add(this.lblOutraBusca);
             this.Controls.Add(this.txtBuscaMultipla);
             this.Controls.Add(this.lblAlunosAlocados);
@@ -477,5 +496,6 @@
         private System.Windows.Forms.Label lblAlunosAlocados;
         private System.Windows.Forms.Label lblOutraBusca;
         private System.Windows.Forms.TextBox txtBuscaMultipla;
+        private MaterialSkin.Controls.MaterialRaisedButton btnBuscaMultipla;
     }
 }
