@@ -165,7 +165,6 @@
             this.Controls.Add(this.materialDivider1);
             this.Name = "userHistoricoEmprego";
             this.Size = new System.Drawing.Size(549, 490);
-            this.Load += new System.EventHandler(this.userHistoricoEmprego_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistoricoEmprego)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

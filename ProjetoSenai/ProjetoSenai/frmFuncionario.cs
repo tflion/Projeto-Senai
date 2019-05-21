@@ -53,16 +53,6 @@ namespace ProjetoSenai
             pnlIndicador.Top = btnCadastrarEmpresa.Top;
         }
 
-        private void pnlDireito_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnImportarDados_MouseHover(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnImportarDados_MouseEnter(object sender, EventArgs e)
         {
             btnImportarDados.BackColor = Color.FromArgb(245, 62, 56);
@@ -105,21 +95,11 @@ namespace ProjetoSenai
             pnlIndicador.Top = btnVisualizarAlunos.Top;
         }
 
-        private void pnlIndicador_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }
-
         private void btnVizualizarHistorico_Click(object sender, EventArgs e)
         {
             userHistoricoEmprego1.BringToFront();
             pnlIndicador.Height = btnVizualizarHistorico.Height;
             pnlIndicador.Top = btnVizualizarHistorico.Top;
-        }
-
-        private void userHistoricoEmprego1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

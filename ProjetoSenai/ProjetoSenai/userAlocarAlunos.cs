@@ -151,26 +151,6 @@ namespace ProjetoSenai
              
         }
 
-        private void userAlocarAlunos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblBuscarEmpresa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBuscarEmpresa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblIdade_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnDesalocarAluno_Click(object sender, EventArgs e)
         {
             if(empresa.ExcluirAlunoEmprego(codAlunoClicado) == true)
@@ -225,16 +205,6 @@ namespace ProjetoSenai
 
 
             }
-
-        }
-
-        private void lblBuscarAluno_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBuscarAluno_TextChanged(object sender, EventArgs e)
-        {
 
         }
 

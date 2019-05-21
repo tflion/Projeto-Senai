@@ -66,18 +66,17 @@
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(121, 21);
             this.cboTipo.TabIndex = 7;
-            this.cboTipo.SelectedIndexChanged += new System.EventHandler(this.cboTipo_SelectedIndexChanged);
             // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.Depth = 0;
-            this.lblTipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblTipo.Location = new System.Drawing.Point(172, 120);
             this.lblTipo.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(38, 17);
+            this.lblTipo.Size = new System.Drawing.Size(43, 19);
             this.lblTipo.TabIndex = 8;
             this.lblTipo.Text = "Tipo:";
             // 

@@ -158,14 +158,6 @@ namespace ProjetoSenai
 
 
         }
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void userCadastrarEmpresa_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
@@ -254,11 +246,6 @@ namespace ProjetoSenai
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void mskTelefoneResp_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
         }
     }
 }

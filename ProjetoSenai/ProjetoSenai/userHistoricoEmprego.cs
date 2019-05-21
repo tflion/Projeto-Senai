@@ -25,11 +25,6 @@ namespace ProjetoSenai
             dgvHistoricoEmprego.DataSource = empresa.RetHistoricoAlunos();
         }
 
-        private void userHistoricoEmprego_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             retAlunosDgv();

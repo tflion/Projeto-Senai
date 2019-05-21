@@ -76,7 +76,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "userPrincipal";
             this.Size = new System.Drawing.Size(549, 490);
-            this.Load += new System.EventHandler(this.userPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

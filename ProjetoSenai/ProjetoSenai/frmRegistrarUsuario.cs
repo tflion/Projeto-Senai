@@ -101,11 +101,6 @@ namespace ProjetoSenai
             cboTipo.Text = "";
         }
 
-        private void btnCadastrarUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnImportarDados_MouseEnter(object sender, EventArgs e)
         {
             btnCadastrarUsuario.BackColor = Color.FromArgb(245, 62, 56);

@@ -58,7 +58,6 @@
             this.pnlDireito.Name = "pnlDireito";
             this.pnlDireito.Size = new System.Drawing.Size(194, 490);
             this.pnlDireito.TabIndex = 0;
-            this.pnlDireito.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDireito_Paint);
             // 
             // btnVizualizarHistorico
             // 
@@ -86,7 +85,6 @@
             this.pnlIndicador.Name = "pnlIndicador";
             this.pnlIndicador.Size = new System.Drawing.Size(10, 75);
             this.pnlIndicador.TabIndex = 15;
-            this.pnlIndicador.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlIndicador_Paint);
             // 
             // btnVisualizarAlunos
             // 
@@ -167,7 +165,6 @@
             this.btnImportarDados.UseVisualStyleBackColor = false;
             this.btnImportarDados.Click += new System.EventHandler(this.button1_Click);
             this.btnImportarDados.MouseEnter += new System.EventHandler(this.btnImportarDados_MouseEnter);
-            this.btnImportarDados.MouseHover += new System.EventHandler(this.btnImportarDados_MouseHover_1);
             // 
             // userHistoricoEmprego1
             // 
@@ -175,7 +172,6 @@
             this.userHistoricoEmprego1.Name = "userHistoricoEmprego1";
             this.userHistoricoEmprego1.Size = new System.Drawing.Size(549, 490);
             this.userHistoricoEmprego1.TabIndex = 5;
-            this.userHistoricoEmprego1.Load += new System.EventHandler(this.userHistoricoEmprego1_Load);
             // 
             // userAlocarAlunos1
             // 

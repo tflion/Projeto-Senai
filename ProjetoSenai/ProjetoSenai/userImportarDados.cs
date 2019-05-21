@@ -41,12 +41,6 @@ namespace ProjetoSenai
 
         DataSet result;
 
-        private void CboFolha_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-
         private void btnSelecionarArquivo_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog of = new OpenFileDialog() { Filter = "Excel Work Book 97-2003|*.xls|Excel Workbook|* .xlsx", ValidateNames = true })
@@ -83,11 +77,6 @@ namespace ProjetoSenai
 
                 }
             }
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
         }
 
         private void cboTipo_SelectedIndexChanged(object sender, EventArgs e)
