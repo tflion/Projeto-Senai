@@ -48,6 +48,7 @@ namespace ProjetoSenai
             // TODO: This line of code loads data into the 'DataSetSecretaria.Aluno' table. You can move, or remove it, as needed.
             this.AlunoTableAdapter.Fill(this.DataSetSecretaria.Aluno);
 
+            this.reportViewer1.RefreshReport();
         }
     }
 }

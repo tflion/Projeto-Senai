@@ -227,7 +227,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="rptSecretaria.rdlc" />
     <EmbeddedResource Include="rptEmprego.rdlc" />
     <EmbeddedResource Include="userAlocarAlunos.resx">
       <DependentUpon>userAlocarAlunos.cs</DependentUpon>
