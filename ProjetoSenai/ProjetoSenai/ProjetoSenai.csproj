@@ -176,6 +176,12 @@
     <Compile Include="userPrincipal.Designer.cs">
       <DependentUpon>userPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="userStatusEmprego.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userStatusEmprego.Designer.cs">
+      <DependentUpon>userStatusEmprego.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAssistente.resx">
       <DependentUpon>frmAssistente.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userPrincipal.resx">
       <DependentUpon>userPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userStatusEmprego.resx">
+      <DependentUpon>userStatusEmprego.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSetEmprego.xsc">
       <DependentUpon>DataSetEmprego.xsd</DependentUpon>
