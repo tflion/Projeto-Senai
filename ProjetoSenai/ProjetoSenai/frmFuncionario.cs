@@ -101,5 +101,10 @@ namespace ProjetoSenai
             pnlIndicador.Height = btnVizualizarHistorico.Height;
             pnlIndicador.Top = btnVizualizarHistorico.Top;
         }
+
+        private void btnSolicitarContrato_Click(object sender, EventArgs e)
+        {
+            userCadastroDeEmpregos1.BringToFront();
+        }
     }
 }

@@ -66,6 +66,7 @@
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(121, 21);
             this.cboTipo.TabIndex = 7;
+            this.cboTipo.SelectedIndexChanged += new System.EventHandler(this.cboTipo_SelectedIndexChanged);
             // 
             // lblTipo
             // 
