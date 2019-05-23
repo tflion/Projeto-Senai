@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionario));
             this.pnlDireito = new System.Windows.Forms.Panel();
+            this.btnSolicitarContrato = new System.Windows.Forms.Button();
             this.btnVizualizarHistorico = new System.Windows.Forms.Button();
             this.pnlIndicador = new System.Windows.Forms.Panel();
             this.btnVisualizarAlunos = new System.Windows.Forms.Button();
@@ -42,12 +43,16 @@
             this.userPrincipal = new ProjetoSenai.userPrincipal();
             this.userImportarDados = new ProjetoSenai.userImportarDados();
             this.userCadastrarEmpresa1 = new ProjetoSenai.userCadastrarEmpresa();
+            this.userCadastroDeEmpregos1 = new ProjetoSenai.userCadastroDeEmpregos();
+            this.btnStatusContrato = new System.Windows.Forms.Button();
             this.pnlDireito.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlDireito
             // 
             this.pnlDireito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.pnlDireito.Controls.Add(this.btnStatusContrato);
+            this.pnlDireito.Controls.Add(this.btnSolicitarContrato);
             this.pnlDireito.Controls.Add(this.btnVizualizarHistorico);
             this.pnlDireito.Controls.Add(this.pnlIndicador);
             this.pnlDireito.Controls.Add(this.btnVisualizarAlunos);
@@ -59,6 +64,24 @@
             this.pnlDireito.Size = new System.Drawing.Size(194, 490);
             this.pnlDireito.TabIndex = 0;
             // 
+            // btnSolicitarContrato
+            // 
+            this.btnSolicitarContrato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.btnSolicitarContrato.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSolicitarContrato.FlatAppearance.BorderSize = 0;
+            this.btnSolicitarContrato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolicitarContrato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSolicitarContrato.ForeColor = System.Drawing.Color.White;
+            this.btnSolicitarContrato.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSolicitarContrato.Location = new System.Drawing.Point(2, 401);
+            this.btnSolicitarContrato.Name = "btnSolicitarContrato";
+            this.btnSolicitarContrato.Size = new System.Drawing.Size(187, 23);
+            this.btnSolicitarContrato.TabIndex = 17;
+            this.btnSolicitarContrato.Text = "SOLICITAR CONTRATO";
+            this.btnSolicitarContrato.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSolicitarContrato.UseVisualStyleBackColor = false;
+            this.btnSolicitarContrato.Click += new System.EventHandler(this.btnSolicitarContrato_Click);
+            // 
             // btnVizualizarHistorico
             // 
             this.btnVizualizarHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
@@ -69,7 +92,7 @@
             this.btnVizualizarHistorico.ForeColor = System.Drawing.Color.White;
             this.btnVizualizarHistorico.Image = ((System.Drawing.Image)(resources.GetObject("btnVizualizarHistorico.Image")));
             this.btnVizualizarHistorico.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVizualizarHistorico.Location = new System.Drawing.Point(7, 301);
+            this.btnVizualizarHistorico.Location = new System.Drawing.Point(7, 237);
             this.btnVizualizarHistorico.Name = "btnVizualizarHistorico";
             this.btnVizualizarHistorico.Size = new System.Drawing.Size(187, 81);
             this.btnVizualizarHistorico.TabIndex = 16;
@@ -96,9 +119,9 @@
             this.btnVisualizarAlunos.ForeColor = System.Drawing.Color.White;
             this.btnVisualizarAlunos.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarAlunos.Image")));
             this.btnVisualizarAlunos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVisualizarAlunos.Location = new System.Drawing.Point(7, 400);
+            this.btnVisualizarAlunos.Location = new System.Drawing.Point(7, 324);
             this.btnVisualizarAlunos.Name = "btnVisualizarAlunos";
-            this.btnVisualizarAlunos.Size = new System.Drawing.Size(187, 67);
+            this.btnVisualizarAlunos.Size = new System.Drawing.Size(187, 58);
             this.btnVisualizarAlunos.TabIndex = 7;
             this.btnVisualizarAlunos.Text = "VISUALIZAR ALUNOS NA  EMPRESA";
             this.btnVisualizarAlunos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -115,7 +138,7 @@
             this.btnAlocarAlunos.ForeColor = System.Drawing.Color.White;
             this.btnAlocarAlunos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlocarAlunos.Image")));
             this.btnAlocarAlunos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAlocarAlunos.Location = new System.Drawing.Point(6, 201);
+            this.btnAlocarAlunos.Location = new System.Drawing.Point(2, 156);
             this.btnAlocarAlunos.Name = "btnAlocarAlunos";
             this.btnAlocarAlunos.Size = new System.Drawing.Size(187, 75);
             this.btnAlocarAlunos.TabIndex = 6;
@@ -134,7 +157,7 @@
             this.btnCadastrarEmpresa.ForeColor = System.Drawing.Color.White;
             this.btnCadastrarEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarEmpresa.Image")));
             this.btnCadastrarEmpresa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(4, 111);
+            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(4, 90);
             this.btnCadastrarEmpresa.Name = "btnCadastrarEmpresa";
             this.btnCadastrarEmpresa.Size = new System.Drawing.Size(190, 60);
             this.btnCadastrarEmpresa.TabIndex = 5;
@@ -158,7 +181,7 @@
             this.btnImportarDados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnImportarDados.Location = new System.Drawing.Point(6, 12);
             this.btnImportarDados.Name = "btnImportarDados";
-            this.btnImportarDados.Size = new System.Drawing.Size(187, 75);
+            this.btnImportarDados.Size = new System.Drawing.Size(187, 72);
             this.btnImportarDados.TabIndex = 4;
             this.btnImportarDados.Text = "IMPORTAR DADOS DO EXCEL";
             this.btnImportarDados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -214,11 +237,36 @@
             this.userCadastrarEmpresa1.TabIndex = 3;
             this.userCadastrarEmpresa1.Load += new System.EventHandler(this.userCadastrarEmpresa1_Load);
             // 
+            // userCadastroDeEmpregos1
+            // 
+            this.userCadastroDeEmpregos1.Location = new System.Drawing.Point(195, 64);
+            this.userCadastroDeEmpregos1.Name = "userCadastroDeEmpregos1";
+            this.userCadastroDeEmpregos1.Size = new System.Drawing.Size(550, 490);
+            this.userCadastroDeEmpregos1.TabIndex = 6;
+            // 
+            // btnStatusContrato
+            // 
+            this.btnStatusContrato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.btnStatusContrato.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatusContrato.FlatAppearance.BorderSize = 0;
+            this.btnStatusContrato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatusContrato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatusContrato.ForeColor = System.Drawing.Color.White;
+            this.btnStatusContrato.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnStatusContrato.Location = new System.Drawing.Point(4, 430);
+            this.btnStatusContrato.Name = "btnStatusContrato";
+            this.btnStatusContrato.Size = new System.Drawing.Size(187, 48);
+            this.btnStatusContrato.TabIndex = 18;
+            this.btnStatusContrato.Text = "STATUS DE ENCAMINHAMENTO";
+            this.btnStatusContrato.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStatusContrato.UseVisualStyleBackColor = false;
+            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 554);
+            this.Controls.Add(this.userCadastroDeEmpregos1);
             this.Controls.Add(this.userHistoricoEmprego1);
             this.Controls.Add(this.userAlocarAlunos1);
             this.Controls.Add(this.userCadastrarEmpresa2);
@@ -250,5 +298,8 @@
         private userAlocarAlunos userAlocarAlunos1;
         private System.Windows.Forms.Button btnVizualizarHistorico;
         private userHistoricoEmprego userHistoricoEmprego1;
+        private System.Windows.Forms.Button btnSolicitarContrato;
+        private userCadastroDeEmpregos userCadastroDeEmpregos1;
+        private System.Windows.Forms.Button btnStatusContrato;
     }
 }

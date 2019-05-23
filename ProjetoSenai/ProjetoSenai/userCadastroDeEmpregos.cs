@@ -18,6 +18,8 @@ namespace ProjetoSenai
         public userCadastroDeEmpregos()
         {
             InitializeComponent();
+            retornarEmpresaDgv();
+            retornarSolicitacaoDgv();
         }
 
         int codEmpresaClicada, codSolicitacaoClicada = 0;
@@ -45,6 +47,7 @@ namespace ProjetoSenai
             {
                 MessageBox.Show("Cadastrado");
                 LimparTxt();
+                retornarSolicitacaoDgv();
             }
         }
 
@@ -56,6 +59,7 @@ namespace ProjetoSenai
             {
                 MessageBox.Show("Editado");
                 LimparTxt();
+                retornarSolicitacaoDgv();
             }
         }
 
@@ -71,6 +75,12 @@ namespace ProjetoSenai
             }
             txtNomeEmpresa.Text = dgvEmpresa.Rows[e.RowIndex].Cells["nomeEmpresa"].Value.ToString();
 
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            retornarEmpresaDgv();
+            retornarSolicitacaoDgv();
         }
 
         private void dgvSolicitarEmprego_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -36,7 +36,7 @@ namespace ProjetoSenai
             try
             {
                 bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("UPDATE solicitacaoContrato SET nomeEmpresa = '{0}', tipoContrato = '{1}' WHERE codEmpresa = {14}", nomeEmpresa, tipoContrato, codSolicitacaoClicada));
+                bd.ExecutarComandosSql(String.Format("UPDATE solicitacaoContrato SET nomeEmpresa = '{0}', tipoContrato = '{1}' WHERE codContrato = {2}", nomeEmpresa, tipoContrato, codSolicitacaoClicada));
                 bd.Desconectar();
                 return true;
             }
