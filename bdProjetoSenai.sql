@@ -147,6 +147,7 @@ nomeEmpresa			VARCHAR(100),
 cpfAluno			VARCHAR(100),
 cnpjEmpresa			VARCHAR(100),
 idadeAluno			VARCHAR(100),
+tipoContrato		VARCHAR(100),
 FOREIGN KEY (empresa_codEmpresa) REFERENCES Empresa (codEmpresa),
 FOREIGN KEY (aluno_codAluno) REFERENCES Aluno (codAluno),
 );
@@ -161,7 +162,16 @@ nomeEmpresa			VARCHAR(100),
 cpfAluno			VARCHAR(100),
 cnpjEmpresa			VARCHAR(100),
 idadeAluno			VARCHAR(100),
+tipoContrato		VARCHAR(100),
 FOREIGN KEY (empresa_codEmpresa) REFERENCES Empresa (codEmpresa),
 FOREIGN KEY (aluno_codAluno) REFERENCES Aluno (codAluno),
 );
--- DROP TABLE Empresa
+
+CREATE TABLE solicitacaoContrato
+(
+codContrato			INT PRIMARY KEY IDENTITY(1,1),
+empresa_codEmpresa	INT,
+nomeEmpresa			VARCHAR(100),
+tipoContrato		VARCHAR(20),
+FOREIGN KEY (empresa_codEmpresa) REFERENCES Empresa (codEmpresa),
+);

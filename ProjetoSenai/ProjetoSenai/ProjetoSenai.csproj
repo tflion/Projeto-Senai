@@ -85,6 +85,7 @@
     <Compile Include="ClassAcessoBD.cs" />
     <Compile Include="ClassAluno.cs" />
     <Compile Include="ClassEmpresa.cs" />
+    <Compile Include="ClassSolicitarContrato.cs" />
     <Compile Include="ClassUsuario.cs" />
     <Compile Include="DataSetEmprego.cs">
       <DependentUpon>DataSetEmprego.xsd</DependentUpon>
@@ -151,6 +152,12 @@
     <Compile Include="userCadastrarEmpresa.Designer.cs">
       <DependentUpon>userCadastrarEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="userCadastroDeEmpregos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userCadastroDeEmpregos.Designer.cs">
+      <DependentUpon>userCadastroDeEmpregos.cs</DependentUpon>
+    </Compile>
     <Compile Include="userHistoricoEmprego.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -206,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userCadastrarEmpresa.resx">
       <DependentUpon>userCadastrarEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userCadastroDeEmpregos.resx">
+      <DependentUpon>userCadastroDeEmpregos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userHistoricoEmprego.resx">
       <DependentUpon>userHistoricoEmprego.cs</DependentUpon>
