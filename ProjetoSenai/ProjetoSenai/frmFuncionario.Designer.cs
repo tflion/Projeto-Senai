@@ -34,7 +34,6 @@
             this.btnSolicitarContrato = new System.Windows.Forms.Button();
             this.btnVizualizarHistorico = new System.Windows.Forms.Button();
             this.pnlIndicador = new System.Windows.Forms.Panel();
-            this.btnVisualizarAlunos = new System.Windows.Forms.Button();
             this.btnAlocarAlunos = new System.Windows.Forms.Button();
             this.btnCadastrarEmpresa = new System.Windows.Forms.Button();
             this.btnImportarDados = new System.Windows.Forms.Button();
@@ -56,7 +55,6 @@
             this.pnlDireito.Controls.Add(this.btnSolicitarContrato);
             this.pnlDireito.Controls.Add(this.btnVizualizarHistorico);
             this.pnlDireito.Controls.Add(this.pnlIndicador);
-            this.pnlDireito.Controls.Add(this.btnVisualizarAlunos);
             this.pnlDireito.Controls.Add(this.btnAlocarAlunos);
             this.pnlDireito.Controls.Add(this.btnCadastrarEmpresa);
             this.pnlDireito.Controls.Add(this.btnImportarDados);
@@ -74,9 +72,9 @@
             this.btnStatusContrato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatusContrato.ForeColor = System.Drawing.Color.White;
             this.btnStatusContrato.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnStatusContrato.Location = new System.Drawing.Point(3, 430);
+            this.btnStatusContrato.Location = new System.Drawing.Point(7, 412);
             this.btnStatusContrato.Name = "btnStatusContrato";
-            this.btnStatusContrato.Size = new System.Drawing.Size(187, 48);
+            this.btnStatusContrato.Size = new System.Drawing.Size(187, 75);
             this.btnStatusContrato.TabIndex = 18;
             this.btnStatusContrato.Text = "STATUS DE ENCAMINHAMENTO";
             this.btnStatusContrato.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -92,9 +90,9 @@
             this.btnSolicitarContrato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolicitarContrato.ForeColor = System.Drawing.Color.White;
             this.btnSolicitarContrato.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSolicitarContrato.Location = new System.Drawing.Point(7, 147);
+            this.btnSolicitarContrato.Location = new System.Drawing.Point(7, 162);
             this.btnSolicitarContrato.Name = "btnSolicitarContrato";
-            this.btnSolicitarContrato.Size = new System.Drawing.Size(187, 23);
+            this.btnSolicitarContrato.Size = new System.Drawing.Size(187, 75);
             this.btnSolicitarContrato.TabIndex = 17;
             this.btnSolicitarContrato.Text = "SOLICITAR CONTRATO";
             this.btnSolicitarContrato.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -111,9 +109,9 @@
             this.btnVizualizarHistorico.ForeColor = System.Drawing.Color.White;
             this.btnVizualizarHistorico.Image = ((System.Drawing.Image)(resources.GetObject("btnVizualizarHistorico.Image")));
             this.btnVizualizarHistorico.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVizualizarHistorico.Location = new System.Drawing.Point(4, 266);
+            this.btnVizualizarHistorico.Location = new System.Drawing.Point(7, 334);
             this.btnVizualizarHistorico.Name = "btnVizualizarHistorico";
-            this.btnVizualizarHistorico.Size = new System.Drawing.Size(187, 81);
+            this.btnVizualizarHistorico.Size = new System.Drawing.Size(187, 75);
             this.btnVizualizarHistorico.TabIndex = 16;
             this.btnVizualizarHistorico.Text = "VISUALIZAR HISTÓRICO DE ALUNOS";
             this.btnVizualizarHistorico.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -128,25 +126,6 @@
             this.pnlIndicador.Size = new System.Drawing.Size(10, 75);
             this.pnlIndicador.TabIndex = 15;
             // 
-            // btnVisualizarAlunos
-            // 
-            this.btnVisualizarAlunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
-            this.btnVisualizarAlunos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVisualizarAlunos.FlatAppearance.BorderSize = 0;
-            this.btnVisualizarAlunos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarAlunos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarAlunos.ForeColor = System.Drawing.Color.White;
-            this.btnVisualizarAlunos.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarAlunos.Image")));
-            this.btnVisualizarAlunos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVisualizarAlunos.Location = new System.Drawing.Point(2, 353);
-            this.btnVisualizarAlunos.Name = "btnVisualizarAlunos";
-            this.btnVisualizarAlunos.Size = new System.Drawing.Size(187, 71);
-            this.btnVisualizarAlunos.TabIndex = 7;
-            this.btnVisualizarAlunos.Text = "VISUALIZAR ALUNOS NA  EMPRESA";
-            this.btnVisualizarAlunos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVisualizarAlunos.UseVisualStyleBackColor = false;
-            this.btnVisualizarAlunos.Click += new System.EventHandler(this.btnVisualizarAlunos_Click);
-            // 
             // btnAlocarAlunos
             // 
             this.btnAlocarAlunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
@@ -157,7 +136,7 @@
             this.btnAlocarAlunos.ForeColor = System.Drawing.Color.White;
             this.btnAlocarAlunos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlocarAlunos.Image")));
             this.btnAlocarAlunos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAlocarAlunos.Location = new System.Drawing.Point(2, 176);
+            this.btnAlocarAlunos.Location = new System.Drawing.Point(7, 243);
             this.btnAlocarAlunos.Name = "btnAlocarAlunos";
             this.btnAlocarAlunos.Size = new System.Drawing.Size(187, 75);
             this.btnAlocarAlunos.TabIndex = 6;
@@ -176,9 +155,9 @@
             this.btnCadastrarEmpresa.ForeColor = System.Drawing.Color.White;
             this.btnCadastrarEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarEmpresa.Image")));
             this.btnCadastrarEmpresa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(2, 81);
+            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(7, 81);
             this.btnCadastrarEmpresa.Name = "btnCadastrarEmpresa";
-            this.btnCadastrarEmpresa.Size = new System.Drawing.Size(190, 60);
+            this.btnCadastrarEmpresa.Size = new System.Drawing.Size(187, 75);
             this.btnCadastrarEmpresa.TabIndex = 5;
             this.btnCadastrarEmpresa.Text = "CADASTRAR EMPRESA";
             this.btnCadastrarEmpresa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -198,9 +177,9 @@
             this.btnImportarDados.ForeColor = System.Drawing.Color.White;
             this.btnImportarDados.Image = ((System.Drawing.Image)(resources.GetObject("btnImportarDados.Image")));
             this.btnImportarDados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnImportarDados.Location = new System.Drawing.Point(3, 3);
+            this.btnImportarDados.Location = new System.Drawing.Point(7, 9);
             this.btnImportarDados.Name = "btnImportarDados";
-            this.btnImportarDados.Size = new System.Drawing.Size(187, 72);
+            this.btnImportarDados.Size = new System.Drawing.Size(187, 75);
             this.btnImportarDados.TabIndex = 4;
             this.btnImportarDados.Text = "IMPORTAR DADOS DO EXCEL";
             this.btnImportarDados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -302,7 +281,6 @@
         private userCadastrarEmpresa userCadastrarEmpresa2;
         private System.Windows.Forms.Button btnImportarDados;
         private System.Windows.Forms.Button btnCadastrarEmpresa;
-        private System.Windows.Forms.Button btnVisualizarAlunos;
         private System.Windows.Forms.Button btnAlocarAlunos;
         private System.Windows.Forms.Panel pnlIndicador;
         private userAlocarAlunos userAlocarAlunos1;

@@ -85,16 +85,6 @@ namespace ProjetoSenai
             pnlIndicador.Top = btnAlocarAlunos.Top;
         }
 
-        private void btnVisualizarAlunos_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmRelatorio form = new frmRelatorio();
-            form.ShowDialog();
-            this.Close();
-            pnlIndicador.Height = btnVisualizarAlunos.Height;
-            pnlIndicador.Top = btnVisualizarAlunos.Top;
-        }
-
         private void btnVizualizarHistorico_Click(object sender, EventArgs e)
         {
             userHistoricoEmprego1.BringToFront();

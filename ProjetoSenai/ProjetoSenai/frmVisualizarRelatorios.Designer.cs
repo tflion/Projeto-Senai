@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pnlDireito = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // pnlDireito
+            // 
+            this.pnlDireito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.pnlDireito.Location = new System.Drawing.Point(0, 64);
+            this.pnlDireito.Name = "pnlDireito";
+            this.pnlDireito.Size = new System.Drawing.Size(194, 490);
+            this.pnlDireito.TabIndex = 1;
             // 
             // frmVisualizarRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 516);
+            this.ClientSize = new System.Drawing.Size(745, 554);
+            this.Controls.Add(this.pnlDireito);
             this.Name = "frmVisualizarRelatorios";
             this.Text = "frmVisualizarRelatorios";
             this.ResumeLayout(false);
@@ -42,5 +52,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel pnlDireito;
     }
 }
