@@ -107,6 +107,12 @@
     <Compile Include="frmAssistente.Designer.cs">
       <DependentUpon>frmAssistente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEscolhaAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEscolhaAdm.Designer.cs">
+      <DependentUpon>frmEscolhaAdm.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEsqueceuSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,12 @@
     </Compile>
     <Compile Include="frmRelatorioSecretaria.Designer.cs">
       <DependentUpon>frmRelatorioSecretaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarRelatorios.Designer.cs">
+      <DependentUpon>frmVisualizarRelatorios.cs</DependentUpon>
     </Compile>
     <Compile Include="MyMessageBox.cs">
       <SubType>Form</SubType>
@@ -197,6 +209,9 @@
     <EmbeddedResource Include="frmAssistente.resx">
       <DependentUpon>frmAssistente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEscolhaAdm.resx">
+      <DependentUpon>frmEscolhaAdm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEsqueceuSenha.resx">
       <DependentUpon>frmEsqueceuSenha.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRelatorioSecretaria.resx">
       <DependentUpon>frmRelatorioSecretaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarRelatorios.resx">
+      <DependentUpon>frmVisualizarRelatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyMessageBox.resx">
       <DependentUpon>MyMessageBox.cs</DependentUpon>

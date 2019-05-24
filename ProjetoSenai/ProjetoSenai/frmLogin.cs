@@ -45,7 +45,6 @@ namespace ProjetoSenai
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //Se for maior que 0 então achou o login
-
             DataTable dt = usuario.VerificarUsu(txtEmail.Text, txtSenha.Text);
             if(dt.Rows.Count == 0)
             {
@@ -58,13 +57,15 @@ namespace ProjetoSenai
                 string tipo = dt.Rows[0]["tipo"].ToString();
                 if(tipo == "1")
                 {
+                    //Form adm
                     this.Hide();
-                    frmFuncionario form = new frmFuncionario();
+                    frmEscolhaAdm form = new frmEscolhaAdm();
                     form.ShowDialog();
                     this.Close();
                 }
                 else
                 {
+                    //Form assistente
                     this.Hide();
                     frmAssistente form = new frmAssistente();
                     form.ShowDialog();
