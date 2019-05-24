@@ -103,6 +103,15 @@ namespace ProjetoSenai
             }
         }
 
+        private void userStatusEmprego_Load(object sender, EventArgs e)
+        {
+            //Textos não editáveis
+            txtNomeEmpresa.ReadOnly = true;
+            txtNomeEmpresa.BackColor = SystemColors.Window;
+            txtNomeAluno.ReadOnly = true;
+            txtNomeAluno.BackColor = SystemColors.Window;
+        }
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
             RetornarDados();

@@ -83,6 +83,13 @@ namespace ProjetoSenai
             retornarSolicitacaoDgv();
         }
 
+        private void userCadastroDeEmpregos_Load(object sender, EventArgs e)
+        {
+            //Textos não editáveis
+            txtNomeEmpresa.ReadOnly = true;
+            txtNomeEmpresa.BackColor = SystemColors.Window;
+        }
+
         private void dgvSolicitarEmprego_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1) return;

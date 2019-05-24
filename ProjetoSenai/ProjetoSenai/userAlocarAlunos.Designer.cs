@@ -397,6 +397,7 @@
             this.Controls.Add(this.dgvAluno);
             this.Name = "userAlocarAlunos";
             this.Size = new System.Drawing.Size(549, 490);
+            this.Load += new System.EventHandler(this.userAlocarAlunos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).EndInit();
             this.ResumeLayout(false);

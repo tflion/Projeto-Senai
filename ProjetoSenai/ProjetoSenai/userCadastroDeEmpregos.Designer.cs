@@ -261,6 +261,7 @@
             this.Controls.Add(this.dgvEmpresa);
             this.Name = "userCadastroDeEmpregos";
             this.Size = new System.Drawing.Size(549, 490);
+            this.Load += new System.EventHandler(this.userCadastroDeEmpregos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitarEmprego)).EndInit();
             this.ResumeLayout(false);

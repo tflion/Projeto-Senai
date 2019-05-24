@@ -185,6 +185,21 @@ namespace ProjetoSenai
 
         }
 
+        private void userAlocarAlunos_Load(object sender, EventArgs e)
+        {
+            //Texto não editáveis
+            txtNomeAluno.ReadOnly = true;
+            txtNomeAluno.BackColor = SystemColors.Window;
+            txtCpfAluno.ReadOnly = true;
+            txtCpfAluno.BackColor = SystemColors.Window;
+            txtIdade.ReadOnly = true;
+            txtIdade.BackColor = SystemColors.Window;
+            txtNomeEmpresa.ReadOnly = true;
+            txtNomeEmpresa.BackColor = SystemColors.Window;
+            txtCnpj.ReadOnly = true;
+            txtCnpj.BackColor = SystemColors.Window;
+        }
+
         private void dgvEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1) return;
