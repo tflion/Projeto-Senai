@@ -106,5 +106,10 @@ namespace ProjetoSenai
         {
             userCadastroDeEmpregos1.BringToFront();
         }
+
+        private void btnStatusContrato_Click(object sender, EventArgs e)
+        {
+            userStatusEmprego1.BringToFront();
+        }
     }
 }

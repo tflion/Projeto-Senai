@@ -86,6 +86,7 @@
     <Compile Include="ClassAluno.cs" />
     <Compile Include="ClassEmpresa.cs" />
     <Compile Include="ClassSolicitarContrato.cs" />
+    <Compile Include="ClassStatusEmprego.cs" />
     <Compile Include="ClassUsuario.cs" />
     <Compile Include="DataSetEmprego.cs">
       <DependentUpon>DataSetEmprego.xsd</DependentUpon>

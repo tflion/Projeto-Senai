@@ -22,7 +22,6 @@ namespace ProjetoSenai
             InitializeComponent();
             RetornarAlunoDgv();
             RetornarEmpresaDgv();
-            RetornarAlunoNaEmpresa();
         }
         private void RetornarEmpresaDgv()
         {
@@ -33,11 +32,6 @@ namespace ProjetoSenai
         {
             dgvAluno.DataSource = aluno.retAlunos();
             dgvAluno.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-        }
-        private void RetornarAlunoNaEmpresa()
-        {
-            dgvAlunoNaEmpresa.DataSource = empresa.RetAlunosAlocados();
-            dgvAlunoNaEmpresa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
         private void LimparTxt()
         {
@@ -80,7 +74,6 @@ namespace ProjetoSenai
         {
             RetornarAlunoDgv();
             RetornarEmpresaDgv();
-            RetornarAlunoNaEmpresa();
         }
 
         private void BtnAdicionar_Click(object sender, EventArgs e)
@@ -159,22 +152,6 @@ namespace ProjetoSenai
                 LimparTxt();
             }
 
-        }
-
-        private void dgvAlunoNaEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex == -1) return;
-
-            if (dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["aluno_codAluno"].Value.ToString() != "")
-            {
-                //CodClicado recebe o campo clicado
-                codAlunoClicado = int.Parse(dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["aluno_codAluno"].Value.ToString());
-            }
-            txtNomeEmpresa.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["nomeEmpresa"].Value.ToString();
-            txtCnpj.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["cnpjEmpresa"].Value.ToString();
-            txtNomeAluno.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["nomeAluno"].Value.ToString();
-            txtCpfAluno.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["cpfAluno"].Value.ToString();
-            txtIdade.Text = dgvAlunoNaEmpresa.Rows[e.RowIndex].Cells["idadeAluno"].Value.ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

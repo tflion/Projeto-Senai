@@ -27,6 +27,8 @@ namespace ProjetoSenai
 
         ClassAcessoBD bd = new ClassAcessoBD();
 
+
+        ////////////////////////////////////////////////// Empresa
         public bool Inserir()
         {
             try
@@ -62,7 +64,7 @@ namespace ProjetoSenai
                     ". ");
             }
         }
-
+        //////////////////////////////////////////// Emprego
         public bool AlocarAlunoEmprego(int codEmpresaClicada,string nomeAluno,string cpfAluno,string idadeAluno)
         {
             try
@@ -77,6 +79,21 @@ namespace ProjetoSenai
             {
                 throw new Exception(ex.Message + "Erro ao editar os dados desta empresa" +
                     ". ");
+            }
+        }
+
+        public bool ExcluirAlunoEmprego(int codAlunoClicado)
+        {
+            try
+            {
+                bd.Conectar();
+                bd.ExecutarComandosSql(String.Format("DELETE FROM Emprego WHERE aluno_codAluno LIKE {0}", codAlunoClicado));
+                bd.Desconectar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message + "Erro ao excluir os dados da empresa. ");
             }
         }
 
@@ -104,6 +121,13 @@ namespace ProjetoSenai
             bd.Desconectar();
             return dt;
         }
+        public DataTable RetStatusAlunosAlocados()
+        {
+            bd.Conectar();
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM statusAluno"));
+            bd.Desconectar();
+            return dt;
+        }
 
         public DataTable RetHistoricoAlunos()
         {
@@ -111,44 +135,6 @@ namespace ProjetoSenai
             DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM HistoricoEmprego"));
             bd.Desconectar();
             return dt;
-        }
-
-        public DataTable RetAlunosAlocadosInnerJoin()
-        {
-            bd.Conectar();
-            DataTable dt = bd.RetDataTable(String.Format("SELECT Ep.codEmprego,Emp.nomeEmpresa,Emp.cnpj,Emp.telefoneResponsavel,A.nomeAluno,A.cpf,A.idade FROM Emprego AS Ep INNER JOIN Empresa AS Emp ON Ep.empresa_codEmpresa = Emp.codEmpresa INNER JOIN Aluno AS A ON Ep.aluno_codAluno = A.codAluno"));
-            bd.Desconectar();
-            return dt;
-        }
-
-        public bool Excluir(int codEmpresaClicada)
-        {
-            try
-            {
-                bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("DELETE FROM Empresa WHERE codEmpresa LIKE {0}", codEmpresaClicada));
-                bd.Desconectar();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message + "Erro ao excluir os dados da empresa. ");
-            }
-        }
-
-        public bool ExcluirAlunoEmprego(int codAlunoClicado)
-        {
-            try
-            {
-                bd.Conectar();
-                bd.ExecutarComandosSql(String.Format("DELETE FROM Emprego WHERE aluno_codAluno LIKE {0}", codAlunoClicado));
-                bd.Desconectar();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message + "Erro ao excluir os dados da empresa. ");
-            }
         }
 
         public DataTable RetEmpresas()
