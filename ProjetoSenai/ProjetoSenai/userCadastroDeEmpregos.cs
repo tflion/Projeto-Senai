@@ -90,6 +90,16 @@ namespace ProjetoSenai
             txtNomeEmpresa.BackColor = SystemColors.Window;
         }
 
+        private void btnRemoverContrato_Click(object sender, EventArgs e)
+        {
+            if(contrato.ExcluirSolicitacao(codSolicitacaoClicada) == true)
+            {
+                MessageBox.Show("Excluido");
+                LimparTxt();
+                retornarSolicitacaoDgv();
+            }
+        }
+
         private void dgvSolicitarEmprego_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1) return;

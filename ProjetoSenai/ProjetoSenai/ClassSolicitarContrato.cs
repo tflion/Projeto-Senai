@@ -47,6 +47,21 @@ namespace ProjetoSenai
             }
         }
 
+        public bool ExcluirSolicitacao(int codSolicitacaoClicado)
+        {
+            try
+            {
+                bd.Conectar();
+                bd.ExecutarComandosSql(String.Format("DELETE FROM solicitacaoContrato WHERE codContrato = {0}", codSolicitacaoClicado));
+                bd.Desconectar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message + "Erro ao excluir os dados da empresa. ");
+            }
+        }
+
         public DataTable RetSolicitacao()
         {
             bd.Conectar();
