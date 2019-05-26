@@ -116,5 +116,9 @@ namespace ProjetoSenai
             pnlIndicador.Height = btnCadastrarUsuario.Height;
             pnlIndicador.Top = btnCadastrarUsuario.Top;
         }
+
+        private void FrmRegistrarUsuario_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

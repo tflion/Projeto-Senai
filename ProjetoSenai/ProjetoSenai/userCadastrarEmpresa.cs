@@ -204,6 +204,8 @@ namespace ProjetoSenai
         private void RetornarEmpresaDgv()
         {
             dgvEmpresa.DataSource = empresa.RetEmpresas();
+            //Dgv ajustar o tamanho para o conteúdo dentro, não o header
+            dgvEmpresa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
         private bool ChecarTextos()
         {

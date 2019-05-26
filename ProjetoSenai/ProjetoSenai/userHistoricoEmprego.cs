@@ -23,6 +23,8 @@ namespace ProjetoSenai
         private void retAlunosDgv()
         {
             dgvHistoricoEmprego.DataSource = empresa.RetHistoricoAlunos();
+            //Dgv ajustar o tamanho para o conteúdo dentro, não o header
+            dgvHistoricoEmprego.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
@@ -59,6 +61,13 @@ namespace ProjetoSenai
 
                 }
             }
+        }
+
+        private void UserHistoricoEmprego_Load(object sender, EventArgs e)
+        {
+            //Dados não necessários no dgv
+            dgvHistoricoEmprego.Columns["aluno_codAluno"].Visible = false;
+            dgvHistoricoEmprego.Columns["empresa_codEmpresa"].Visible = false;
         }
     }
 }

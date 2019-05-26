@@ -115,6 +115,14 @@ namespace ProjetoSenai
             bd.Desconectar();
             return dt;
         }
+        //Retornar apensa os dados necessários que o cliente requisitou
+        public DataTable retAlunosNecessarios()
+        {
+            bd.Conectar();
+            DataTable dt = bd.RetDataTable(String.Format("SELECT RegistroAluno,nomeAluno,nascimento,idade,sexo,grauInstrucao,rua,numeroCasa,complemento,bairro,estado,cidade,cep,telCelular,identidade,cpf,email,carteiraTrabalho,nomePai,telCelularPai,nomeMae,telCelularMae,nomeCurso,nomeHabilitacao,codigoTurma,statusMatricula,dataMatricula,telCelular2 FROM Aluno"));
+            bd.Desconectar();
+            return dt;
+        }
 
         public DataTable verificarRA(string ra)
         {

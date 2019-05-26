@@ -238,6 +238,7 @@
             // 
             // cboTipo
             // 
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipo.FormattingEnabled = true;
             this.cboTipo.Items.AddRange(new object[] {
             "Administrador",
@@ -272,6 +273,7 @@
             this.Name = "frmRegistrarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SENAI - Serviço Nacional de Aprendizagem Industrial";
+            this.Load += new System.EventHandler(this.FrmRegistrarUsuario_Load);
             this.pnlDireito.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

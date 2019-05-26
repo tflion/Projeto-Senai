@@ -30,7 +30,7 @@ namespace ProjetoSenai
         }
         private void RetornarAlunoDgv()
         {
-            dgvAluno.DataSource = aluno.retAlunos();
+            dgvAluno.DataSource = aluno.retAlunosNecessarios();
             dgvAluno.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
         private void LimparTxt()

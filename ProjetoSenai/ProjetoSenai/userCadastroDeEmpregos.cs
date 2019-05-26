@@ -32,10 +32,14 @@ namespace ProjetoSenai
         private void retornarEmpresaDgv()
         {
             dgvEmpresa.DataSource = empresa.RetEmpresas();
+            //Dgv ajustar o tamanho para o conteúdo dentro, não o header
+            dgvEmpresa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
         private void retornarSolicitacaoDgv()
         {
             dgvSolicitarEmprego.DataSource = contrato.RetSolicitacao();
+            //Dgv ajustar o tamanho para o conteúdo dentro, não o header
+            dgvSolicitarEmprego.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
         private void btnCadastrarContrato_Click(object sender, EventArgs e)
@@ -88,6 +92,9 @@ namespace ProjetoSenai
             //Textos não editáveis
             txtNomeEmpresa.ReadOnly = true;
             txtNomeEmpresa.BackColor = SystemColors.Window;
+
+            //Dados não necessários no dgv
+            dgvSolicitarEmprego.Columns["empresa_codEmpresa"].Visible = false;
         }
 
         private void btnRemoverContrato_Click(object sender, EventArgs e)

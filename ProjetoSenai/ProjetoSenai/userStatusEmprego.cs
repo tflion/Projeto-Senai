@@ -37,10 +37,14 @@ namespace ProjetoSenai
         private void RetornarAlunosAlucadosDgv()
         {
             dgvAlunosAlocados.DataSource = empresa.RetAlunosAlocados();
+            //Dgv ajustar o tamanho para o conteúdo dentro, não o header
+            dgvAlunosAlocados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
         private void RetornarStatusEmpregoDgv()
         {
             dgvStatusAlunosAlocados.DataSource = empresa.RetStatusAlunosAlocados();
+            //Dgv ajustar o tamanho para o conteúdo dentro, não o header
+            dgvStatusAlunosAlocados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
         private void RetornarDados()
         {
@@ -110,6 +114,10 @@ namespace ProjetoSenai
             txtNomeEmpresa.BackColor = SystemColors.Window;
             txtNomeAluno.ReadOnly = true;
             txtNomeAluno.BackColor = SystemColors.Window;
+
+            //Dados não necessários no dgv
+            dgvAlunosAlocados.Columns["aluno_codAluno"].Visible = false;
+            dgvAlunosAlocados.Columns["empresa_codEmpresa"].Visible = false;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
