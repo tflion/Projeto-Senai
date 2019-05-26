@@ -83,10 +83,21 @@ namespace ProjetoSenai
                 empresa.aluno_codAluno = codAlunoClicado;
                 empresa.nomeEmpresa = txtNomeEmpresa.Text;
                 empresa.cnpj = txtCnpj.Text;
-                if((empresa.AlocarAlunoEmprego(codEmpresaClicada,txtNomeAluno.Text,txtCpfAluno.Text,txtIdade.Text) == true) && (empresa.AlocarAlunoHistorico(codEmpresaClicada, txtNomeAluno.Text, txtCpfAluno.Text, txtIdade.Text) == true))
+
+                DataTable dt = empresa.VerificarAlunoExistente(codAlunoClicado);
+                if (dt.Rows.Count >0)
                 {
-                    MyMessageBox.Show("       Aluno alocado com sucesso!","Alocação", "OK");
+                    //Achou um aluno então já esta alocado
+                    MessageBox.Show("Aluno já está alocado");
                     LimparTxt();
+                }
+                else
+                {
+                    if ((empresa.AlocarAlunoEmprego(codEmpresaClicada, txtNomeAluno.Text, txtCpfAluno.Text, txtIdade.Text) == true) && (empresa.AlocarAlunoHistorico(codEmpresaClicada, txtNomeAluno.Text, txtCpfAluno.Text, txtIdade.Text) == true))
+                    {
+                        MyMessageBox.Show("       Aluno alocado com sucesso!", "Alocação", "OK");
+                        LimparTxt();
+                    }
                 }
             }
         }

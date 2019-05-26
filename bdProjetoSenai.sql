@@ -150,6 +150,8 @@ CREATE TABLE Emprego
 	FOREIGN KEY (empresa_codEmpresa) REFERENCES Empresa (codEmpresa),
 	FOREIGN KEY (aluno_codAluno) REFERENCES Aluno (codAluno),
 );
+--SELECT * FROM Emprego
+--SELECT * FROM Emprego WHERE aluno_codAluno LIKE 3
 --Todas as informações irão ficar aqui
 CREATE TABLE HistoricoEmprego
 (

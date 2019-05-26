@@ -82,6 +82,15 @@ namespace ProjetoSenai
             }
         }
 
+        public DataTable VerificarAlunoExistente(int busca)
+        {
+            bd.Conectar();
+            DataTable dt = bd.RetDataTable(String.Format("SELECT * FROM Emprego WHERE aluno_codAluno LIKE {0}", busca));
+            bd.Desconectar();
+
+            return dt;
+        }
+
         public bool ExcluirAlunoEmprego(int codAlunoClicado)
         {
             try
