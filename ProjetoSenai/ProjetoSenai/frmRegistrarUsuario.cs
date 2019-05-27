@@ -66,8 +66,8 @@ namespace ProjetoSenai
                 txtEmail.Focus();
             }else
             {
-                cboTipo.Text = (cboTipo.Text == "Administrador") ? "1" : "0";
-                usuario.Tipo = int.Parse(cboTipo.Text);
+                string tipo = (cboTipo.Text == "Administrador") ? "1" : "0";
+                usuario.Tipo = int.Parse(tipo);
                 //Se for igual irá inserir no banco
                 usuario.Email = txtEmail.Text;
                 usuario.Senha = txtSenha.Text;
