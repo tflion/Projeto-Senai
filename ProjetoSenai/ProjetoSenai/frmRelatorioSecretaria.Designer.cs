@@ -70,9 +70,10 @@
             this.btnVoltarLogin.FlatAppearance.BorderSize = 0;
             this.btnVoltarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltarLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltarLogin.Image")));
-            this.btnVoltarLogin.Location = new System.Drawing.Point(1, 65);
+            this.btnVoltarLogin.Location = new System.Drawing.Point(1, 80);
+            this.btnVoltarLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVoltarLogin.Name = "btnVoltarLogin";
-            this.btnVoltarLogin.Size = new System.Drawing.Size(63, 33);
+            this.btnVoltarLogin.Size = new System.Drawing.Size(84, 41);
             this.btnVoltarLogin.TabIndex = 24;
             this.btnVoltarLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVoltarLogin.UseVisualStyleBackColor = false;
@@ -109,23 +110,24 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoSenai.rptSecretaria.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(1, 104);
+            this.reportViewer1.Location = new System.Drawing.Point(1, 128);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(745, 286);
+            this.reportViewer1.Size = new System.Drawing.Size(993, 352);
             this.reportViewer1.TabIndex = 25;
             // 
             // frmRelatorioSecretaria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 391);
+            this.ClientSize = new System.Drawing.Size(993, 481);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnVoltarLogin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MaximumSize = new System.Drawing.Size(745, 391);
-            this.MinimumSize = new System.Drawing.Size(745, 391);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(993, 481);
+            this.MinimumSize = new System.Drawing.Size(993, 481);
             this.Name = "frmRelatorioSecretaria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SENAI - Serviço Nacional de Aprendizagem Industrial";

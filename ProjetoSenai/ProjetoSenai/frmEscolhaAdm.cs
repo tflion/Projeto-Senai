@@ -33,16 +33,21 @@ namespace ProjetoSenai
 
         private void btnVisualizarRelatorio_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnVisualizarAlunos_Click(object sender, EventArgs e)
+        {
             this.Hide();
-            frmVisualizarRelatorios form = new frmVisualizarRelatorios();
+            frmFuncionario form = new frmFuncionario();
             form.ShowDialog();
             this.Close();
         }
 
-        private void btnAdministrar_Click(object sender, EventArgs e)
+        private void btnViewRelato_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmFuncionario form = new frmFuncionario();
+            frmVisualizarRelatorios form = new frmVisualizarRelatorios();
             form.ShowDialog();
             this.Close();
         }

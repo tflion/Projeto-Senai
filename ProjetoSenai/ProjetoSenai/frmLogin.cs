@@ -67,7 +67,7 @@ namespace ProjetoSenai
                 {
                     //Form assistente
                     this.Hide();
-                    frmAssistente form = new frmAssistente();
+                    frmVisualizarRelatorios form = new frmVisualizarRelatorios();
                     form.ShowDialog();
                     this.Close();
                 }

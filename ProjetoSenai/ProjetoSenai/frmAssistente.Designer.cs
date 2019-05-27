@@ -42,16 +42,18 @@
             this.pnlDireito.Controls.Add(this.pnlIndicador);
             this.pnlDireito.Controls.Add(this.btnVisualizarAlunos);
             this.pnlDireito.Location = new System.Drawing.Point(0, 64);
+            this.pnlDireito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlDireito.Name = "pnlDireito";
-            this.pnlDireito.Size = new System.Drawing.Size(186, 502);
+            this.pnlDireito.Size = new System.Drawing.Size(240, 633);
             this.pnlDireito.TabIndex = 1;
             // 
             // pnlIndicador
             // 
             this.pnlIndicador.BackColor = System.Drawing.Color.White;
-            this.pnlIndicador.Location = new System.Drawing.Point(0, 191);
+            this.pnlIndicador.Location = new System.Drawing.Point(0, 235);
+            this.pnlIndicador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlIndicador.Name = "pnlIndicador";
-            this.pnlIndicador.Size = new System.Drawing.Size(10, 75);
+            this.pnlIndicador.Size = new System.Drawing.Size(13, 92);
             this.pnlIndicador.TabIndex = 15;
             // 
             // btnVisualizarAlunos
@@ -64,9 +66,10 @@
             this.btnVisualizarAlunos.ForeColor = System.Drawing.Color.White;
             this.btnVisualizarAlunos.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarAlunos.Image")));
             this.btnVisualizarAlunos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVisualizarAlunos.Location = new System.Drawing.Point(8, 191);
+            this.btnVisualizarAlunos.Location = new System.Drawing.Point(11, 235);
+            this.btnVisualizarAlunos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVisualizarAlunos.Name = "btnVisualizarAlunos";
-            this.btnVisualizarAlunos.Size = new System.Drawing.Size(172, 75);
+            this.btnVisualizarAlunos.Size = new System.Drawing.Size(229, 92);
             this.btnVisualizarAlunos.TabIndex = 7;
             this.btnVisualizarAlunos.Text = "VISUALIZAR ALUNOS E EMPRESAS";
             this.btnVisualizarAlunos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -76,20 +79,22 @@
             // userPrincipal1
             // 
             this.userPrincipal1.BackColor = System.Drawing.Color.White;
-            this.userPrincipal1.Location = new System.Drawing.Point(180, 64);
+            this.userPrincipal1.Location = new System.Drawing.Point(240, 79);
+            this.userPrincipal1.Margin = new System.Windows.Forms.Padding(5);
             this.userPrincipal1.Name = "userPrincipal1";
-            this.userPrincipal1.Size = new System.Drawing.Size(553, 490);
+            this.userPrincipal1.Size = new System.Drawing.Size(737, 603);
             this.userPrincipal1.TabIndex = 2;
             // 
             // frmAssistente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 554);
+            this.ClientSize = new System.Drawing.Size(977, 682);
             this.Controls.Add(this.userPrincipal1);
             this.Controls.Add(this.pnlDireito);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(733, 554);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(977, 682);
             this.Name = "frmAssistente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SENAI - Serviço Nacional de Aprendizagem Industrial";

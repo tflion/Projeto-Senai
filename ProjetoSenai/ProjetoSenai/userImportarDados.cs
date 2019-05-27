@@ -213,6 +213,11 @@ namespace ProjetoSenai
             }
 
         }
+
+        private void dgvExcel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

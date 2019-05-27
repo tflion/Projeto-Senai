@@ -95,11 +95,16 @@ namespace ProjetoSenai
         private void btnSolicitarContrato_Click(object sender, EventArgs e)
         {
             userCadastroDeEmpregos1.BringToFront();
+            pnlIndicador.Height = btnSolicitarContrato.Height;
+            pnlIndicador.Top = btnSolicitarContrato.Top;
         }
 
         private void btnStatusContrato_Click(object sender, EventArgs e)
         {
             userStatusEmprego1.BringToFront();
+            pnlIndicador.Height = btnStatusContrato.Height;
+            pnlIndicador.Top = btnStatusContrato.Top;
+
         }
     }
 }
