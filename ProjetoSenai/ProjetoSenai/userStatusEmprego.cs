@@ -24,6 +24,18 @@ namespace ProjetoSenai
             RetornarAlunosAlucadosDgv();
             RetornarStatusEmpregoDgv();
         }
+
+        private bool ChecarTextos()
+        {
+            if (String.IsNullOrEmpty(txtNomeEmpresa.Text) || String.IsNullOrEmpty(txtNomeAluno.Text) || String.IsNullOrEmpty(txtStatus.Text) || String.IsNullOrEmpty(rchDescricao.Text) || String.IsNullOrEmpty(txtPeriodo.Text))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         private void LimparDados()
         {
             txtNomeEmpresa.Text = "";
@@ -98,13 +110,20 @@ namespace ProjetoSenai
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            RetornarDados();
-            if(status.Inserir() == true)
+            if(ChecarTextos() == true)
             {
-                MyMessageBox.Show("Cadastrado com sucesso!", "Cadastro", "OK");
-                RetornarStatusEmpregoDgv();
-                LimparDados();
+                RetornarDados();
+                if (status.Inserir() == true)
+                {
+                    MyMessageBox.Show("Cadastrado com sucesso!", "Cadastro", "OK");
+                    RetornarStatusEmpregoDgv();
+                    LimparDados();
+                }
+            }else
+            {
+                MyMessageBox.Show("         Favor preencher os dados \n                 corretamente.", "Validação", "OK");
             }
+
         }
 
         private void userStatusEmprego_Load(object sender, EventArgs e)
@@ -122,12 +141,18 @@ namespace ProjetoSenai
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            RetornarDados();
-            if(status.Editar(codAlunoStatusEmprego) == true)
+            if(ChecarTextos() == true)
             {
-                MyMessageBox.Show("Editado com sucesso!", "Edição", "OK");
-                RetornarStatusEmpregoDgv();
-                LimparDados();
+                RetornarDados();
+                if (status.Editar(codAlunoStatusEmprego) == true)
+                {
+                    MyMessageBox.Show("Editado com sucesso!", "Edição", "OK");
+                    RetornarStatusEmpregoDgv();
+                    LimparDados();
+                }
+            }else
+            {
+                MyMessageBox.Show("         Favor preencher os dados \n                 corretamente.", "Validação", "OK");
             }
         }
     }

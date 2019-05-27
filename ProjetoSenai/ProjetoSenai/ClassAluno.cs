@@ -119,7 +119,7 @@ namespace ProjetoSenai
         public DataTable retAlunosNecessarios()
         {
             bd.Conectar();
-            DataTable dt = bd.RetDataTable(String.Format("SELECT RegistroAluno,nomeAluno,nascimento,idade,sexo,grauInstrucao,rua,numeroCasa,complemento,bairro,estado,cidade,cep,telCelular,identidade,cpf,email,carteiraTrabalho,nomePai,telCelularPai,nomeMae,telCelularMae,nomeCurso,nomeHabilitacao,codigoTurma,statusMatricula,dataMatricula,telCelular2 FROM Aluno"));
+            DataTable dt = bd.RetDataTable(String.Format("SELECT codAluno,RegistroAluno,nomeAluno,nascimento,idade,sexo,grauInstrucao,rua,numeroCasa,complemento,bairro,estado,cidade,cep,telCelular,identidade,cpf,email,carteiraTrabalho,nomePai,telCelularPai,nomeMae,telCelularMae,nomeCurso,nomeHabilitacao,codigoTurma,statusMatricula,dataMatricula,telCelular2 FROM Aluno"));
             bd.Desconectar();
             return dt;
         }

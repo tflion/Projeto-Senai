@@ -99,6 +99,9 @@ namespace ProjetoSenai
                         LimparTxt();
                     }
                 }
+            }else
+            {
+                MyMessageBox.Show("         Favor preencher os dados \n                 corretamente.", "Validação", "OK");
             }
         }
 
@@ -157,12 +160,17 @@ namespace ProjetoSenai
 
         private void btnDesalocarAluno_Click(object sender, EventArgs e)
         {
-            if(empresa.ExcluirAlunoEmprego(codAlunoClicado) == true)
+            if(VerificarDados() == true)
             {
-                MyMessageBox.Show("   Aluno desalocado com sucesso!","Desalocação","OK");
-                LimparTxt();
+                if (empresa.ExcluirAlunoEmprego(codAlunoClicado) == true)
+                {
+                    MyMessageBox.Show("   Aluno desalocado com sucesso!", "Desalocação", "OK");
+                    LimparTxt();
+                }
+            }else
+            {
+                MyMessageBox.Show("         Favor preencher os dados \n                 corretamente.", "Validação", "OK");
             }
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

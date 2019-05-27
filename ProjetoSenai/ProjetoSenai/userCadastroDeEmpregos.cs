@@ -29,6 +29,17 @@ namespace ProjetoSenai
             txtNomeEmpresa.Text = "";
             cboTipoContrato.Text = "";
         }
+        private bool ChecarTextos()
+        {
+            if (String.IsNullOrEmpty(txtNomeEmpresa.Text) || String.IsNullOrEmpty(cboTipoContrato.Text))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         private void retornarEmpresaDgv()
         {
             dgvEmpresa.DataSource = empresa.RetEmpresas();
@@ -44,26 +55,38 @@ namespace ProjetoSenai
 
         private void btnCadastrarContrato_Click(object sender, EventArgs e)
         {
-            contrato.empresa_codEmpresa = codEmpresaClicada;
-            contrato.nomeEmpresa = txtNomeEmpresa.Text;
-            contrato.tipoContrato = cboTipoContrato.Text;
-            if (contrato.InserirSolicitacao() == true)
+            if (ChecarTextos() == true)
             {
-                MyMessageBox.Show("Contrato cadastrado com sucesso!", "Cadastro de contrato", "OK");
-                LimparTxt();
-                retornarSolicitacaoDgv();
+                contrato.empresa_codEmpresa = codEmpresaClicada;
+                contrato.nomeEmpresa = txtNomeEmpresa.Text;
+                contrato.tipoContrato = cboTipoContrato.Text;
+                if (contrato.InserirSolicitacao() == true)
+                {
+                    MyMessageBox.Show("Contrato cadastrado com sucesso!", "Cadastro de contrato", "OK");
+                    LimparTxt();
+                    retornarSolicitacaoDgv();
+                }
+            }else
+            {
+                MyMessageBox.Show("         Favor preencher os dados \n                 corretamente.", "Validação", "OK");
             }
         }
 
         private void btnEditarContrato_Click(object sender, EventArgs e)
         {
-            contrato.nomeEmpresa = txtNomeEmpresa.Text;
-            contrato.tipoContrato = cboTipoContrato.Text;
-            if (contrato.EditarSolicitacao(codSolicitacaoClicada) == true)
+            if (ChecarTextos() == true)
             {
-                MyMessageBox.Show("Contrato editado com sucesso!", "Edição de contrato", "OK");
-                LimparTxt();
-                retornarSolicitacaoDgv();
+                contrato.nomeEmpresa = txtNomeEmpresa.Text;
+                contrato.tipoContrato = cboTipoContrato.Text;
+                if (contrato.EditarSolicitacao(codSolicitacaoClicada) == true)
+                {
+                    MyMessageBox.Show("Contrato editado com sucesso!", "Edição de contrato", "OK");
+                    LimparTxt();
+                    retornarSolicitacaoDgv();
+                }
+            }else
+            {
+                MyMessageBox.Show("         Favor preencher os dados \n                 corretamente.", "Validação", "OK");
             }
         }
 
@@ -99,11 +122,17 @@ namespace ProjetoSenai
 
         private void btnRemoverContrato_Click(object sender, EventArgs e)
         {
-            if(contrato.ExcluirSolicitacao(codSolicitacaoClicada) == true)
+            if(ChecarTextos() == true)
             {
-                MyMessageBox.Show("Contrato excluído com sucesso!", "Exclusão de contrato", "OK");
-                LimparTxt();
-                retornarSolicitacaoDgv();
+                if (contrato.ExcluirSolicitacao(codSolicitacaoClicada) == true)
+                {
+                    MyMessageBox.Show("Contrato excluído com sucesso!", "Exclusão de contrato", "OK");
+                    LimparTxt();
+                    retornarSolicitacaoDgv();
+                }
+            }else
+            {
+                MyMessageBox.Show("         Favor preencher os dados \n                 corretamente.", "Validação", "OK");
             }
         }
 
