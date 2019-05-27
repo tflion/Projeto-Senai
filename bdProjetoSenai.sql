@@ -1,4 +1,5 @@
-﻿CREATE DATABASE dbProjetoSenai
+﻿
+CREATE DATABASE dbProjetoSenai
 
 GO
 
