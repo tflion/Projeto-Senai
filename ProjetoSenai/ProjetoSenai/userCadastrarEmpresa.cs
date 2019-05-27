@@ -35,7 +35,7 @@ namespace ProjetoSenai
 
                 if (ChecaServidor.StatusCode != HttpStatusCode.OK)
                 {
-                    MessageBox.Show("Servidor indisponível");
+                    MyMessageBox.Show(" O servidor não se encontra disponível", "Servidor indisponível", "OK");
                     return; // Sai da rotina
                 }
 
