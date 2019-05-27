@@ -49,7 +49,7 @@ namespace ProjetoSenai
             contrato.tipoContrato = cboTipoContrato.Text;
             if (contrato.InserirSolicitacao() == true)
             {
-                MessageBox.Show("Cadastrado");
+                MyMessageBox.Show("Contrato cadastrado com sucesso!", "Cadastro de contrato", "OK");
                 LimparTxt();
                 retornarSolicitacaoDgv();
             }
@@ -61,7 +61,7 @@ namespace ProjetoSenai
             contrato.tipoContrato = cboTipoContrato.Text;
             if (contrato.EditarSolicitacao(codSolicitacaoClicada) == true)
             {
-                MessageBox.Show("Editado");
+                MyMessageBox.Show("Contrato editado com sucesso!", "Edição de contrato", "OK");
                 LimparTxt();
                 retornarSolicitacaoDgv();
             }
@@ -101,7 +101,7 @@ namespace ProjetoSenai
         {
             if(contrato.ExcluirSolicitacao(codSolicitacaoClicada) == true)
             {
-                MessageBox.Show("Excluido");
+                MyMessageBox.Show("Contrato excluído com sucesso!", "Exclusão de contrato", "OK");
                 LimparTxt();
                 retornarSolicitacaoDgv();
             }

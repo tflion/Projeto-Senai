@@ -88,7 +88,7 @@ namespace ProjetoSenai
                 if (dt.Rows.Count >0)
                 {
                     //Achou um aluno então já esta alocado
-                    MessageBox.Show("Aluno já está alocado");
+                    MyMessageBox.Show("     O aluno já está alocado!","Alocação","OK");
                     LimparTxt();
                 }
                 else

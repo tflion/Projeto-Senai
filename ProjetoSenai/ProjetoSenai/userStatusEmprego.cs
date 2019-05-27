@@ -101,7 +101,7 @@ namespace ProjetoSenai
             RetornarDados();
             if(status.Inserir() == true)
             {
-                MessageBox.Show("Cadastrado");
+                MyMessageBox.Show("Cadastrado com sucesso!", "Cadastro", "OK");
                 RetornarStatusEmpregoDgv();
                 LimparDados();
             }
@@ -125,7 +125,7 @@ namespace ProjetoSenai
             RetornarDados();
             if(status.Editar(codAlunoStatusEmprego) == true)
             {
-                MessageBox.Show("Editado");
+                MyMessageBox.Show("Editado com sucesso!", "Edição", "OK");
                 RetornarStatusEmpregoDgv();
                 LimparDados();
             }
