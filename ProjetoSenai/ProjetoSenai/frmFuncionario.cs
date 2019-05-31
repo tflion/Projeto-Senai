@@ -106,5 +106,13 @@ namespace ProjetoSenai
             pnlIndicador.Top = btnStatusContrato.Top;
 
         }
+
+        private void BtnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmEscolhaAdm form = new frmEscolhaAdm();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

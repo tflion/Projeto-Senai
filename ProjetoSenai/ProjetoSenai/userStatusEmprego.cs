@@ -27,7 +27,7 @@ namespace ProjetoSenai
 
         private bool ChecarTextos()
         {
-            if (String.IsNullOrEmpty(txtNomeEmpresa.Text) || String.IsNullOrEmpty(txtNomeAluno.Text) || String.IsNullOrEmpty(txtStatus.Text) || String.IsNullOrEmpty(rchDescricao.Text) || String.IsNullOrEmpty(txtPeriodo.Text))
+            if (String.IsNullOrEmpty(txtNomeEmpresa.Text) || String.IsNullOrEmpty(txtNomeAluno.Text) || String.IsNullOrEmpty(txtStatus.Text))
             {
                 return false;
             }

@@ -27,90 +27,95 @@ namespace ProjetoSenai
         }
         private void MostrarCEP()
         {
-            if(txtCep.Text != "")
+            try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://viacep.com.br/ws/" + txtCep.Text + "/json/");
-                request.AllowAutoRedirect = false;
-                HttpWebResponse ChecaServidor = (HttpWebResponse)request.GetResponse();
-
-                if (ChecaServidor.StatusCode != HttpStatusCode.OK)
+                if (txtCep.Text != "")
                 {
-                    MyMessageBox.Show(" O servidor não se encontra disponível", "Servidor indisponível", "OK");
-                    return; // Sai da rotina
-                }
+                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://viacep.com.br/ws/" + txtCep.Text + "/json/");
+                    request.AllowAutoRedirect = false;
+                    HttpWebResponse ChecaServidor = (HttpWebResponse)request.GetResponse();
 
-                using (Stream webStream = ChecaServidor.GetResponseStream())
-                {
-                    if (webStream != null)
+                    if (ChecaServidor.StatusCode != HttpStatusCode.OK)
                     {
-                        using (StreamReader responseReader = new StreamReader(webStream))
+                        MyMessageBox.Show(" O servidor não se encontra disponível", "Servidor indisponível", "OK");
+                        return; // Sai da rotina
+                    }
+
+                    using (Stream webStream = ChecaServidor.GetResponseStream())
+                    {
+                        if (webStream != null)
                         {
-                            string response = responseReader.ReadToEnd();
-                            response = Regex.Replace(response, "[{},]", string.Empty);
-                            response = response.Replace("\"", "");
-
-                            String[] substrings = response.Split('\n');
-
-                            int cont = 0;
-                            foreach (var substring in substrings)
+                            using (StreamReader responseReader = new StreamReader(webStream))
                             {
-                                if (cont == 1)
+                                string response = responseReader.ReadToEnd();
+                                response = Regex.Replace(response, "[{},]", string.Empty);
+                                response = response.Replace("\"", "");
+
+                                String[] substrings = response.Split('\n');
+
+                                int cont = 0;
+                                foreach (var substring in substrings)
                                 {
-                                    string[] valor = substring.Split(":".ToCharArray());
-                                    if (valor[0] == "  erro")
+                                    if (cont == 1)
                                     {
-                                        MyMessageBox.Show("  O CEP inserido não foi localizado. \n Favor inserir novamente um válido.", "CEP não encontrado", "OK");
-                                        txtCep.Focus();
-                                        return;
+                                        string[] valor = substring.Split(":".ToCharArray());
+                                        if (valor[0] == "  erro")
+                                        {
+                                            MyMessageBox.Show("  O CEP inserido não foi localizado. \n Favor inserir novamente um válido.", "CEP não encontrado", "OK");
+                                            txtCep.Focus();
+                                            return;
+                                        }
                                     }
-                                }
 
-                                //Logradouro
-                                if (cont == 2)
-                                {
-                                    string[] valor = substring.Split(":".ToCharArray());
-                                    txtRua.Text = valor[1];
-                                }
+                                    //Logradouro
+                                    if (cont == 2)
+                                    {
+                                        string[] valor = substring.Split(":".ToCharArray());
+                                        txtRua.Text = valor[1];
+                                    }
 
-                                //Complemento
-                                if (cont == 3)
-                                {
-                                    //string[] valor = substring.Split(":".ToCharArray());
-                                    //txtComplemento.Text = valor[1];
-                                }
+                                    //Complemento
+                                    if (cont == 3)
+                                    {
+                                        //string[] valor = substring.Split(":".ToCharArray());
+                                        //txtComplemento.Text = valor[1];
+                                    }
 
-                                //Bairro
-                                if (cont == 4)
-                                {
-                                    string[] valor = substring.Split(":".ToCharArray());
-                                    txtBairro.Text = valor[1];
-                                }
+                                    //Bairro
+                                    if (cont == 4)
+                                    {
+                                        string[] valor = substring.Split(":".ToCharArray());
+                                        txtBairro.Text = valor[1];
+                                    }
 
-                                //Localidade (Cidade)
-                                if (cont == 5)
-                                {
-                                    string[] valor = substring.Split(":".ToCharArray());
-                                    txtCidade.Text = valor[1];
-                                }
+                                    //Localidade (Cidade)
+                                    if (cont == 5)
+                                    {
+                                        string[] valor = substring.Split(":".ToCharArray());
+                                        txtCidade.Text = valor[1];
+                                    }
 
-                                //Estado (UF)
-                                if (cont == 6)
-                                {
-                                    string[] valor = substring.Split(":".ToCharArray());
-                                    txtEstado.Text = valor[1];
-                                }
+                                    //Estado (UF)
+                                    if (cont == 6)
+                                    {
+                                        string[] valor = substring.Split(":".ToCharArray());
+                                        txtEstado.Text = valor[1];
+                                    }
 
-                                cont++;
+                                    cont++;
+                                }
                             }
                         }
                     }
                 }
-            }
-            else
+                else
+                {
+                    MyMessageBox.Show(" Favor inserir o CEP para o preenchi- \n mento automático.", "CEP vazio", "OK");
+                }
+            }catch(Exception e)
             {
-                MyMessageBox.Show(" Favor inserir o CEP para o preenchi- \n mento automático.", "CEP vazio", "OK");
+                MessageBox.Show("Preenchimento automático indisponivel no momento");
             }
-
 
         }
 
